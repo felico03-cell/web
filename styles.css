@@ -276,13 +276,95 @@ footer{background:#fff;padding-top:44px;}
 
 .copyright{text-align:center;font-size:12.5px;color:var(--navy);padding:16px 0;}
 
+/* ===== Category nav active state ===== */
+.catnav a.active{background:rgba(255,255,255,.18);padding:6px 14px;border-radius:8px;margin:0 -14px;}
+
+/* ===== About: hero banner ===== */
+.about-hero{
+  background:linear-gradient(135deg,var(--navy-2) 0%,var(--navy) 55%,var(--blue-mid) 100%);
+  padding:56px 0;text-align:center;color:#fff;
+}
+.about-hero-badge{
+  display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:22px;
+}
+.about-hero-badge .icon-circle{
+  width:64px;height:64px;border-radius:50%;background:#fff;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;color:var(--navy);
+}
+.about-hero-badge .icon-circle svg{width:30px;height:30px;}
+.about-hero h1{font-size:32px;font-style:italic;font-weight:800;}
+.about-hero p{font-size:17px;color:#dfe4f5;}
+
+/* ===== About: Siapa Kami ===== */
+.siapa-section{padding:56px 0;}
+.siapa-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:start;}
+.siapa-text h2{font-size:26px;font-weight:700;color:var(--navy);margin-bottom:18px;}
+.siapa-text p{font-size:14.5px;color:#4a4d66;line-height:1.8;margin-bottom:18px;}
+.siapa-cards{display:flex;flex-direction:column;gap:16px;}
+.siapa-card{
+  display:flex;align-items:center;
+  background:linear-gradient(90deg,#fdf1ec 0%,#eeeff9 100%);
+  border-left:4px solid var(--orange);
+  border-radius:14px;padding:18px;
+  box-shadow:0 6px 18px rgba(27,45,105,.08);
+}
+.siapa-card img{width:64px;height:64px;}
+
+/* ===== About: Visi & Misi ===== */
+.visimisi-section{background:var(--field-bg);padding:56px 0;}
+.visimisi-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+.visimisi-item .head{display:flex;align-items:center;gap:16px;margin-bottom:16px;}
+.visimisi-item .head img{width:56px;height:56px;flex-shrink:0;}
+.visimisi-item .head h3{font-size:22px;font-weight:700;color:var(--navy);}
+.visimisi-item p{font-size:14.5px;color:#4a4d66;line-height:1.8;}
+
+/* ===== About: Alamat Kami ===== */
+.alamat-section{padding:56px 0;text-align:center;}
+.alamat-section h2{font-size:26px;font-weight:700;color:var(--navy);margin-bottom:10px;}
+.alamat-section > .container > p{font-size:15px;color:#4a4d66;margin-bottom:40px;}
+.alamat-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;text-align:left;align-items:start;}
+.alamat-info-item{display:flex;align-items:flex-start;gap:16px;margin-bottom:36px;}
+.alamat-info-item:last-child{margin-bottom:0;}
+.alamat-info-item img{width:38px;height:38px;flex-shrink:0;margin-top:2px;}
+.alamat-info-item h4{font-size:19px;font-weight:700;color:#151830;margin-bottom:8px;}
+.alamat-info-item p{font-size:14.5px;color:#4a4d66;line-height:1.6;}
+.alamat-map{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 12px 34px rgba(27,45,105,.18);}
+.alamat-map iframe{display:block;width:100%;height:440px;border:0;}
+.map-card{
+  position:absolute;left:18px;bottom:18px;max-width:280px;
+  background:#fff;border-radius:14px;padding:18px;
+  box-shadow:0 10px 24px rgba(0,0,0,.2);
+}
+.map-card h4{font-size:16px;font-weight:800;color:#151830;margin-bottom:8px;}
+.map-card p{font-size:12.5px;color:#4a4d66;line-height:1.5;margin-bottom:10px;}
+.map-card .row{display:flex;align-items:center;gap:8px;font-size:12.5px;color:#4a4d66;margin-bottom:6px;}
+.map-card .row svg{width:14px;height:14px;color:var(--navy);flex-shrink:0;}
+.map-btn{position:absolute;right:16px;bottom:16px;height:46px;display:block;}
+
+/* ===== About: Mengapa Memilih Kami ===== */
+.why-section{background:var(--field-bg);padding:56px 0;text-align:center;}
+.why-section h2{font-size:26px;font-weight:700;color:var(--navy);margin-bottom:36px;}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.why-card{background:#fff;border-radius:16px;padding:36px 22px;box-shadow:0 6px 22px rgba(27,45,105,.08);}
+.why-card img{width:70px;height:70px;margin:0 auto 20px;}
+.why-card h4{font-size:16px;font-weight:800;color:#151830;margin-bottom:10px;}
+.why-card p{font-size:13.5px;color:#4a4d66;line-height:1.6;}
+
 /* ===== Responsive ===== */
 @media (max-width:960px){
   .feature-grid .feature-card{flex-basis:100%;}
   .footer-col{flex-basis:45%;border-right:none;border-bottom:1px solid var(--line);padding:18px 0;}
   .footer-about{flex-basis:100%;padding:18px 0;}
+  .siapa-grid{grid-template-columns:1fr;}
+  .visimisi-grid{grid-template-columns:1fr;gap:36px;}
+  .alamat-grid{grid-template-columns:1fr;}
+  .why-grid{grid-template-columns:repeat(2,1fr);}
 }
 @media (max-width:640px){
+  .why-grid{grid-template-columns:1fr;}
+  .map-card{position:static;max-width:none;margin-top:14px;}
+  .map-btn{position:static;margin-top:12px;}
+  .alamat-map{display:flex;flex-direction:column;}
   .header-row{flex-wrap:wrap;}
   .location-pill{order:3;}
   .search-bar{order:4;flex-basis:100%;}

@@ -2,6 +2,7 @@
 // (logo + photo + label already composed in the image itself).
 function buildCarousel(id, count, imgSrc, name) {
   const el = document.getElementById(id);
+  if (!el) return;
   let html = "";
   for (let i = 0; i < count; i++) {
     html += `
