@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calsprint — Cetak Spanduk Banner Mulai Rp 20.000/Meter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== Top utility bar ===== -->
+<div class="topbar">
+  <div class="container">
+    <div class="follow">
+      <span>Ikuti Kami di:</span>
+      <a class="ic-outline" href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>
+      </a>
+      <a class="ic-outline" href="#" aria-label="TikTok">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 2h-3.2v13.4a3 3 0 1 1-2.1-2.86v-3.3a6.2 6.2 0 1 0 5.3 6.16V8.9a7.6 7.6 0 0 0 4.6 1.56V7.3a4.4 4.4 0 0 1-4.6-4.1V2z"/></svg>
+      </a>
+    </div>
+    <div class="links">
+      <a href="#">Cara Order</a>
+      <span class="sep">|</span>
+      <a href="#">Karir</a>
+      <span class="sep">|</span>
+      <a href="#">FAQ</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Header ===== -->
+<header class="site-header">
+  <div class="container header-row">
+    <a href="#" class="brand">
+      <img class="brand-logo" src="images/logo-calsprint.png" alt="Calsprint">
+    </a>
+
+    <button class="pill-field location-pill">
+      <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+      Tangerang
+    </button>
+
+    <form class="pill-field search-bar" role="search" onsubmit="return false;">
+      <input type="text" placeholder="Mau Cetak Apa?">
+      <button type="submit" aria-label="Cari">
+        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19l-5-5zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>
+      </button>
+    </form>
+
+    <div class="header-actions">
+      <a class="icon-plain" href="#" aria-label="Email">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.01L12 12l8-5.99V6H4zm16 12V8.24l-8 6-8-6V18h16z"/></svg>
+      </a>
+      <a class="btn-whatsapp" href="https://wa.me/6287840233772" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.34A10 10 0 1 0 12 2zm0 18.2a8.16 8.16 0 0 1-4.16-1.14l-.3-.18-3.02.8.81-2.94-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.13c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3-.02-.46-.02s-.42.06-.64.3c-.22.24-.85.83-.85 2.02 0 1.19.87 2.34 1 2.5.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/></svg>
+        <span>Chat us on WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Category nav ===== -->
+<nav class="catnav">
+  <div class="container">
+    <div class="category-wrap">
+      <button class="pick" id="categoryToggle" aria-expanded="false" aria-controls="categoryDropdown">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+        Pilih Kategori
+      </button>
+
+      <div class="category-dropdown" id="categoryDropdown">
+        <div class="dropdown-head">
+          <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+          Pilih Kategori
+        </div>
+        <ul class="dropdown-list">
+          <li>
+            <a href="#">
+              <span class="dd-icon"><img src="images/category-icons/voucher.png" alt=""></span>
+              <span class="dd-label">Voucher</span>
+              <svg class="dd-chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="dd-icon"><img src="images/category-icons/packaging.png" alt=""></span>
+              <span class="dd-label">Packaging</span>
+              <svg class="dd-chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="dd-icon"><img src="images/category-icons/stickers.png" alt=""></span>
+              <span class="dd-label">Stickers</span>
+              <svg class="dd-chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="dd-icon"><img src="images/category-icons/brochure.png" alt=""></span>
+              <span class="dd-label">Brochure</span>
+              <svg class="dd-chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="dd-icon"><img src="images/category-icons/office-print.png" alt=""></span>
+              <span class="dd-label">Office Print</span>
+              <svg class="dd-chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="dd-icon"><img src="images/category-icons/merchandise.png" alt=""></span>
+              <span class="dd-label">Merchandise</span>
+              <svg class="dd-chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="dd-icon"><img src="images/category-icons/signage-banner.png" alt=""></span>
+              <span class="dd-label">Signgage &amp; Banner</span>
+              <svg class="dd-chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <a href="#">Beranda</a>
+    <a href="#tentang">Tentang Kami</a>
+    <a href="#promo">Promo</a>
+    <a href="#portofolio">Portofolio</a>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-card">
+      <div class="hero-slider" id="heroSlider">
+        <div class="hero-track" id="heroTrack">
+          <div class="hero-slide">
+            <img class="hero-img" src="images/hero-banner.png" alt="Cetak Spanduk Banner — mulai dari Rp 20.000 per meter. Flexi, Albatroz. X Banner, Roll Up Banner, Aneka Spanduk.">
+            <a class="hero-wa-overlay" href="https://wa.me/6287840233772" target="_blank" rel="noopener" aria-label="Chat WhatsApp Order 0878 4023 3772"></a>
+          </div>
+          <div class="hero-slide">
+            <img class="hero-img" src="images/hero-banner-2.png" alt="Cetak Voucher Jilid — Numerator + Perforasi, tanpa ribet!">
+          </div>
+          <div class="hero-slide">
+            <img class="hero-img" src="images/hero-banner-3.png" alt="Banner promo ketiga — placeholder, ganti dengan banner Anda">
+          </div>
+        </div>
+      </div>
+
+      <button class="hero-arrow prev" onclick="heroPrev()" aria-label="Banner sebelumnya">
+        <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="hero-arrow next" onclick="heroNext()" aria-label="Banner berikutnya">
+        <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="hero-dots" id="heroDots"></div>
+  </div>
+</section>
+
+<!-- ===== Produk Pilihan ===== -->
+<section class="section on-navy">
+  <div class="container">
+    <div class="section-head">
+      <h2>Produk Pilihan</h2>
+      <span class="dots"></span>
+      <a class="see-all" href="#">Lihat Semua
+        <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="carousel-wrap">
+      <button class="scroll-btn prev" onclick="scrollCarousel('produk',-1)" aria-label="Sebelumnya">
+        <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="carousel" id="produk"></div>
+      <button class="scroll-btn next" onclick="scrollCarousel('produk',1)" aria-label="Berikutnya">
+        <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Stickers ===== -->
+<section class="section on-navy no-top">
+  <div class="container">
+    <div class="section-head">
+      <h2>Stickers</h2>
+      <span class="dots"></span>
+      <a class="see-all" href="#">Lihat Semua
+        <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="carousel-wrap">
+      <button class="scroll-btn prev" onclick="scrollCarousel('stickers',-1)" aria-label="Sebelumnya">
+        <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="carousel" id="stickers"></div>
+      <button class="scroll-btn next" onclick="scrollCarousel('stickers',1)" aria-label="Berikutnya">
+        <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Feature strip ===== -->
+<section class="feature-strip">
+  <div class="container feature-grid">
+    <div class="feature-card">
+      <span class="ic"><img src="images/icon-proses-cepat.png" alt=""></span>
+      <div>
+        <h4>Proses Cepat</h4>
+        <p>Proses produksi cepat kejar deadline.</p>
+      </div>
+    </div>
+    <div class="feature-card">
+      <span class="ic"><img src="images/icon-harga-fleksibel.png" alt=""></span>
+      <div>
+        <h4>Harga Fleksibel</h4>
+        <p>Bisa nego dan menyesuaikan budget.</p>
+      </div>
+    </div>
+    <div class="feature-card">
+      <span class="ic"><img src="images/icon-kirim.png" alt=""></span>
+      <div>
+        <h4>Kirim ke Mana Saja</h4>
+        <p>Melayani berbagai pilihan ekspedisi.</p>
+      </div>
+    </div>
+    <div class="feature-card">
+      <span class="ic"><img src="images/icon-support-b2b.png" alt=""></span>
+      <div>
+        <h4>Support B2B &amp; UMKM</h4>
+        <p>Harga khusus untuk pesanan banyak.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer id="tentang">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h5>Kategori Produk</h5>
+      <ul>
+        <li><a href="#">Voucher</a></li>
+        <li><a href="#">Packaging</a></li>
+        <li><a href="#">Stickers</a></li>
+        <li><a href="#">Brochure</a></li>
+        <li><a href="#">Office Print</a></li>
+        <li><a href="#">Merchandise</a></li>
+        <li><a href="#">Signgage &amp; Banner</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Layanan Pelanggan</h5>
+      <ul>
+        <li><a href="#">Syarat &amp; Ketentuan</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Hubungi Kami</a></li>
+        <li><a href="#">Jam Operasional</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Tentang Kami</h5>
+      <ul>
+        <li><a href="#">Profil Perusahaan</a></li>
+        <li><a href="#" id="portofolio">Cabang &amp; Lokasi</a></li>
+        <li><a href="#">Karir</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-about">
+      <a href="#" class="brand">
+        <img class="brand-logo" src="images/logo-calsprint.png" alt="Calsprint">
+      </a>
+      <p><b>Calsprint</b> adalah layanan digital printing online yang siap memenuhi berbagai kebutuhan cetak Anda. Melayani UMKM hingga kebutuhan B2B, dengan pilihan pengiriman ke berbagai daerah di Indonesia.</p>
+      <h6>Ikuti Kami</h6>
+      <div class="footer-social">
+        <a href="#" aria-label="TikTok">
+          <svg viewBox="0 0 24 24"><path fill="#fff" d="M16.6 2h-3.2v13.4a3 3 0 1 1-2.1-2.86v-3.3a6.2 6.2 0 1 0 5.3 6.16V8.9a7.6 7.6 0 0 0 4.6 1.56V7.3a4.4 4.4 0 0 1-4.6-4.1V2z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="#fff"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-strip">
+    <div class="container ship-pay-row">
+      <div class="ship-pay">
+        <span class="lbl">Jasa Pengiriman</span>
+        <div class="logos">
+          <img class="badge-img" src="images/jne.png" alt="JNE">
+          <img class="badge-img" src="images/lion-parcel.png" alt="Lion Parcel">
+          <img class="badge-img" src="images/gosend.png" alt="GoSend">
+          <img class="badge-img" src="images/grabexpress.png" alt="GrabExpress">
+          <img class="badge-img" src="images/lalamove.png" alt="Lalamove">
+        </div>
+      </div>
+      <div class="ship-pay align-right">
+        <span class="lbl">Metode Pembayaran</span>
+        <div class="logos">
+          <img class="badge-img" src="images/bca.png" alt="BCA">
+          <img class="badge-img" src="images/qris.png" alt="QRIS">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">Copyright © CV Lokal Jaya Cemerlang. All rights reserved.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
