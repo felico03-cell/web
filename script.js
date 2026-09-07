@@ -68,6 +68,31 @@ buildHeroDots();
 
 
 
+// ===== Semua Produk grid (placeholder cards) =====
+const produkGridEl = document.getElementById('produkGrid');
+if (produkGridEl) {
+  const tmpIcon = `
+    <svg viewBox="0 0 100 120" fill="none" stroke="#1b2d69" stroke-width="4">
+      <path d="M15 8h50l20 20v84a4 4 0 0 1-4 4H15a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4z" stroke-linejoin="round"/>
+      <path d="M65 8v20h20" stroke-linejoin="round"/>
+      <text x="50" y="80" font-family="Poppins, sans-serif" font-size="22" font-weight="800" text-anchor="middle" fill="#1b2d69" stroke="none">TMP</text>
+    </svg>`;
+  let html = '';
+  for (let i = 0; i < 11; i++) {
+    html += `
+      <div class="prod-card">
+        <div class="prod-thumb prod-thumb-placeholder">${tmpIcon}</div>
+        <div class="prod-body">
+          <h3 class="prod-name">Produk</h3>
+          <div class="prod-rating"><span class="stars">★★★★★</span> <span class="count">(5)</span></div>
+          <div class="prod-price">Rp -</div>
+        </div>
+      </div>
+    `;
+  }
+  produkGridEl.insertAdjacentHTML('beforeend', html);
+}
+
 // ===== Category dropdown =====
 const categoryToggleBtn = document.getElementById('categoryToggle');
 const categoryDropdownEl = document.getElementById('categoryDropdown');
