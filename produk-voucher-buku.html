@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Semua Produk — Calsprint</title>
+<title>Voucher - Voucher Jilid Buku — Calsprint</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -181,106 +181,73 @@
   </div>
 </nav>
 
-<!-- ===== Page heading / breadcrumb ===== -->
-<div class="produk-head">
+<!-- ===== Product hero / breadcrumb ===== -->
+<div class="product-hero">
   <div class="container produk-head-row">
-    <h1>Semua Produk</h1>
+    <h1>Voucher - Voucher Jilid Buku</h1>
     <div class="breadcrumb">
       <svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3l9-8z"/></svg>
       <a href="index.html">Beranda</a>
       <svg class="chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Semua Produk</span>
+      <a href="semua-produk.html">Semua Produk</a>
+      <svg class="chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Detail</span>
     </div>
   </div>
 </div>
 
-<!-- ===== Semua Produk: sidebar + grid ===== -->
-<section class="produk-section">
-  <div class="container produk-layout">
+<!-- ===== Product detail ===== -->
+<section class="product-detail">
+  <div class="container product-detail-grid">
 
-    <!-- Sidebar -->
-    <aside class="produk-sidebar">
-      <div class="sidebar-title">
-        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
-        Kategori Produk
+    <!-- Gallery -->
+    <div class="product-gallery">
+      <img id="galleryImg" src="images/produkpage-voucher-buku-1.png" alt="Voucher Jilid Buku">
+      <button class="gallery-hit prev" aria-label="Foto sebelumnya"></button>
+      <button class="gallery-hit next" aria-label="Foto berikutnya"></button>
+    </div>
+
+    <!-- Info -->
+    <div class="product-info">
+      <h1>Voucher - Voucher Jilid Buku</h1>
+      <div class="prod-rating"><span class="stars">★★★★★</span> <span class="count">(5)</span></div>
+
+      <div class="share-row">
+        <span class="lbl">Bagikan:</span>
+        <div class="share-btns">
+          <a class="share-btn" href="#" aria-label="Salin tautan">
+            <img src="images/icon-link-color.png" alt="">
+          </a>
+          <a class="share-btn" href="#" aria-label="Bagikan ke Instagram">
+            <img src="images/instagram-icon-color.png" alt="">
+          </a>
+          <a class="share-btn" href="https://wa.me/6287840233772" target="_blank" rel="noopener" aria-label="Bagikan ke WhatsApp">
+            <img src="images/whatsapp-icon-color.png" alt="">
+          </a>
+          <a class="share-btn" href="#" aria-label="Bagikan ke TikTok">
+            <img src="images/tiktok-icon-color.png" alt="">
+          </a>
+        </div>
       </div>
-      <ul class="cat-side-list">
-        <li><a href="semua-produk.html" class="active">
-          <span class="cat-ico cat-ico-svg"><img src="images/semua-produk-icon.png" alt=""></span>
-          Semua Produk
-        </a></li>
-        <li><a href="#">
-          <img class="cat-ico" src="images/category-icons/voucher.png" alt="">
-          Voucher &amp; Ticket
-        </a></li>
-        <li><a href="#">
-          <img class="cat-ico" src="images/category-icons/brochure.png" alt="">
-          Brochures
-        </a></li>
-        <li><a href="#">
-          <img class="cat-ico" src="images/category-icons/stickers.png" alt="">
-          Sticker Label
-        </a></li>
-        <li><a href="#">
-          <img class="cat-ico" src="images/category-icons/packaging.png" alt="">
-          Packaging
-        </a></li>
-        <li><a href="#">
-          <span class="cat-ico cat-ico-svg"><img src="images/booklet-icon.png" alt=""></span>
-          Booklet
-        </a></li>
-        <li><a href="#">
-          <span class="cat-ico cat-ico-svg"><img src="images/calendar-icon.png" alt=""></span>
-          Calendars
-        </a></li>
-        <li><a href="#">
-          <span class="cat-ico cat-ico-svg"><img src="images/card-icon.png" alt=""></span>
-          Cards
-        </a></li>
-        <li><a href="#">
-          <span class="cat-ico cat-ico-svg"><img src="images/apparel-icon.png" alt=""></span>
-          Apparel
-        </a></li>
-        <li><a href="#">
-          <img class="cat-ico" src="images/category-icons/merchandise.png" alt="">
-          Merchandise
-        </a></li>
-        <li><a href="#">
-          <img class="cat-ico" src="images/category-icons/signage-banner.png" alt="">
-          Signage &amp; display
-        </a></li>
-        <li><a href="#">
-          <img class="cat-ico" src="images/category-icons/office-print.png" alt="">
-          Office
-        </a></li>
+
+      <div class="spec-head">
+        <img src="images/info-icon-primary-color.png" alt="">
+        <span>Spesifikasi Produk</span>
+      </div>
+      <ul class="spec-list">
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
       </ul>
-    </aside>
 
-    <!-- Product grid -->
-    <div class="produk-grid-wrap">
-      <div class="produk-grid" id="produkGrid">
-        <a class="prod-card" href="produk-voucher-buku.html">
-          <div class="prod-thumb"><img src="images/produk-voucher.jpg" alt="Voucher Buku"></div>
-          <div class="prod-body">
-            <h3 class="prod-name">Voucher Buku</h3>
-            <div class="prod-rating"><span class="stars">★★★★★</span> <span class="count">(5)</span></div>
-            <div class="prod-price">Rp -</div>
-          </div>
-        </a>
-      </div>
-
-      <div class="pagination" id="pagination">
-        <button class="page-arrow" aria-label="Halaman sebelumnya">
-          <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <button class="page-num active">1</button>
-        <button class="page-num">2</button>
-        <button class="page-num">3</button>
-        <span class="page-dots">...</span>
-        <button class="page-num">10</button>
-        <button class="page-arrow" aria-label="Halaman berikutnya">
-          <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
+      <div class="color-notice">
+        <img class="ic" src="images/info-icon-secondary-color.png" alt="">
+        <div>
+          <h4>Catatan Penting Mengenai Warna</h4>
+          <p>Warna pada hasil cetak dapat sedikit berbeda dengan tampilan di layar. Hal ini wajar karena layar menggunakan sistem warna RGB (Red, Green, Blue) berbasis cahaya, sedangkan proses pencetakan menggunakan tinta dengan sistem CMYK (Cyan, Magenta, Yellow, Black).</p>
+          <p>Tim kami akan selalu berupaya memastikan hasil cetak tetap optimal dan memenuhi standar kualitas terbaik.</p>
+        </div>
       </div>
     </div>
 
