@@ -213,8 +213,33 @@ header.site-header{padding:18px 0;background:#fff;}
 .scroll-btn.prev{left:-8px;}
 .scroll-btn.next{right:-8px;}
 
+/* ===== Kategori CTA ===== */
+.cat-cta-grid{display:flex;gap:16px;flex-wrap:wrap;}
+.cat-cta-card{
+  flex:1 1 220px;border-radius:14px;padding:22px 22px 20px;
+  display:flex;flex-direction:column;justify-content:space-between;gap:26px;
+  min-height:120px;
+}
+.cat-cta-card h3{font-size:19px;font-weight:800;}
+.cat-cta-card.navy{background:var(--navy);}
+.cat-cta-card.navy h3{color:#fff;}
+.cat-cta-card.orange{background:var(--orange);}
+.cat-cta-card.orange h3{color:#fff;}
+.cat-cta-card.grey{background:#e7e9f0;}
+.cat-cta-card.grey h3{color:var(--navy);}
+.cat-cta-card.yellow{background:var(--yellow);}
+.cat-cta-card.yellow h3{color:var(--navy);}
+.cat-cta-btn{
+  align-self:flex-start;background:#fff;color:var(--navy);
+  font-size:13px;font-weight:700;padding:9px 14px;border-radius:999px;
+  display:flex;align-items:center;gap:4px;
+}
+.cat-cta-btn svg{width:15px;height:15px;}
+.cat-cta-card:hover .cat-cta-btn{background:var(--navy);color:#fff;}
+
+
 /* ===== Feature strip ===== */
-.feature-strip{background:var(--orange);padding:26px 0;}
+.feature-strip{background:#ECEFF6;padding:26px 0;}
 .feature-grid{display:flex;gap:16px;flex-wrap:wrap;}
 .feature-grid .feature-card{flex:1 1 240px;}
 .feature-card{
