@@ -237,6 +237,7 @@ header.site-header{padding:18px 0;background:#fff;}
 }
 .cat-cta-btn svg{width:15px;height:15px;}
 .cat-cta-card:hover .cat-cta-btn{background:var(--navy);color:#fff;}
+.cat-cta-card.navy:hover .cat-cta-btn{background:#FB531C;color:#fff;}
 
 
 /* ===== Feature strip ===== */
