@@ -19,7 +19,7 @@ buildCarousel('stickers', 6, 'images/calendar-a6.png', 'Calendar A6');
 
 function scrollCarousel(id, dir) {
   const el = document.getElementById(id);
-  const card = el.querySelector('.card');
+  const card = el.firstElementChild;
   const step = card ? card.getBoundingClientRect().width + 18 : 220;
   el.scrollBy({ left: dir * step * 2, behavior: 'smooth' });
 }
@@ -104,6 +104,31 @@ if (produkGridEl) {
     `;
   }
   produkGridEl.insertAdjacentHTML('beforeend', html);
+}
+
+// ===== Mobile off-canvas menu =====
+const mobileMenuEl = document.getElementById('mobileMenu');
+const mobileMenuToggleBtn = document.getElementById('mobileMenuToggle');
+const mobileMenuCloseBtn = document.getElementById('mobileMenuClose');
+const mobileMenuBackdropEl = document.getElementById('mobileMenuBackdrop');
+
+if (mobileMenuEl && mobileMenuToggleBtn) {
+  const openMobileMenu = () => {
+    mobileMenuEl.classList.add('open');
+    mobileMenuToggleBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  };
+  const closeMobileMenu = () => {
+    mobileMenuEl.classList.remove('open');
+    mobileMenuToggleBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  };
+  mobileMenuToggleBtn.addEventListener('click', openMobileMenu);
+  mobileMenuCloseBtn?.addEventListener('click', closeMobileMenu);
+  mobileMenuBackdropEl?.addEventListener('click', closeMobileMenu);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMobileMenu();
+  });
 }
 
 // ===== Category dropdown =====
