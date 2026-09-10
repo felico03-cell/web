@@ -71,14 +71,16 @@ buildHeroDots();
 // ===== Product detail gallery =====
 const galleryImgEl = document.getElementById('galleryImg');
 if (galleryImgEl) {
-  const gallerySlides = ['images/produkpage-voucher-buku-1.png', 'images/produkpage-voucher-buku-2.png'];
-  let gallerySlideIndex = 0;
-  const showGallerySlide = (i) => {
-    gallerySlideIndex = (i + gallerySlides.length) % gallerySlides.length;
-    galleryImgEl.src = gallerySlides[gallerySlideIndex];
-  };
-  document.querySelector('.gallery-hit.prev')?.addEventListener('click', () => showGallerySlide(gallerySlideIndex - 1));
-  document.querySelector('.gallery-hit.next')?.addEventListener('click', () => showGallerySlide(gallerySlideIndex + 1));
+  const gallerySlides = (galleryImgEl.dataset.gallery || '').split(',').map(s => s.trim()).filter(Boolean);
+  if (gallerySlides.length) {
+    let gallerySlideIndex = 0;
+    const showGallerySlide = (i) => {
+      gallerySlideIndex = (i + gallerySlides.length) % gallerySlides.length;
+      galleryImgEl.src = gallerySlides[gallerySlideIndex];
+    };
+    document.querySelector('.gallery-hit.prev')?.addEventListener('click', () => showGallerySlide(gallerySlideIndex - 1));
+    document.querySelector('.gallery-hit.next')?.addEventListener('click', () => showGallerySlide(gallerySlideIndex + 1));
+  }
 }
 
 // ===== Semua Produk grid (placeholder cards) =====
