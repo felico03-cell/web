@@ -355,7 +355,8 @@ footer{background:#fff;padding-top:44px;}
 .alamat-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;text-align:left;align-items:start;}
 .alamat-info-item{display:flex;align-items:flex-start;gap:16px;margin-bottom:36px;}
 .alamat-info-item:last-child{margin-bottom:0;}
-.alamat-info-item img{width:38px;height:38px;flex-shrink:0;margin-top:2px;}
+.alamat-info-item img,
+.alamat-info-item svg{width:38px;height:38px;flex-shrink:0;margin-top:2px;color:var(--navy);}
 .alamat-info-item h4{font-size:19px;font-weight:700;color:#151830;margin-bottom:8px;}
 .alamat-info-item p{font-size:14.5px;color:#4a4d66;line-height:1.6;}
 .alamat-map{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 12px 34px rgba(27,45,105,.18);}
@@ -379,6 +380,54 @@ footer{background:#fff;padding-top:44px;}
 .why-card img{width:70px;height:70px;margin:0 auto 20px;}
 .why-card h4{font-size:16px;font-weight:800;color:#151830;margin-bottom:10px;}
 .why-card p{font-size:13.5px;color:#4a4d66;line-height:1.6;}
+
+/* ===== Cara Order: intro ===== */
+.order-intro{padding:44px 0 8px;text-align:center;}
+.order-intro p{max-width:680px;margin:0 auto 8px;font-size:15px;color:#4a4d66;line-height:1.7;}
+
+/* ===== Cara Order: steps ===== */
+.order-steps{padding:40px 0 56px;}
+.order-step{display:grid;grid-template-columns:64px 1fr;gap:22px;position:relative;padding-bottom:44px;}
+.order-step:last-child{padding-bottom:0;}
+.order-step:not(:last-child)::before{
+  content:'';position:absolute;left:31px;top:64px;bottom:0;width:2px;
+  background:var(--line);
+}
+.order-step-num{
+  width:64px;height:64px;border-radius:50%;flex-shrink:0;z-index:1;
+  background:var(--orange);color:#fff;font-family:'Poppins',sans-serif;
+  font-size:24px;font-weight:800;display:flex;align-items:center;justify-content:center;
+}
+.order-step-body{padding-top:8px;}
+.order-step-body h3{font-size:19px;font-weight:800;color:var(--navy);margin-bottom:10px;}
+.order-step-body p{font-size:14.5px;color:#4a4d66;line-height:1.8;margin-bottom:12px;}
+.order-step-body p:last-child{margin-bottom:0;}
+.order-step-label{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:10px;}
+.order-checklist{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;margin-bottom:14px;}
+.order-checklist li{display:flex;align-items:flex-start;gap:8px;font-size:14px;color:#333650;line-height:1.5;}
+.order-checklist li::before{content:'✓';color:var(--orange);font-weight:800;flex-shrink:0;}
+.order-plain-list{list-style:none;margin-bottom:14px;}
+.order-plain-list li{position:relative;padding-left:18px;font-size:14.5px;color:#4a4d66;line-height:1.7;margin-bottom:6px;}
+.order-plain-list li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--orange);}
+.order-note{background:var(--field-bg);border-left:4px solid var(--orange);border-radius:10px;padding:14px 16px;font-size:13.5px;color:#4a4d66;line-height:1.7;margin-bottom:12px;}
+.order-note:last-child{margin-bottom:0;}
+
+/* ===== Cara Order: bantuan CTA ===== */
+.order-help{
+  background:linear-gradient(135deg,var(--navy-2) 0%,var(--navy) 55%,var(--blue-mid) 100%);
+  border-radius:20px;padding:44px;text-align:center;color:#fff;
+}
+.order-help h2{font-size:24px;font-weight:800;margin-bottom:12px;color:#fff;}
+.order-help p{font-size:14.5px;color:#dfe4f5;max-width:560px;margin:0 auto 22px;line-height:1.7;}
+.order-help .btn-whatsapp{display:inline-flex;background:var(--orange);}
+.order-help .btn-whatsapp:hover{background:var(--orange-2);}
+
+/* ===== Cara Order: hubungi & jam operasional ===== */
+.order-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;text-align:left;align-items:start;}
+.order-hours table{width:100%;border-collapse:collapse;}
+.order-hours td{padding:9px 0;font-size:14px;color:#4a4d66;border-bottom:1px solid var(--line);}
+.order-hours td:first-child{font-weight:700;color:#151830;}
+.order-hours td:last-child{text-align:right;}
 
 /* ===== Semua Produk: page head ===== */
 .produk-head{background:#fff;border-bottom:1px solid var(--line);padding:18px 0;}
@@ -608,6 +657,13 @@ footer{background:#fff;padding-top:44px;}
   .ship-pay.align-right{align-items:flex-start;}
   .produk-grid{grid-template-columns:repeat(2,1fr);gap:14px;}
   .produk-head-row{flex-direction:column;align-items:flex-start;}
+
+  .order-checklist{grid-template-columns:1fr;}
+  .order-step{grid-template-columns:48px 1fr;gap:14px;}
+  .order-step-num{width:48px;height:48px;font-size:18px;}
+  .order-step:not(:last-child)::before{left:23px;top:48px;}
+  .order-help{padding:32px 20px;}
+  .order-contact-grid{grid-template-columns:1fr;gap:32px;}
 
   .desktop-only-section{display:none;}
   .mobile-topbar{display:flex;}
