@@ -314,6 +314,10 @@ footer{background:#fff;padding-top:44px;}
   background:linear-gradient(135deg,var(--navy-2) 0%,var(--navy) 55%,var(--blue-mid) 100%);
   padding:56px 0;text-align:center;color:#fff;
 }
+.about-hero.with-photo{
+  background:linear-gradient(rgba(15,26,64,.68),rgba(15,26,64,.58)), url('images/tentang-kami-picture.png') center/cover no-repeat;
+  padding:110px 0;
+}
 .about-hero-badge{
   display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:22px;
 }
@@ -324,6 +328,7 @@ footer{background:#fff;padding-top:44px;}
 .about-hero-badge .icon-circle svg{width:30px;height:30px;}
 .about-hero h1{font-size:32px;font-style:italic;font-weight:800;}
 .about-hero p{font-size:17px;color:#dfe4f5;}
+.about-hero-logo{height:92px;width:auto;margin:0 auto 22px;display:block;}
 
 /* ===== About: Siapa Kami ===== */
 .siapa-section{padding:56px 0;}
@@ -341,12 +346,18 @@ footer{background:#fff;padding-top:44px;}
 .siapa-card img{width:64px;height:64px;}
 
 /* ===== About: Visi & Misi ===== */
-.visimisi-section{background:var(--field-bg);padding:56px 0;}
-.visimisi-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+.visimisi-section{background:var(--field-bg);padding:48px 0;}
+.visimisi-row{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:center;}
+.visimisi-row.reverse .visimisi-item{order:2;}
+.visimisi-row.reverse .visimisi-photo{order:1;}
 .visimisi-item .head{display:flex;align-items:center;gap:16px;margin-bottom:16px;}
 .visimisi-item .head img{width:56px;height:56px;flex-shrink:0;}
 .visimisi-item .head h3{font-size:22px;font-weight:700;color:var(--navy);}
 .visimisi-item p{font-size:14.5px;color:#4a4d66;line-height:1.8;}
+.visimisi-photo img{
+  width:100%;height:400px;object-fit:cover;display:block;
+  border-radius:16px;box-shadow:0 12px 34px rgba(27,45,105,.16);
+}
 
 /* ===== About: Alamat Kami ===== */
 .alamat-section{padding:56px 0;text-align:center;}
@@ -638,7 +649,11 @@ footer{background:#fff;padding-top:44px;}
   .footer-col{flex-basis:45%;border-right:none;border-bottom:1px solid var(--line);padding:18px 0;}
   .footer-about{flex-basis:100%;padding:18px 0;}
   .siapa-grid{grid-template-columns:1fr;}
-  .visimisi-grid{grid-template-columns:1fr;gap:36px;}
+  .visimisi-row{grid-template-columns:1fr;gap:28px;}
+  .visimisi-row.reverse .visimisi-item,
+  .visimisi-row.reverse .visimisi-photo{order:initial;}
+  .visimisi-photo img{height:280px;}
+  .about-hero.with-photo{padding:80px 0;}
   .alamat-grid{grid-template-columns:1fr;}
   .why-grid{grid-template-columns:repeat(2,1fr);}
   .produk-layout{grid-template-columns:1fr;}
