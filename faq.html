@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — Calsprint</title>
+<link rel="icon" type="image/png" href="images/logo-calsprint-notext.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== Top utility bar ===== -->
+<div class="topbar">
+  <div class="container">
+    <div class="follow">
+      <span>Ikuti Kami di:</span>
+      <a class="ic-outline" href="https://www.instagram.com/cals.print/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>
+      </a>
+      <a class="ic-outline" href="https://www.tiktok.com/@cals.print" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 2h-3.2v13.4a3 3 0 1 1-2.1-2.86v-3.3a6.2 6.2 0 1 0 5.3 6.16V8.9a7.6 7.6 0 0 0 4.6 1.56V7.3a4.4 4.4 0 0 1-4.6-4.1V2z"/></svg>
+      </a>
+    </div>
+    <div class="links">
+      <a href="cara-order.html">Cara Order</a>
+      <span class="sep">|</span>
+      <a href="#" class="karir-trigger">Karir</a>
+      <span class="sep">|</span>
+      <a href="faq.html">FAQ</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Header ===== -->
+<header class="site-header">
+  <div class="container header-row">
+    <a href="index.html" class="brand">
+      <img class="brand-logo" src="images/logo-calsprint.png" alt="Calsprint">
+    </a>
+
+    <button class="pill-field location-pill">
+      <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+      Tangerang
+    </button>
+
+    <form class="pill-field search-bar" role="search" onsubmit="return false;">
+      <input type="text" placeholder="Mau Cetak Apa?">
+      <button type="submit" aria-label="Cari">
+        <img class="search-icon" src="images/search-icon.png" alt="">
+      </button>
+    </form>
+
+    <div class="header-actions">
+      <a class="icon-plain email-trigger" href="#" aria-label="Email">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.01L12 12l8-5.99V6H4zm16 12V8.24l-8 6-8-6V18h16z"/></svg>
+      </a>
+      <a class="btn-whatsapp" href="https://wa.me/6287840233772" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.34A10 10 0 1 0 12 2zm0 18.2a8.16 8.16 0 0 1-4.16-1.14l-.3-.18-3.02.8.81-2.94-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.13c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3-.02-.46-.02s-.42.06-.64.3c-.22.24-.85.83-.85 2.02 0 1.19.87 2.34 1 2.5.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/></svg>
+        <span>Chat us on WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Category nav ===== -->
+<nav class="catnav">
+  <div class="container">
+    <div class="category-wrap">
+      <button class="pick" id="categoryToggle" aria-expanded="false" aria-controls="categoryDropdown">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+        Pilih Kategori
+      </button>
+
+      <div class="category-dropdown" id="categoryDropdown">
+        <div class="cat-grid">
+          <div class="cat-col">
+            <div class="cat-thumb"><img src="images/produk-voucher-dropdown.jpg" alt="Voucher &amp; Ticket"></div>
+            <h4 class="cat-title">Voucher &amp; Ticket</h4>
+            <ul class="cat-links">
+              <li><a href="#">Vouchers</a></li>
+              <li><a href="#">Tickets</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"></div>
+            <h4 class="cat-title">Brochures</h4>
+            <ul class="cat-links">
+              <li><a href="#">Flyers</a></li>
+              <li><a href="#">Leaflets</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"></div>
+            <h4 class="cat-title">Sticker Label</h4>
+            <ul class="cat-links">
+              <li><a href="#">Sticker Die Cut</a></li>
+              <li><a href="#">Sticker A3+</a></li>
+              <li><a href="#">Custom Request</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"></div>
+            <h4 class="cat-title">Packaging</h4>
+            <ul class="cat-links">
+              <li><a href="#">Hang Tag</a></li>
+              <li><a href="#">Food Box</a></li>
+              <li><a href="#">Custom Packaging</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"></div>
+            <h4 class="cat-title">Booklet</h4>
+            <ul class="cat-links">
+              <li><a href="#">Booklet</a></li>
+              <li><a href="#">Spiral Book</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"></div>
+            <h4 class="cat-title">Calendars</h4>
+            <ul class="cat-links">
+              <li><a href="#">Standard Calendar</a></li>
+              <li><a href="produk-kalender.html">Corporate Calendar</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"></div>
+            <h4 class="cat-title">Cards</h4>
+            <ul class="cat-links">
+              <li><a href="#">Greeting Card</a></li>
+              <li><a href="#">Loyalty Card</a></li>
+              <li><a href="#">Business Card</a></li>
+              <li><a href="#">Payment Card</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"></div>
+            <h4 class="cat-title">Apparel</h4>
+            <ul class="cat-links">
+              <li><a href="#">T-Shirt</a></li>
+              <li><a href="#">Printed Bag</a></li>
+              <li><a href="#">Baseball Cap</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"></div>
+            <h4 class="cat-title">Merchandise</h4>
+            <ul class="cat-links">
+              <li><a href="#">Keychain</a></li>
+              <li><a href="#">Mug</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"></div>
+            <h4 class="cat-title">Signage &amp; display</h4>
+            <ul class="cat-links">
+              <li><a href="#">Banner</a></li>
+              <li><a href="#">Standing Banner</a></li>
+              <li><a href="#">Posters</a></li>
+              <li><a href="#">Standing Improraboard</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"></div>
+            <h4 class="cat-title">Office</h4>
+            <ul class="cat-links">
+              <li><a href="#">Buku Nota Surat Jalan</a></li>
+              <li><a href="#">Kop Surat</a></li>
+              <li><a href="#">Amplop</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="index.html">Beranda</a>
+    <a href="semua-produk.html">Semua Produk</a>
+    <a href="tentang-kami.html">Tentang Kami</a>
+    <a href="index.html#promo">Promo</a>
+    <a href="index.html#portofolio">Portofolio</a>
+  </div>
+</nav>
+
+<!-- ===== FAQ headline banner ===== -->
+<section class="about-hero">
+  <div class="container">
+    <div class="about-hero-badge">
+      <span class="icon-circle icon-circle-img">
+        <img src="images/qmark-icon.png" alt="">
+      </span>
+      <h1>FAQ</h1>
+    </div>
+    <p>Frequently Asked Questions — jawaban seputar pemesanan, file cetak, produksi, hingga pengiriman di CALSPRINT.</p>
+  </div>
+</section>
+
+<!-- ===== FAQ content ===== -->
+<section class="faq-content">
+  <div class="container">
+
+    <div class="faq-category">
+      <h2 class="faq-category-title">Pemesanan</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">1. Bagaimana cara memesan produk di CALSPRINT?</summary>
+          <div class="faq-answer">
+            <p>Anda dapat melakukan pemesanan dengan menghubungi tim CALSPRINT melalui WhatsApp atau melalui channel pemesanan yang tersedia.</p>
+            <p>Informasikan produk yang ingin dicetak, spesifikasi, jumlah, dan kebutuhan finishing. Tim kami akan membantu memberikan penawaran harga dan mengarahkan proses pemesanan hingga produksi.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">2. Informasi apa saja yang perlu saya siapkan untuk melakukan pemesanan?</summary>
+          <div class="faq-answer">
+            <p>Untuk memproses pesanan, kami membutuhkan informasi seperti:</p>
+            <ul>
+              <li>Jenis produk yang ingin dicetak</li>
+              <li>Ukuran</li>
+              <li>Bahan/media</li>
+              <li>Jumlah</li>
+              <li>Finishing, jika diperlukan</li>
+              <li>File desain</li>
+              <li>Informasi pengiriman atau pengambilan</li>
+            </ul>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">3. Apakah saya bisa memesan dalam jumlah sedikit?</summary>
+          <div class="faq-answer">
+            <p>Bisa. Minimum pemesanan berbeda-beda tergantung produk dan metode produksi yang digunakan.</p>
+            <p>Untuk produk tertentu, kami dapat melayani pesanan dalam jumlah satuan maupun jumlah kecil. Untuk kebutuhan volume besar, kami juga menyediakan pilihan produksi yang lebih sesuai agar biaya per unit lebih efisien.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="faq-category">
+      <h2 class="faq-category-title">File &amp; Desain</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">4. Format file apa saja yang dapat digunakan untuk cetak?</summary>
+          <div class="faq-answer">
+            <p>Kami menyarankan file dalam format PDF untuk hasil produksi yang terbaik.</p>
+            <p>Format lain yang dapat digunakan antara lain:</p>
+            <ul>
+              <li>JPG / JPEG</li>
+              <li>PNG</li>
+              <li>CorelDraw (CDR)</li>
+            </ul>
+            <p>Untuk file JPG dan PNG mohon di perhatikan gambarnya tidak pecah untuk hasil cetak yang maksimal.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">5. Berapa resolusi file yang dianjurkan?</summary>
+          <div class="faq-answer">
+            <p>Untuk hasil cetak yang optimal, kami menyarankan resolusi file 300 DPI pada ukuran cetak sebenarnya.</p>
+            <p>Untuk file berukuran besar, kebutuhan resolusi dapat disesuaikan dengan ukuran dan jarak pandang. Pastikan juga ukuran pada approval juga sudah sesuai dengan ukuran produk yang dipesan.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">6. Mode warna apa yang sebaiknya digunakan?</summary>
+          <div class="faq-answer">
+            <p>Kami menyarankan menggunakan CMYK untuk kebutuhan cetak.</p>
+            <p>Warna pada hasil cetak dapat mengalami perbedaan setelah dikonversi dari RGB ke CMYK.</p>
+            <p>Perlu diketahui juga bahwa warna CMYK pada hasil cetak tidak selalu sama dengan tampilan di monitor, karena setiap monitor memiliki pengaturan, tingkat kecerahan, dan karakteristik warna yang berbeda.</p>
+            <p>Jika warna sangat sensitif atau harus sesuai dengan standar tertentu, sebaiknya lakukan approval terlebih dahulu sebelum produksi.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">7. Apakah CALSPRINT bisa membantu jika saya belum memiliki file siap cetak?</summary>
+          <div class="faq-answer">
+            <p>Sangat bisa. Silakan konsultasikan kebutuhan Anda kepada tim CALSPRINT.</p>
+            <p>Untuk kebutuhan desain, layanan yang tersedia dapat disesuaikan dengan tingkat kesulitan dan kebutuhan pengerjaan.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="faq-category">
+      <h2 class="faq-category-title">Produk &amp; Bahan</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">8. Produk apa saja yang dapat dicetak di CALSPRINT?</summary>
+          <div class="faq-answer">
+            <p>CALSPRINT menyediakan berbagai kebutuhan digital printing dan percetakan untuk bisnis, seperti:</p>
+            <ul>
+              <li>Brosur</li>
+              <li>Voucher</li>
+              <li>Sticker</li>
+              <li>Loyalty card</li>
+              <li>Company profile</li>
+              <li>Packaging sleeve</li>
+              <li>Calendar</li>
+              <li>Hang tag</li>
+              <li>Display catalogue box</li>
+              <li>Dan berbagai kebutuhan cetak lainnya</li>
+            </ul>
+            <p>Jika produk yang Anda butuhkan belum tercantum, silakan hubungi kami untuk mengetahui ketersediaannya.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">9. Apa saja pilihan bahan yang tersedia?</summary>
+          <div class="faq-answer">
+            <p>Pilihan bahan menyesuaikan dengan produk yang dipesan. Beberapa material yang tersedia antara lain:</p>
+            <ul>
+              <li>Art Paper</li>
+              <li>Art Carton</li>
+              <li>HVS</li>
+              <li>Cast Coat &amp; Semi Coat Stickers</li>
+              <li>Vinyl Stickers</li>
+              <li>Dan berbagai material lainnya</li>
+            </ul>
+            <p>Tim kami dapat memberikan rekomendasi bahan sesuai budget dan kebutuhan anda.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">11. Apakah CALSPRINT bisa mencetak dalam jumlah besar?</summary>
+          <div class="faq-answer">
+            <p>Sangat bisa. Kami melayani kebutuhan cetak mulai dari jumlah kecil hingga kebutuhan dengan volume besar. Untuk order dalam jumlah besar kami ada penawaran khusus.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="faq-category">
+      <h2 class="faq-category-title">Produksi</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">12. Berapa lama waktu pengerjaan pesanan?</summary>
+          <div class="faq-answer">
+            <p>Waktu pengerjaan tergantung pada:</p>
+            <ul>
+              <li>Jenis produk</li>
+              <li>Jumlah pesanan</li>
+              <li>Spesifikasi bahan</li>
+              <li>Finishing</li>
+              <li>Kondisi kapasitas produksi</li>
+            </ul>
+            <p>Untuk voucher, brosur, sticker tanpa finishing yang kompleks, dan sleeve kartu nama dengan jumlah minim, waktu pengerjaan umumnya sekitar 1-2 hari. Namun, estimasi tersebut tidak dapat dijadikan acuan pasti karena waktu pengerjaan dapat berubah tergantung kondisi antrian produksi.</p>
+            <p>Untuk kebutuhan corporate dan pesanan dengan volume besar, waktu pengerjaan umumnya sekitar 5-7 hari, tergantung jumlah pesanan, spesifikasi produk, dan kondisi antrian produksi.</p>
+            <p>Estimasi pengerjaan akan diinformasikan oleh tim kami sebelum pesanan diproses.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">13. Kapan waktu pengerjaan mulai dihitung?</summary>
+          <div class="faq-answer">
+            <p>Waktu pengerjaan mulai dihitung setelah pesanan telah dikonfirmasi, pembayaran (atau DP) telah diterima, file siap dan sudah di ACC pelanggan untuk diproduksi.</p>
+            <p>Apabila terdapat revisi file atau informasi pesanan yang belum lengkap, waktu pengerjaan dapat menyesuaikan.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">14. Apakah CALSPRINT menerima pesanan urgent?</summary>
+          <div class="faq-answer">
+            <p>Untuk kebutuhan urgent, silakan hubungi tim CALSPRINT terlebih dahulu.</p>
+            <p>Pesanan urgent akan disesuaikan dengan jenis produk, jumlah pesanan, deadline, dan kapasitas produksi yang tersedia. Biaya tambahan (mungkin) dapat berlaku untuk kebutuhan pengerjaan khusus.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">15. Apakah hasil warna cetak bisa 100% sama dengan warna di layar?</summary>
+          <div class="faq-answer">
+            <p>Tidak selalu. Warna yang terlihat pada monitor dapat berbeda dengan hasil cetak karena perbedaan antara sistem warna digital dan proses cetak.</p>
+            <p>Untuk kebutuhan yang sangat memperhatikan warna, kami menyarankan melakukan konsultasi terlebih dahulu dengan tim CALSPRINT.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="faq-category">
+      <h2 class="faq-category-title">Pembayaran &amp; Pengiriman</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">16. Bagaimana cara pembayaran pesanan?</summary>
+          <div class="faq-answer">
+            <p>Metode pembayaran akan diinformasikan oleh tim CALSPRINT sesuai dengan channel pemesanan yang digunakan.</p>
+            <p>Pesanan akan diproses setelah pembayaran dan detail pesanan telah dikonfirmasi.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">17. Apakah tersedia pengiriman?</summary>
+          <div class="faq-answer">
+            <p>Ya. Pesanan dapat dikirim menggunakan layanan pengiriman yang tersedia sesuai dengan lokasi dan kebutuhan pesanan.</p>
+            <p>Untuk kebutuhan tertentu, opsi pengiriman dapat didiskusikan dengan tim CALSPRINT.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">18. Apakah saya bisa mengambil pesanan langsung?</summary>
+          <div class="faq-answer">
+            <p>Bisa, apabila opsi pengambilan langsung tersedia untuk pesanan Anda.</p>
+            <p>Silakan konfirmasi kepada tim CALSPRINT mengenai lokasi dan waktu pengambilan sebelum datang.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="faq-category">
+      <h2 class="faq-category-title">Revisi &amp; Keluhan</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">19. Apakah pesanan yang sudah dikonfirmasi masih bisa diubah?</summary>
+          <div class="faq-answer">
+            <p>Perubahan pesanan dapat dilakukan selama pesanan belum masuk ke tahap cetak.</p>
+            <p>Jika pesanan sudah diproduksi atau dicetak, perubahan spesifikasi tidak dapat dilakukan.</p>
+            <p>Karena itu, pastikan seluruh detail pesanan dan file sudah benar sebelum produksi dimulai.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">20. Bagaimana jika hasil cetak mengalami kesalahan produksi?</summary>
+          <div class="faq-answer">
+            <p>Jika terdapat kesalahan yang berasal dari proses produksi CALSPRINT, silakan segera hubungi tim kami dan sertakan foto atau video sebagai bukti.</p>
+            <p>Tim kami akan melakukan pengecekan dan menentukan solusi sesuai dengan kondisi pesanan.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">21. Apakah kesalahan pada file desain menjadi tanggung jawab CALSPRINT?</summary>
+          <div class="faq-answer">
+            <p>Kesalahan pada file yang dikirim pelanggan, seperti salah tulisan, ukuran, warna, gambar, atau layout, pada dasarnya menjadi tanggung jawab pelanggan.</p>
+            <p>Karena itu, kami menyarankan untuk melakukan pengecekan kembali seluruh isi file sebelum produksi.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="faq-category">
+      <h2 class="faq-category-title">Konsultasi</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">22. Saya bingung memilih bahan atau spesifikasi. Apakah bisa konsultasi?</summary>
+          <div class="faq-answer">
+            <p>Tentu, sangat bisa! Anda dapat berkonsultasi dengan tim CALSPRINT sebelum melakukan pemesanan.</p>
+            <p>Kami dapat membantu memberikan rekomendasi berdasarkan kebutuhan penggunaan, jumlah, tampilan yang diinginkan, dan pastinya juga budget Anda.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">23. Bagaimana cara menghubungi CALSPRINT?</summary>
+          <div class="faq-answer">
+            <p>Anda dapat menghubungi tim CALSPRINT melalui WhatsApp dan Email untuk mendapatkan informasi produk, konsultasi, penawaran harga, maupun bantuan terkait pesanan.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="faq-category">
+      <h2 class="faq-category-title">Kebutuhan Bisnis</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">24. Apakah CALSPRINT melayani kebutuhan cetak rutin untuk bisnis?</summary>
+          <div class="faq-answer">
+            <p>Ya, sangat bisa. CALSPRINT melayani kebutuhan cetak rutin untuk berbagai kebutuhan bisnis.</p>
+            <p>Untuk kebutuhan yang dilakukan secara berkala, Anda dapat berdiskusi dengan tim kami agar proses pemesanan dapat disesuaikan sehingga lebih praktis untuk pemesanan berikutnya.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">25. Apakah CALSPRINT bisa mencetak dalam jumlah besar dengan jadwal pengiriman bertahap?</summary>
+          <div class="faq-answer">
+            <p>Bisa. Untuk kebutuhan volume besar, kami dapat menyesuaikan produksi dan pengiriman secara bertahap sesuai kebutuhan Anda.</p>
+            <p>Silakan informasikan jumlah total, jadwal kebutuhan, dan tujuan pengiriman kepada tim CALSPRINT agar kami dapat membantu menyesuaikan rencana produksinya.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">26. Apakah bisa request sample sebelum produksi dalam jumlah besar?</summary>
+          <div class="faq-answer">
+            <p>Untuk produk tertentu, sample dapat diajukan sebelum produksi dalam jumlah besar.</p>
+            <p>Ketersediaan sample dan biaya yang dikenakan akan disesuaikan dengan jenis produk. Silakan konsultasikan terlebih dahulu dengan tim CALSPRINT.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">27. Apakah CALSPRINT bisa membantu kebutuhan cetak untuk reseller atau agency?</summary>
+          <div class="faq-answer">
+            <p>Sangat bisa. CALSPRINT dapat melayani kebutuhan cetak untuk reseller, agency, maupun bisnis yang memiliki kebutuhan produksi untuk klien mereka.</p>
+            <p>Spesifikasi, jumlah, dan kebutuhan produksi dapat dikonsultasikan dengan tim kami agar dapat disesuaikan dengan kebutuhan bisnis Anda.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">28. Apakah bisa mendapatkan harga khusus untuk pemesanan rutin atau volume besar?</summary>
+          <div class="faq-answer">
+            <p>Sangat bisa. Harga dapat disesuaikan berdasarkan jenis produk, jumlah pesanan, frekuensi pemesanan, dan kebutuhan produksi.</p>
+            <p>Untuk kebutuhan rutin atau volume besar, silakan hubungi tim CALSPRINT untuk mendapatkan penawaran yang sesuai.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== Bantuan & Konsultasi ===== -->
+<section class="alamat-section">
+  <div class="container">
+    <div class="order-help">
+      <h2>Masih Ada Pertanyaan Lain?</h2>
+      <p>Jika jawaban di atas belum menjawab kebutuhan Anda, jangan ragu untuk konsultasi langsung dengan admin CALSPRINT.</p>
+      <a class="btn-whatsapp" href="https://wa.me/6287840233772" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.34A10 10 0 1 0 12 2zm0 18.2a8.16 8.16 0 0 1-4.16-1.14l-.3-.18-3.02.8.81-2.94-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.13c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3-.02-.46-.02s-.42.06-.64.3c-.22.24-.85.83-.85 2.02 0 1.19.87 2.34 1 2.5.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/></svg>
+        <span>Hubungi Admin CALSPRINT</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer id="tentang">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h5>Kategori Produk</h5>
+      <ul>
+        <li><a href="#">Voucher</a></li>
+        <li><a href="#">Packaging</a></li>
+        <li><a href="#">Stickers</a></li>
+        <li><a href="#">Brochure</a></li>
+        <li><a href="#">Office Print</a></li>
+        <li><a href="#">Merchandise</a></li>
+        <li><a href="#">Signgage &amp; Banner</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Layanan Pelanggan</h5>
+      <ul>
+        <li><a href="#">Syarat &amp; Ketentuan</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#">Hubungi Kami</a></li>
+        <li><a href="#">Jam Operasional</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Tentang Kami</h5>
+      <ul>
+        <li><a href="tentang-kami.html">Profil Perusahaan</a></li>
+        <li><a href="#" id="portofolio">Cabang &amp; Lokasi</a></li>
+        <li><a href="#" class="karir-trigger">Karir</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-about">
+      <a href="index.html" class="brand">
+        <img class="brand-logo" src="images/logo-calsprint.png" alt="Calsprint">
+      </a>
+      <p><b>Calsprint</b> adalah layanan digital printing online yang siap memenuhi berbagai kebutuhan cetak Anda. Melayani UMKM hingga kebutuhan B2B, dengan pilihan pengiriman ke berbagai daerah di Indonesia.</p>
+      <h6>Ikuti Kami</h6>
+      <div class="footer-social">
+        <a href="https://www.tiktok.com/@cals.print" target="_blank" rel="noopener" aria-label="TikTok">
+          <img src="images/tiktok-icon-orange.png" alt="">
+        </a>
+        <a href="https://www.instagram.com/cals.print/" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="images/instagram-icon-orange.png" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-strip">
+    <div class="container ship-pay-row">
+      <div class="ship-pay">
+        <span class="lbl">Jasa Pengiriman</span>
+        <div class="logos">
+          <img class="badge-img" src="images/jne.png" alt="JNE">
+          <img class="badge-img" src="images/lion-parcel.png" alt="Lion Parcel">
+          <img class="badge-img" src="images/gosend.png" alt="GoSend">
+          <img class="badge-img" src="images/grabexpress.png" alt="GrabExpress">
+          <img class="badge-img" src="images/lalamove.png" alt="Lalamove">
+        </div>
+      </div>
+      <div class="ship-pay align-right">
+        <span class="lbl">Metode Pembayaran</span>
+        <div class="logos">
+          <img class="badge-img" src="images/bca.png" alt="BCA">
+          <img class="badge-img" src="images/qris.png" alt="QRIS">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">Copyright © CV Lokal Jaya Cemerlang. All rights reserved.</div>
+</footer>
+
+<!-- ===== Karir popup ===== -->
+<div class="karir-modal-backdrop" id="karirModalBackdrop"></div>
+<div class="karir-modal" id="karirModal" role="dialog" aria-modal="true" aria-labelledby="karirModalTitle">
+  <button class="karir-modal-close" id="karirModalClose" aria-label="Tutup">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <h3 class="karir-modal-title" id="karirModalTitle">Bergabung Bersama CALSPRINT</h3>
+  <div class="karir-modal-body">
+    <p>Temukan kesempatan untuk berkembang dan menjadi bagian dari perjalanan CALSPRINT.</p>
+    <div class="karir-modal-subtitle">Posisi yang Tersedia</div>
+    <p>Saat ini belum ada lowongan pekerjaan yang tersedia.</p>
+    <p>Tertarik menjadi bagian dari CALSPRINT? Kirimkan CV dan informasi diri Anda melalui email kami untuk dipertimbangkan sesuai dengan kebutuhan perusahaan.</p>
+    <a class="karir-modal-btn" href="mailto:calsprint2203@gmail.com?subject=Lamaran%20Pekerjaan&body=Berikut%20informasi%20diri%20saya%20...">Kirim CV</a>
+  </div>
+</div>
+
+<!-- ===== Email options popup ===== -->
+<div class="email-modal-backdrop" id="emailModalBackdrop"></div>
+<div class="email-modal" id="emailModal" role="dialog" aria-modal="true" aria-labelledby="emailModalTitle">
+  <button class="email-modal-close" id="emailModalClose" aria-label="Tutup">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <h3 class="email-modal-title" id="emailModalTitle">Hubungi Kami via Email</h3>
+  <div class="email-modal-menu">
+    <a class="email-modal-item" href="mailto:calsprint2203@gmail.com?subject=Permohonan%20Penawaran%20Harga&body=Halo%20CALSPRINT%2C%20Saya%20ingin%20meminta%20penawaran%20harga%20untuk%20kebutuhan%20cetak%20perusahaan%20saya.">
+      <span class="email-modal-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 15h4"/></svg>
+      </span>
+      <span class="email-modal-text">Minta Penawaran Harga</span>
+    </a>
+    <a class="email-modal-item" href="mailto:calsprint2203@gmail.com?subject=Menanyakan%20Informasi&body=Halo%20CALSPRINT%2C%0A%0ASaya%20ingin%20menanyakan%20informasi%20terkait%20produk%20dan%20layanan%20di%20CALSPRINT.%0A%0A%0APertanyaan%3A%0A%0A%5BSilakan%20tuliskan%20pertanyaan%20Anda%20di%20sini%5D%0A%0AMohon%20dapat%20diberikan%20informasi%20lebih%20lanjut.%0A%0ATerima%20kasih.">
+      <span class="email-modal-icon email-modal-icon-img">
+        <img src="images/xmark-icon.png" alt="">
+      </span>
+      <span class="email-modal-text">Menanyakan Informasi</span>
+    </a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

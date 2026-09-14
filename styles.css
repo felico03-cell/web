@@ -71,6 +71,65 @@ header.site-header{padding:18px 0;background:#fff;}
 .header-actions{display:flex;align-items:center;gap:16px;}
 .icon-plain{width:22px;height:22px;color:var(--navy);flex-shrink:0;}
 .icon-plain svg{width:100%;height:100%;fill:var(--navy);}
+
+/* ===== Email options popup ===== */
+.email-modal-backdrop{position:fixed;inset:0;background:rgba(15,26,64,.55);z-index:200;opacity:0;visibility:hidden;transition:opacity .18s;}
+.email-modal-backdrop.open{opacity:1;visibility:visible;}
+.email-modal{
+  position:fixed;top:50%;left:50%;transform:translate(-50%,-48%);
+  background:#fff;border-radius:18px;padding:30px;width:min(380px,90vw);
+  z-index:201;box-shadow:0 24px 60px rgba(15,26,64,.28);
+  opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s,transform .18s;
+}
+.email-modal.open{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,-50%);}
+.email-modal-close{
+  position:absolute;top:14px;right:14px;width:30px;height:30px;border:none;background:none;
+  color:#8a8fa8;cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:50%;
+}
+.email-modal-close:hover{background:var(--field-bg);}
+.email-modal-close svg{width:18px;height:18px;}
+.email-modal-title{font-size:18px;font-weight:800;color:var(--navy);margin-bottom:20px;text-align:center;}
+.email-modal-menu{display:flex;flex-direction:column;gap:12px;}
+.email-modal-item{
+  display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:12px;
+  background:var(--field-bg);color:var(--navy);text-decoration:none;font-weight:700;font-size:14.5px;
+  transition:background .15s;
+}
+.email-modal-item:hover{background:#eaecf6;}
+.email-modal-icon{
+  width:40px;height:40px;border-radius:50%;background:var(--orange);color:#fff;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+}
+.email-modal-icon svg{width:20px;height:20px;}
+.email-modal-icon.email-modal-icon-img{background:none;}
+.email-modal-icon.email-modal-icon-img img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;}
+
+/* ===== Karir popup ===== */
+.karir-modal-backdrop{position:fixed;inset:0;background:rgba(15,26,64,.55);z-index:200;opacity:0;visibility:hidden;transition:opacity .18s;}
+.karir-modal-backdrop.open{opacity:1;visibility:visible;}
+.karir-modal{
+  position:fixed;top:50%;left:50%;transform:translate(-50%,-48%);
+  background:#fff;border-radius:18px;padding:32px;width:min(460px,90vw);
+  z-index:201;box-shadow:0 24px 60px rgba(15,26,64,.28);
+  opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s,transform .18s;
+}
+.karir-modal.open{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,-50%);}
+.karir-modal-close{
+  position:absolute;top:14px;right:14px;width:30px;height:30px;border:none;background:none;
+  color:#8a8fa8;cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:50%;
+}
+.karir-modal-close:hover{background:var(--field-bg);}
+.karir-modal-close svg{width:18px;height:18px;}
+.karir-modal-title{font-size:19px;font-weight:800;color:var(--navy);margin-bottom:10px;}
+.karir-modal-body p{font-size:14px;color:#4a4d66;line-height:1.7;margin-bottom:14px;}
+.karir-modal-subtitle{font-size:14.5px;font-weight:800;color:var(--navy);margin-bottom:8px;}
+.karir-modal-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--orange);color:#fff;padding:13px 24px;border-radius:999px;
+  font-size:14px;font-weight:700;text-decoration:none;transition:background .15s;margin-top:4px;
+}
+.karir-modal-btn:hover{background:var(--orange-2);}
+
 .btn-whatsapp{
   display:flex;align-items:center;gap:8px;
   background:var(--navy);color:#fff;padding:12px 20px;border-radius:999px;
@@ -326,24 +385,26 @@ footer{background:#fff;padding-top:44px;}
   display:flex;align-items:center;justify-content:center;color:var(--navy);
 }
 .about-hero-badge .icon-circle svg{width:30px;height:30px;}
+.about-hero-badge .icon-circle.icon-circle-img img{width:78%;height:78%;border-radius:50%;object-fit:cover;display:block;}
 .about-hero h1{font-size:32px;font-style:italic;font-weight:800;}
 .about-hero p{font-size:17px;color:#dfe4f5;}
 .about-hero-logo{height:92px;width:auto;margin:0 auto 22px;display:block;}
 
 /* ===== About: Siapa Kami ===== */
 .siapa-section{padding:56px 0;}
-.siapa-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:start;}
+.siapa-grid{display:block;}
 .siapa-text h2{font-size:26px;font-weight:700;color:var(--navy);margin-bottom:18px;}
 .siapa-text p{font-size:14.5px;color:#4a4d66;line-height:1.8;margin-bottom:18px;}
-.siapa-cards{display:flex;flex-direction:column;gap:16px;}
+.siapa-cards{display:flex;flex-wrap:wrap;gap:20px;margin-top:8px;}
 .siapa-card{
-  display:flex;align-items:center;
+  display:flex;align-items:center;gap:16px;flex:1;min-width:280px;
   background:linear-gradient(90deg,#fdf1ec 0%,#eeeff9 100%);
   border-left:4px solid var(--orange);
-  border-radius:14px;padding:18px;
+  border-radius:14px;padding:18px 24px;
   box-shadow:0 6px 18px rgba(27,45,105,.08);
 }
-.siapa-card img{width:64px;height:64px;}
+.siapa-card img{width:56px;height:56px;flex-shrink:0;}
+.siapa-card span{font-size:18px;font-weight:800;color:var(--navy);}
 
 /* ===== About: Visi & Misi ===== */
 .visimisi-section{background:var(--field-bg);padding:48px 0;}
@@ -354,6 +415,15 @@ footer{background:#fff;padding-top:44px;}
 .visimisi-item .head img{width:56px;height:56px;flex-shrink:0;}
 .visimisi-item .head h3{font-size:22px;font-weight:700;color:var(--navy);}
 .visimisi-item p{font-size:14.5px;color:#4a4d66;line-height:1.8;}
+.visimisi-item .nilai-intro{font-weight:700;color:var(--navy);margin-bottom:10px;}
+.visimisi-item .nilai-list{list-style:none;counter-reset:nilai;}
+.visimisi-item .nilai-list li{
+  counter-increment:nilai;font-size:14.5px;color:#4a4d66;line-height:1.7;
+  margin-bottom:8px;padding-left:24px;position:relative;
+}
+.visimisi-item .nilai-list li::before{
+  content:counter(nilai)".";position:absolute;left:0;color:var(--navy);font-weight:700;
+}
 .visimisi-photo img{
   width:100%;height:400px;object-fit:cover;display:block;
   border-radius:16px;box-shadow:0 12px 34px rgba(27,45,105,.16);
@@ -398,23 +468,23 @@ footer{background:#fff;padding-top:44px;}
 
 /* ===== Cara Order: steps ===== */
 .order-steps{padding:40px 0 56px;}
-.order-step{display:grid;grid-template-columns:44px 1fr;gap:18px;position:relative;padding-bottom:44px;}
+.order-step{display:grid;grid-template-columns:56px 1fr;gap:18px;position:relative;padding-bottom:44px;}
 .order-step:last-child{padding-bottom:0;}
 .order-step:not(:last-child)::before{
-  content:'';position:absolute;left:21px;top:44px;bottom:0;width:2px;
+  content:'';position:absolute;left:27px;top:56px;bottom:0;width:2px;
   background:var(--line);
 }
 .order-step-num{
-  width:44px;height:44px;border-radius:50%;flex-shrink:0;z-index:1;
+  width:56px;height:56px;border-radius:50%;flex-shrink:0;z-index:1;
   background:var(--orange);color:#fff;font-family:'Poppins',sans-serif;
-  font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;
+  font-size:22px;font-weight:800;display:flex;align-items:center;justify-content:center;
 }
 .order-step-body{padding-top:2px;}
 .order-step-body h3{font-size:19px;font-weight:800;color:var(--navy);margin-bottom:10px;}
 .order-step-body p{font-size:14.5px;color:#4a4d66;line-height:1.8;margin-bottom:12px;}
 .order-step-body p:last-child{margin-bottom:0;}
 .order-step-label{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:10px;}
-.order-checklist{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;margin-bottom:14px;}
+.order-checklist{list-style:none;display:grid;grid-template-columns:1fr;gap:8px 24px;margin-bottom:14px;}
 .order-checklist li{display:flex;align-items:flex-start;gap:8px;font-size:14px;color:#333650;line-height:1.5;}
 .order-checklist li::before{content:'✓';color:var(--orange);font-weight:800;flex-shrink:0;}
 .order-plain-list{list-style:none;margin-bottom:14px;}
@@ -422,6 +492,35 @@ footer{background:#fff;padding-top:44px;}
 .order-plain-list li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--orange);}
 .order-note{background:var(--field-bg);border-left:4px solid var(--orange);border-radius:10px;padding:14px 16px;font-size:13.5px;color:#4a4d66;line-height:1.7;margin-bottom:12px;}
 .order-note:last-child{margin-bottom:0;}
+
+/* ===== FAQ page ===== */
+.faq-content{padding:48px 0 64px;}
+.faq-category{margin-bottom:40px;}
+.faq-category:last-child{margin-bottom:0;}
+.faq-category-title{
+  font-size:19px;font-weight:800;color:var(--navy);margin-bottom:16px;
+  text-transform:uppercase;letter-spacing:.3px;
+}
+.faq-list{display:flex;flex-direction:column;gap:12px;}
+.faq-item{border:1px solid var(--line);border-radius:12px;background:#fff;overflow:hidden;}
+.faq-item[open]{border-color:var(--orange);}
+.faq-question{
+  list-style:none;cursor:pointer;padding:16px 48px 16px 18px;position:relative;
+  font-size:14.5px;font-weight:700;color:var(--navy);line-height:1.5;
+}
+.faq-question::-webkit-details-marker{display:none;}
+.faq-question::after{
+  content:'+';position:absolute;right:18px;top:50%;transform:translateY(-50%);
+  font-size:20px;font-weight:700;color:var(--orange);line-height:1;
+}
+.faq-item[open] .faq-question::after{content:'\2212';}
+.faq-answer{padding:0 18px 18px;font-size:14px;color:#4a4d66;line-height:1.75;}
+.faq-answer p{margin-bottom:10px;}
+.faq-answer p:last-child{margin-bottom:0;}
+.faq-answer ul{list-style:none;margin:6px 0 12px;padding:0;}
+.faq-answer ul li{position:relative;padding-left:18px;margin-bottom:6px;}
+.faq-answer ul li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--orange);}
+.faq-answer ul li:last-child{margin-bottom:0;}
 
 /* ===== Cara Order: bantuan CTA ===== */
 .order-help{
@@ -648,7 +747,7 @@ footer{background:#fff;padding-top:44px;}
   .feature-grid .feature-card{flex-basis:100%;}
   .footer-col{flex-basis:45%;border-right:none;border-bottom:1px solid var(--line);padding:18px 0;}
   .footer-about{flex-basis:100%;padding:18px 0;}
-  .siapa-grid{grid-template-columns:1fr;}
+  .siapa-cards{flex-direction:column;}
   .visimisi-row{grid-template-columns:1fr;gap:28px;}
   .visimisi-row.reverse .visimisi-item,
   .visimisi-row.reverse .visimisi-photo{order:initial;}
@@ -679,9 +778,9 @@ footer{background:#fff;padding-top:44px;}
   .produk-head-row{flex-direction:column;align-items:flex-start;}
 
   .order-checklist{grid-template-columns:1fr;}
-  .order-step{grid-template-columns:36px 1fr;gap:12px;}
-  .order-step-num{width:36px;height:36px;font-size:13px;}
-  .order-step:not(:last-child)::before{left:17px;top:36px;}
+  .order-step{grid-template-columns:46px 1fr;gap:12px;}
+  .order-step-num{width:46px;height:46px;font-size:18px;}
+  .order-step:not(:last-child)::before{left:22px;top:46px;}
   .order-help{padding:32px 20px;}
   .order-contact-grid{grid-template-columns:1fr;gap:32px;}
 

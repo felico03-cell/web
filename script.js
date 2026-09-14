@@ -133,6 +133,62 @@ if (mobileMenuEl && mobileMenuToggleBtn) {
   });
 }
 
+// ===== Email options popup =====
+const emailModalEl = document.getElementById('emailModal');
+const emailModalBackdropEl = document.getElementById('emailModalBackdrop');
+const emailModalCloseBtn = document.getElementById('emailModalClose');
+const emailTriggerEls = document.querySelectorAll('.email-trigger');
+
+if (emailModalEl && emailModalBackdropEl && emailTriggerEls.length) {
+  const openEmailModal = () => {
+    emailModalEl.classList.add('open');
+    emailModalBackdropEl.classList.add('open');
+  };
+  const closeEmailModal = () => {
+    emailModalEl.classList.remove('open');
+    emailModalBackdropEl.classList.remove('open');
+  };
+  emailTriggerEls.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      openEmailModal();
+    });
+  });
+  emailModalCloseBtn?.addEventListener('click', closeEmailModal);
+  emailModalBackdropEl.addEventListener('click', closeEmailModal);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeEmailModal();
+  });
+}
+
+// ===== Karir popup =====
+const karirModalEl = document.getElementById('karirModal');
+const karirModalBackdropEl = document.getElementById('karirModalBackdrop');
+const karirModalCloseBtn = document.getElementById('karirModalClose');
+const karirTriggerEls = document.querySelectorAll('.karir-trigger');
+
+if (karirModalEl && karirModalBackdropEl && karirTriggerEls.length) {
+  const openKarirModal = () => {
+    karirModalEl.classList.add('open');
+    karirModalBackdropEl.classList.add('open');
+  };
+  const closeKarirModal = () => {
+    karirModalEl.classList.remove('open');
+    karirModalBackdropEl.classList.remove('open');
+  };
+  karirTriggerEls.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      openKarirModal();
+    });
+  });
+  karirModalCloseBtn?.addEventListener('click', closeKarirModal);
+  karirModalBackdropEl.addEventListener('click', closeKarirModal);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeKarirModal();
+  });
+}
+
 // ===== Category dropdown =====
 const categoryToggleBtn = document.getElementById('categoryToggle');
 const categoryDropdownEl = document.getElementById('categoryDropdown');
