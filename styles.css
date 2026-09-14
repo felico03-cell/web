@@ -69,40 +69,6 @@ header.site-header{padding:18px 0;background:#fff;}
 .search-bar button .search-icon{width:26px;height:26px;object-fit:contain;}
 
 .header-actions{display:flex;align-items:center;gap:16px;}
-.icon-plain{width:22px;height:22px;color:var(--navy);flex-shrink:0;}
-.icon-plain svg{width:100%;height:100%;fill:var(--navy);}
-
-/* ===== Email options popup ===== */
-.email-modal-backdrop{position:fixed;inset:0;background:rgba(15,26,64,.55);z-index:200;opacity:0;visibility:hidden;transition:opacity .18s;}
-.email-modal-backdrop.open{opacity:1;visibility:visible;}
-.email-modal{
-  position:fixed;top:50%;left:50%;transform:translate(-50%,-48%);
-  background:#fff;border-radius:18px;padding:30px;width:min(380px,90vw);
-  z-index:201;box-shadow:0 24px 60px rgba(15,26,64,.28);
-  opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s,transform .18s;
-}
-.email-modal.open{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,-50%);}
-.email-modal-close{
-  position:absolute;top:14px;right:14px;width:30px;height:30px;border:none;background:none;
-  color:#8a8fa8;cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:50%;
-}
-.email-modal-close:hover{background:var(--field-bg);}
-.email-modal-close svg{width:18px;height:18px;}
-.email-modal-title{font-size:18px;font-weight:800;color:var(--navy);margin-bottom:20px;text-align:center;}
-.email-modal-menu{display:flex;flex-direction:column;gap:12px;}
-.email-modal-item{
-  display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:12px;
-  background:var(--field-bg);color:var(--navy);text-decoration:none;font-weight:700;font-size:14.5px;
-  transition:background .15s;
-}
-.email-modal-item:hover{background:#eaecf6;}
-.email-modal-icon{
-  width:40px;height:40px;border-radius:50%;background:var(--orange);color:#fff;flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;
-}
-.email-modal-icon svg{width:20px;height:20px;}
-.email-modal-icon.email-modal-icon-img{background:none;}
-.email-modal-icon.email-modal-icon-img img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;}
 
 /* ===== Karir popup ===== */
 .karir-modal-backdrop{position:fixed;inset:0;background:rgba(15,26,64,.55);z-index:200;opacity:0;visibility:hidden;transition:opacity .18s;}
@@ -137,6 +103,10 @@ header.site-header{padding:18px 0;background:#fff;}
 }
 .btn-whatsapp svg{width:16px;height:16px;fill:#fff;}
 .btn-whatsapp:hover{background:var(--navy-2);}
+
+.btn-whatsapp-img,.btn-hubungi-img{display:flex;align-items:center;flex-shrink:0;transition:opacity .15s;}
+.btn-whatsapp-img img,.btn-hubungi-img img{height:40px;width:auto;display:block;}
+.btn-whatsapp-img:hover,.btn-hubungi-img:hover{opacity:.85;}
 
 /* ===== Category nav ===== */
 .catnav{background:var(--orange);position:relative;z-index:20;}
@@ -453,6 +423,48 @@ footer{background:#fff;padding-top:44px;}
 .map-card .row svg{width:14px;height:14px;color:var(--navy);flex-shrink:0;}
 .map-btn{position:absolute;right:16px;bottom:16px;height:46px;display:block;}
 
+/* ===== Hubungi Kami: hero ===== */
+.hubungi-hero{
+  background:linear-gradient(90deg,rgba(15,26,64,.78) 0%,rgba(15,26,64,.5) 45%,rgba(15,26,64,.15) 100%), url('images/temp-hubungi-kami.svg') center/cover no-repeat;
+  padding:220px 0;color:#fff;
+}
+.hubungi-hero h1{font-size:38px;font-weight:800;margin-bottom:14px;}
+.hubungi-hero p{font-size:16px;color:#dfe4f5;max-width:520px;line-height:1.6;}
+
+/* ===== Hubungi Kami: form ===== */
+.kontak-section{padding:0 0 56px;margin-top:-64px;position:relative;z-index:5;}
+.kontak-card{
+  background:#fff;border-radius:20px;box-shadow:0 20px 50px rgba(15,26,64,.16);
+  padding:40px;max-width:900px;margin:0 auto;
+}
+.kontak-card h2{font-size:22px;font-weight:800;color:var(--navy);margin-bottom:8px;}
+.kontak-card > p{font-size:14.5px;color:#4a4d66;margin-bottom:28px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.form-group{margin-top:20px;}
+.form-row .form-group{margin-top:0;}
+.form-group label{display:block;font-size:14.5px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.form-group input,
+.form-group textarea{
+  width:100%;border:1px solid var(--line);border-radius:10px;padding:12px 14px;
+  font-size:14px;font-family:inherit;color:var(--ink);background:#fff;
+}
+.form-group textarea{resize:vertical;}
+.kontak-submit{
+  display:block;width:100%;max-width:260px;margin:28px auto 0;text-align:center;
+  background:var(--orange);color:#fff;padding:14px 24px;border:none;border-radius:999px;
+  font-size:15px;font-weight:700;cursor:pointer;transition:background .15s;
+}
+.kontak-submit:hover{background:var(--orange-2);}
+.kontak-submit:disabled{opacity:.7;cursor:not-allowed;}
+.kontak-botcheck{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;}
+.kontak-status{margin-top:16px;text-align:center;font-size:14px;font-weight:600;}
+.kontak-status.success{color:#1a8a4a;}
+.kontak-status.error{color:var(--orange);}
+
+/* ===== Hubungi Kami: social row in Alamat Kami ===== */
+.alamat-social{margin-left:54px;margin-top:8px;}
+.alamat-social h4{font-size:19px;font-weight:700;color:#151830;margin-bottom:12px;}
+
 /* ===== About: Mengapa Memilih Kami ===== */
 .why-section{background:var(--field-bg);padding:56px 0;text-align:center;}
 .why-section h2{font-size:26px;font-weight:700;color:var(--navy);margin-bottom:36px;}
@@ -692,8 +704,6 @@ footer{background:#fff;padding-top:44px;}
 .mobile-ic{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .mobile-ic svg{width:18px;height:18px;}
 .mobile-ic.wa{background:#25D366;}
-.mobile-ic.mail{background:var(--field-bg);}
-.mobile-ic.mail svg{fill:var(--navy);}
 
 .mobile-search-wrap{padding:0 20px 14px;background:#fff;}
 .mobile-search-bar{width:100%;border:1px solid var(--line);}
@@ -753,6 +763,8 @@ footer{background:#fff;padding-top:44px;}
   .visimisi-row.reverse .visimisi-photo{order:initial;}
   .visimisi-photo img{height:280px;}
   .about-hero.with-photo{padding:160px 0;}
+  .hubungi-hero{padding:150px 0;}
+  .kontak-card{padding:28px;}
   .alamat-grid{grid-template-columns:1fr;}
   .why-grid{grid-template-columns:repeat(2,1fr);}
   .produk-layout{grid-template-columns:1fr;}
@@ -766,6 +778,8 @@ footer{background:#fff;padding-top:44px;}
   .map-card{position:static;max-width:none;margin-top:14px;}
   .map-btn{position:static;margin-top:12px;}
   .alamat-map{display:flex;flex-direction:column;}
+  .form-row{grid-template-columns:1fr;}
+  .alamat-social{margin-left:0;}
   .header-row{flex-wrap:wrap;}
   .location-pill{order:3;}
   .search-bar{order:4;flex-basis:100%;}

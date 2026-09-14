@@ -53,12 +53,11 @@
     </form>
 
     <div class="header-actions">
-      <a class="icon-plain email-trigger" href="#" aria-label="Email">
-        <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.01L12 12l8-5.99V6H4zm16 12V8.24l-8 6-8-6V18h16z"/></svg>
+      <a class="btn-whatsapp-img" href="https://wa.me/6287840233772" target="_blank" rel="noopener">
+        <img src="images/whatsapp-long-button.svg" alt="Chat us on WhatsApp">
       </a>
-      <a class="btn-whatsapp" href="https://wa.me/6287840233772" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.34A10 10 0 1 0 12 2zm0 18.2a8.16 8.16 0 0 1-4.16-1.14l-.3-.18-3.02.8.81-2.94-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.13c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3-.02-.46-.02s-.42.06-.64.3c-.22.24-.85.83-.85 2.02 0 1.19.87 2.34 1 2.5.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/></svg>
-        <span>Chat us on WhatsApp</span>
+      <a class="btn-hubungi-img" href="hubungi-kami.html">
+        <img src="images/hubungi-kami-button.svg" alt="Hubungi Kami">
       </a>
     </div>
   </div>
@@ -246,7 +245,7 @@
 </section>
 
 <!-- ===== Alamat Kami ===== -->
-<section class="alamat-section">
+<section class="alamat-section" id="lokasi">
   <div class="container">
     <h2>Alamat Kami</h2>
     <p>Kunjungi lokasi kami untuk layanan langsung</p>
@@ -260,7 +259,7 @@
           </div>
         </div>
         <div class="alamat-info-item">
-          <img src="images/phone-icon.png" alt="">
+          <img src="images/whatsapp-icon-primarycolor-trans.svg" alt="">
           <div>
             <h4>Telepon:</h4>
             <p>+62 878-4023-3772</p>
@@ -302,9 +301,9 @@
     <h2>Mengapa Memilih Kami?</h2>
     <div class="why-grid">
       <div class="why-card">
-        <img src="images/quality-icon.png" alt="">
-        <h4>Kualitas Terjamin</h4>
-        <p>Menggunakan mesin dan bahan berkualitas tinggi untuk hasil cetak terbaik</p>
+        <img src="images/cart-icon-blue.svg" alt="">
+        <h4>Kirim ke Mana Saja</h4>
+        <p>Melayani berbagai pilihan ekspedisi.</p>
       </div>
       <div class="why-card">
         <img src="images/bolt-icon.png" alt="">
@@ -343,7 +342,7 @@
     <div class="footer-col">
       <h5>Layanan Pelanggan</h5>
       <ul>
-        <li><a href="#">Syarat &amp; Ketentuan</a></li>
+        <li><a href="cara-order.html">Cara Order</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="#">Hubungi Kami</a></li>
         <li><a href="#">Jam Operasional</a></li>
@@ -353,7 +352,7 @@
       <h5>Tentang Kami</h5>
       <ul>
         <li><a href="tentang-kami.html">Profil Perusahaan</a></li>
-        <li><a href="#" id="portofolio">Cabang &amp; Lokasi</a></li>
+        <li><a href="tentang-kami.html#lokasi">Cabang &amp; Lokasi</a></li>
         <li><a href="#" class="karir-trigger">Karir</a></li>
         <li><a href="#">Blog</a></li>
       </ul>
@@ -412,29 +411,6 @@
     <p>Saat ini belum ada lowongan pekerjaan yang tersedia.</p>
     <p>Tertarik menjadi bagian dari CALSPRINT? Kirimkan CV dan informasi diri Anda melalui email kami untuk dipertimbangkan sesuai dengan kebutuhan perusahaan.</p>
     <a class="karir-modal-btn" href="mailto:calsprint2203@gmail.com?subject=Lamaran%20Pekerjaan&body=Berikut%20informasi%20diri%20saya%20...">Kirim CV</a>
-  </div>
-</div>
-
-<!-- ===== Email options popup ===== -->
-<div class="email-modal-backdrop" id="emailModalBackdrop"></div>
-<div class="email-modal" id="emailModal" role="dialog" aria-modal="true" aria-labelledby="emailModalTitle">
-  <button class="email-modal-close" id="emailModalClose" aria-label="Tutup">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-  </button>
-  <h3 class="email-modal-title" id="emailModalTitle">Hubungi Kami via Email</h3>
-  <div class="email-modal-menu">
-    <a class="email-modal-item" href="mailto:calsprint2203@gmail.com?subject=Permohonan%20Penawaran%20Harga&body=Halo%20CALSPRINT%2C%20Saya%20ingin%20meminta%20penawaran%20harga%20untuk%20kebutuhan%20cetak%20perusahaan%20saya.">
-      <span class="email-modal-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 15h4"/></svg>
-      </span>
-      <span class="email-modal-text">Minta Penawaran Harga</span>
-    </a>
-    <a class="email-modal-item" href="mailto:calsprint2203@gmail.com?subject=Menanyakan%20Informasi&body=Halo%20CALSPRINT%2C%0A%0ASaya%20ingin%20menanyakan%20informasi%20terkait%20produk%20dan%20layanan%20di%20CALSPRINT.%0A%0A%0APertanyaan%3A%0A%0A%5BSilakan%20tuliskan%20pertanyaan%20Anda%20di%20sini%5D%0A%0AMohon%20dapat%20diberikan%20informasi%20lebih%20lanjut.%0A%0ATerima%20kasih.">
-      <span class="email-modal-icon email-modal-icon-img">
-        <img src="images/xmark-icon.png" alt="">
-      </span>
-      <span class="email-modal-text">Menanyakan Informasi</span>
-    </a>
   </div>
 </div>
 

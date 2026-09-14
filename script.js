@@ -133,34 +133,6 @@ if (mobileMenuEl && mobileMenuToggleBtn) {
   });
 }
 
-// ===== Email options popup =====
-const emailModalEl = document.getElementById('emailModal');
-const emailModalBackdropEl = document.getElementById('emailModalBackdrop');
-const emailModalCloseBtn = document.getElementById('emailModalClose');
-const emailTriggerEls = document.querySelectorAll('.email-trigger');
-
-if (emailModalEl && emailModalBackdropEl && emailTriggerEls.length) {
-  const openEmailModal = () => {
-    emailModalEl.classList.add('open');
-    emailModalBackdropEl.classList.add('open');
-  };
-  const closeEmailModal = () => {
-    emailModalEl.classList.remove('open');
-    emailModalBackdropEl.classList.remove('open');
-  };
-  emailTriggerEls.forEach(function (el) {
-    el.addEventListener('click', function (e) {
-      e.preventDefault();
-      openEmailModal();
-    });
-  });
-  emailModalCloseBtn?.addEventListener('click', closeEmailModal);
-  emailModalBackdropEl.addEventListener('click', closeEmailModal);
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeEmailModal();
-  });
-}
-
 // ===== Karir popup =====
 const karirModalEl = document.getElementById('karirModal');
 const karirModalBackdropEl = document.getElementById('karirModalBackdrop');
@@ -212,5 +184,47 @@ if (categoryToggleBtn && categoryDropdownEl) {
       categoryDropdownEl.classList.remove('open');
       categoryToggleBtn.setAttribute('aria-expanded', 'false');
     }
+  });
+}
+
+// ===== Hubungi Kami: Dapatkan Penawaran form (Web3Forms) =====
+const kontakFormEl = document.getElementById('kontakForm');
+const kontakStatusEl = document.getElementById('kontakStatus');
+
+if (kontakFormEl && kontakStatusEl) {
+  kontakFormEl.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const submitBtn = kontakFormEl.querySelector('.kontak-submit');
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Mengirim...';
+    kontakStatusEl.hidden = true;
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(Object.fromEntries(new FormData(kontakFormEl))),
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        kontakStatusEl.hidden = false;
+        if (data.success) {
+          kontakStatusEl.textContent = 'Pesan Anda berhasil terkirim. Tim CALSPRINT akan segera menghubungi Anda.';
+          kontakStatusEl.className = 'kontak-status success';
+          kontakFormEl.reset();
+        } else {
+          kontakStatusEl.textContent = 'Gagal mengirim pesan. Silakan coba lagi.';
+          kontakStatusEl.className = 'kontak-status error';
+        }
+      })
+      .catch(function () {
+        kontakStatusEl.hidden = false;
+        kontakStatusEl.textContent = 'Gagal mengirim pesan. Periksa koneksi Anda dan coba lagi.';
+        kontakStatusEl.className = 'kontak-status error';
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      });
   });
 }

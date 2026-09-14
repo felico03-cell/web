@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Voucher - Voucher Jilid Buku — Calsprint</title>
+<title>Hubungi Kami — Calsprint</title>
 <link rel="icon" type="image/png" href="images/logo-calsprint-notext.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -174,87 +174,118 @@
       </div>
     </div>
     <a href="index.html">Beranda</a>
-    <a href="semua-produk.html" class="active">Semua Produk</a>
+    <a href="semua-produk.html">Semua Produk</a>
     <a href="tentang-kami.html">Tentang Kami</a>
     <a href="index.html#promo">Promo</a>
     <a href="index.html#portofolio">Portofolio</a>
   </div>
 </nav>
 
-<!-- ===== Product hero / breadcrumb ===== -->
-<div class="product-hero">
-  <div class="container produk-head-row">
-    <h1>Voucher - Voucher Jilid Buku</h1>
-    <div class="breadcrumb">
-      <svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3l9-8z"/></svg>
-      <a href="index.html">Beranda</a>
-      <svg class="chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <a href="semua-produk.html">Semua Produk</a>
-      <svg class="chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Detail</span>
+<!-- ===== Hubungi Kami hero ===== -->
+<section class="hubungi-hero">
+  <div class="container">
+    <h1>Hubungi Kami</h1>
+    <p>Informasikan kebutuhan cetak Anda dan dapatkan penawaran yang sesuai dari tim CALSPRINT.</p>
+  </div>
+</section>
+
+<!-- ===== Dapatkan Penawaran ===== -->
+<section class="kontak-section">
+  <div class="container">
+    <div class="kontak-card">
+      <h2>DAPATKAN PENAWARAN</h2>
+      <p>Isi data diri dan informasikan kebutuhan cetak Anda kepada kami. Tim CALSPRINT akan segera menghubungi Anda dengan penawaran yang sesuai.</p>
+      <form id="kontakForm">
+        <input type="hidden" name="access_key" value="bf5496ca-64f1-4351-93b9-7b734a3ca2fc">
+        <input type="hidden" name="subject" value="Permintaan Penawaran - Website CALSPRINT">
+        <input type="checkbox" name="botcheck" class="kontak-botcheck" tabindex="-1" autocomplete="off">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="kontakNama">Nama</label>
+            <input type="text" id="kontakNama" name="name" placeholder="Masukkan nama Anda" required>
+          </div>
+          <div class="form-group">
+            <label for="kontakEmail">Email</label>
+            <input type="email" id="kontakEmail" name="email" placeholder="Masukkan alamat email Anda" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="kontakDetail">Detail Kebutuhan</label>
+          <input type="text" id="kontakDetail" name="detail_kebutuhan" placeholder="*Jelaskan ukuran, bahan, jumlah, finishing, atau kebutuhan lainnya">
+        </div>
+        <div class="form-group">
+          <label for="kontakPesan">Pesan Anda</label>
+          <textarea id="kontakPesan" name="pesan" rows="5" placeholder="Ceritakan kepada kami mengenai proyek atau pertanyaan Anda."></textarea>
+        </div>
+        <button type="submit" class="kontak-submit">Kirim Pesan</button>
+        <p class="kontak-status" id="kontakStatus" hidden></p>
+      </form>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ===== Product detail ===== -->
-<section class="product-detail">
-  <div class="container product-detail-grid">
-
-    <!-- Gallery -->
-    <div class="product-gallery">
-      <img id="galleryImg" src="images/produkpage-voucher-buku-1.png" alt="Voucher Jilid Buku" data-gallery="images/produkpage-voucher-buku-1.png,images/produkpage-voucher-buku-2.png">
-      <button class="gallery-hit prev" aria-label="Foto sebelumnya">
-        <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <button class="gallery-hit next" aria-label="Foto berikutnya">
-        <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-    </div>
-
-    <!-- Info -->
-    <div class="product-info">
-      <h1>Voucher - Voucher Jilid Buku</h1>
-      <div class="prod-rating"><span class="stars">★★★★★</span> <span class="count">(5)</span></div>
-
-      <div class="share-row">
-        <span class="lbl">Bagikan:</span>
-        <div class="share-btns">
-          <a class="share-btn" href="#" aria-label="Salin tautan">
-            <img src="images/icon-link-color.png" alt="">
-          </a>
-          <a class="share-btn" href="#" aria-label="Bagikan ke Instagram">
-            <img src="images/instagram-icon-color.png" alt="">
-          </a>
-          <a class="share-btn" href="https://wa.me/6287840233772" target="_blank" rel="noopener" aria-label="Bagikan ke WhatsApp">
-            <img src="images/whatsapp-icon-color.png" alt="">
-          </a>
-          <a class="share-btn" href="#" aria-label="Bagikan ke TikTok">
-            <img src="images/tiktok-icon-color.png" alt="">
-          </a>
+<!-- ===== Alamat Kami ===== -->
+<section class="alamat-section" id="lokasi">
+  <div class="container">
+    <h2>Alamat Kami</h2>
+    <p>Kunjungi lokasi kami untuk layanan langsung</p>
+    <div class="alamat-grid">
+      <div class="alamat-info">
+        <div class="alamat-info-item">
+          <img src="images/address-icon.svg" alt="">
+          <div>
+            <h4>Alamat:</h4>
+            <p>Jl. Mt. Haryono No.34B, RT.002/RW.010,<br>Sukasari, Kec. Tangerang, Kota Tangerang, Banten 15118</p>
+          </div>
+        </div>
+        <div class="alamat-info-item">
+          <img src="images/whatsapp-icon-primarycolor-trans.svg" alt="">
+          <div>
+            <h4>Telepon:</h4>
+            <p>+62 878-4023-3772</p>
+          </div>
+        </div>
+        <div class="alamat-info-item">
+          <img src="images/clock-icon.png" alt="">
+          <div>
+            <h4>Jam Operasional:</h4>
+            <p>Senin: 08.00–17.00<br>Selasa: 08.00–17.00<br>Rabu: 08.00–17.00<br>Kamis: 08.00–17.00<br>Jumat: 08.00–17.00<br>Sabtu: 08.00–16.00<br>Minggu &amp; Hari Libur Nasional: Tutup</p>
+          </div>
+        </div>
+        <div class="alamat-social">
+          <h4>Media Sosial Kami</h4>
+          <div class="share-btns">
+            <a class="share-btn" href="https://www.instagram.com/cals.print/" target="_blank" rel="noopener" aria-label="Instagram">
+              <img src="images/instagram-icon-color.png" alt="">
+            </a>
+            <a class="share-btn" href="https://wa.me/6287840233772" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <img src="images/whatsapp-icon-color.png" alt="">
+            </a>
+            <a class="share-btn" href="https://www.tiktok.com/@cals.print" target="_blank" rel="noopener" aria-label="TikTok">
+              <img src="images/tiktok-icon-color.png" alt="">
+            </a>
+          </div>
         </div>
       </div>
-
-      <div class="spec-head">
-        <img src="images/info-icon-primary-color.png" alt="">
-        <span>Spesifikasi Produk</span>
-      </div>
-      <ul class="spec-list">
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-      </ul>
-
-      <div class="color-notice">
-        <img class="ic" src="images/info-icon-secondary-color.png" alt="">
-        <div>
-          <h4>Catatan Penting Mengenai Warna</h4>
-          <p>Warna pada hasil cetak dapat sedikit berbeda dengan tampilan di layar. Hal ini wajar karena layar menggunakan sistem warna RGB (Red, Green, Blue) berbasis cahaya, sedangkan proses pencetakan menggunakan tinta dengan sistem CMYK (Cyan, Magenta, Yellow, Black).</p>
-          <p>Tim kami akan selalu berupaya memastikan hasil cetak tetap optimal dan memenuhi standar kualitas terbaik.</p>
+      <div class="alamat-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.633861070082!2d106.6332867!3d-6.1797382999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f9e7a32c0c3f%3A0x4ca069e15eac54a8!2sCALS%20PRINT!5e0!3m2!1sen!2sid!4v1788345413486!5m2!1sen!2sid" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="map-card">
+          <h4>CALS PRINT</h4>
+          <p>Jl. Mt. Haryono No.34B, RT.002/RW.010, Sukasari, Kec. Tangerang, Kota Tangerang, Banten 15118</p>
+          <div class="row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+62 878-4023-3772</span>
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <span>Senin–Jumat: 08.00–17.00, Sabtu: 08.00–16.00, Minggu &amp; Libur Nasional: Tutup</span>
+          </div>
         </div>
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Jl.+Mt.+Haryono+No.34B,+Sukasari,+Kec.+Tangerang,+Kota+Tangerang,+Banten+15118" target="_blank" rel="noopener">
+          <img src="images/buka-di-google-maps.png" alt="Buka di Google Maps" style="height:100%;width:auto;">
+        </a>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -278,7 +309,7 @@
       <ul>
         <li><a href="cara-order.html">Cara Order</a></li>
         <li><a href="faq.html">FAQ</a></li>
-        <li><a href="#">Hubungi Kami</a></li>
+        <li><a href="hubungi-kami.html">Hubungi Kami</a></li>
         <li><a href="#">Jam Operasional</a></li>
       </ul>
     </div>
