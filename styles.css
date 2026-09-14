@@ -316,7 +316,7 @@ footer{background:#fff;padding-top:44px;}
 }
 .about-hero.with-photo{
   background:linear-gradient(rgba(15,26,64,.68),rgba(15,26,64,.58)), url('images/tentang-kami-picture.png') center/cover no-repeat;
-  padding:110px 0;
+  padding:260px 0;
 }
 .about-hero-badge{
   display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:22px;
@@ -653,7 +653,7 @@ footer{background:#fff;padding-top:44px;}
   .visimisi-row.reverse .visimisi-item,
   .visimisi-row.reverse .visimisi-photo{order:initial;}
   .visimisi-photo img{height:280px;}
-  .about-hero.with-photo{padding:80px 0;}
+  .about-hero.with-photo{padding:160px 0;}
   .alamat-grid{grid-template-columns:1fr;}
   .why-grid{grid-template-columns:repeat(2,1fr);}
   .produk-layout{grid-template-columns:1fr;}
