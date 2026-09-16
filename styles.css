@@ -111,6 +111,7 @@ header.site-header{padding:18px 0;background:#fff;}
 /* ===== Category nav ===== */
 .catnav{background:var(--orange);position:relative;z-index:20;}
 .catnav .container{display:flex;align-items:center;gap:38px;height:44px;overflow-x:visible;}
+.catnav-links{display:flex;align-items:center;gap:38px;}
 .catnav .pick{
   display:flex;align-items:center;gap:8px;
   height:100%;padding:0 20px;
@@ -781,6 +782,10 @@ footer{background:#fff;padding-top:44px;}
   .search-bar{order:4;flex-basis:100%;}
   .header-actions{margin-left:auto;}
   .btn-whatsapp span{display:none;}
+  .btn-whatsapp-img img,.btn-hubungi-img img{height:32px;}
+  .catnav .container{gap:20px;}
+  .catnav-links{gap:20px;overflow-x:auto;scrollbar-width:none;min-width:0;}
+  .catnav-links::-webkit-scrollbar{display:none;}
   .carousel .card{flex-basis:150px;}
   .footer-col{flex-basis:100%;}
   .ship-pay.align-right{align-items:flex-start;}
