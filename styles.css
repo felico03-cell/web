@@ -480,8 +480,8 @@ footer{background:#fff;padding-top:44px;}
 .klien-section{padding:56px 0;text-align:center;}
 .klien-section h2{font-size:26px;font-weight:700;color:var(--navy);margin-bottom:32px;}
 .klien-marquee{overflow:hidden;background:var(--field-bg);border-radius:16px;padding:30px 0;}
-.klien-track{display:flex;width:max-content;gap:56px;animation:klienScroll 22s linear infinite;}
-.klien-track span{font-size:19px;font-weight:800;color:var(--navy);opacity:.65;white-space:nowrap;}
+.klien-track{display:flex;align-items:center;width:max-content;gap:56px;animation:klienScroll 45s linear infinite;}
+.klien-track img{height:40px;width:auto;flex-shrink:0;object-fit:contain;}
 @keyframes klienScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 @media (prefers-reduced-motion: reduce){.klien-track{animation:none;}}
 
