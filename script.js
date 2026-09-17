@@ -70,6 +70,7 @@ buildHeroDots();
 
 // ===== Product detail gallery =====
 const galleryImgEl = document.getElementById('galleryImg');
+let showGallerySlideBySrc = null;
 if (galleryImgEl) {
   const gallerySlides = (galleryImgEl.dataset.gallery || '').split(',').map(s => s.trim()).filter(Boolean);
   if (gallerySlides.length) {
@@ -80,8 +81,23 @@ if (galleryImgEl) {
     };
     document.querySelector('.gallery-hit.prev')?.addEventListener('click', () => showGallerySlide(gallerySlideIndex - 1));
     document.querySelector('.gallery-hit.next')?.addEventListener('click', () => showGallerySlide(gallerySlideIndex + 1));
+    showGallerySlideBySrc = (src) => {
+      const i = gallerySlides.indexOf(src);
+      showGallerySlide(i === -1 ? gallerySlideIndex : i);
+    };
   }
 }
+
+// ===== Product detail variant picker =====
+document.querySelectorAll('.variant-btns').forEach((group) => {
+  group.addEventListener('click', (e) => {
+    const btn = e.target.closest('.variant-btn');
+    if (!btn) return;
+    group.querySelectorAll('.variant-btn').forEach((b) => b.classList.remove('active'));
+    btn.classList.add('active');
+    if (btn.dataset.image) showGallerySlideBySrc?.(btn.dataset.image);
+  });
+});
 
 // ===== Semua Produk grid (placeholder cards) =====
 const produkGridEl = document.getElementById('produkGrid');
@@ -106,6 +122,24 @@ if (produkGridEl) {
     `;
   }
   produkGridEl.insertAdjacentHTML('beforeend', html);
+
+  const catSideLinks = document.querySelectorAll('.cat-side-list a[data-filter]');
+  const applyProdukFilter = (filter) => {
+    catSideLinks.forEach((l) => l.classList.toggle('active', l.dataset.filter === filter));
+    produkGridEl.querySelectorAll('.prod-card').forEach((card) => {
+      const match = filter === 'all' || card.dataset.category === filter;
+      card.hidden = !match;
+    });
+  };
+  catSideLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      applyProdukFilter(link.dataset.filter);
+    });
+  });
+
+  const urlFilter = new URLSearchParams(location.search).get('filter');
+  if (urlFilter) applyProdukFilter(urlFilter);
 }
 
 // ===== Mobile off-canvas menu =====

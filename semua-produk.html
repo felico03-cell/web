@@ -152,15 +152,15 @@
         <div class="cat-grid">
           <div class="cat-col">
             <div class="cat-thumb"><img src="images/produk-voucher-dropdown.jpg" alt="Voucher &amp; Ticket"></div>
-            <h4 class="cat-title">Voucher &amp; Ticket</h4>
+            <a class="cat-title" href="semua-produk.html?filter=voucher">Voucher &amp; Ticket</a>
             <ul class="cat-links">
-              <li><a href="#">Vouchers</a></li>
+              <li><a href="produk-voucher.html">Vouchers</a></li>
               <li><a href="#">Tickets</a></li>
             </ul>
           </div>
           <div class="cat-col">
-            <div class="cat-thumb"></div>
-            <h4 class="cat-title">Brochures</h4>
+            <div class="cat-thumb"><img src="images/produk-brosur-dropdown.png" alt="Brochures"></div>
+            <a class="cat-title" href="semua-produk.html?filter=brochures">Brochures</a>
             <ul class="cat-links">
               <li><a href="#">Flyers</a></li>
               <li><a href="#">Leaflets</a></li>
@@ -168,7 +168,7 @@
           </div>
           <div class="cat-col">
             <div class="cat-thumb"><img src="images/produk-sticker-dropdown.png" alt="Sticker Label"></div>
-            <h4 class="cat-title">Sticker Label</h4>
+            <a class="cat-title" href="semua-produk.html?filter=stickers">Sticker Label</a>
             <ul class="cat-links">
               <li><a href="#">Sticker Die Cut</a></li>
               <li><a href="#">Sticker A3+</a></li>
@@ -177,7 +177,7 @@
           </div>
           <div class="cat-col">
             <div class="cat-thumb"><img src="images/produk-packaging-dropdown.png" alt="Packaging"></div>
-            <h4 class="cat-title">Packaging</h4>
+            <a class="cat-title" href="semua-produk.html?filter=packaging">Packaging</a>
             <ul class="cat-links">
               <li><a href="#">Hang Tag</a></li>
               <li><a href="#">Food Box</a></li>
@@ -186,7 +186,7 @@
           </div>
           <div class="cat-col">
             <div class="cat-thumb"></div>
-            <h4 class="cat-title">Booklet</h4>
+            <a class="cat-title" href="semua-produk.html?filter=booklet">Booklet</a>
             <ul class="cat-links">
               <li><a href="#">Booklet</a></li>
               <li><a href="#">Spiral Book</a></li>
@@ -194,7 +194,7 @@
           </div>
           <div class="cat-col">
             <div class="cat-thumb"><img src="images/produk-calendar-dropdown.png" alt="Calendars"></div>
-            <h4 class="cat-title">Calendars</h4>
+            <a class="cat-title" href="semua-produk.html?filter=calendars">Calendars</a>
             <ul class="cat-links">
               <li><a href="#">Standard Calendar</a></li>
               <li><a href="produk-kalender.html">Corporate Calendar</a></li>
@@ -202,7 +202,7 @@
           </div>
           <div class="cat-col">
             <div class="cat-thumb"><img src="images/produk-cards-dropdown.png" alt="Cards"></div>
-            <h4 class="cat-title">Cards</h4>
+            <a class="cat-title" href="semua-produk.html?filter=cards">Cards</a>
             <ul class="cat-links">
               <li><a href="#">Greeting Card</a></li>
               <li><a href="#">Loyalty Card</a></li>
@@ -212,7 +212,7 @@
           </div>
           <div class="cat-col">
             <div class="cat-thumb"></div>
-            <h4 class="cat-title">Apparel</h4>
+            <a class="cat-title" href="semua-produk.html?filter=apparel">Apparel</a>
             <ul class="cat-links">
               <li><a href="#">T-Shirt</a></li>
               <li><a href="#">Printed Bag</a></li>
@@ -221,7 +221,7 @@
           </div>
           <div class="cat-col">
             <div class="cat-thumb"></div>
-            <h4 class="cat-title">Merchandise</h4>
+            <a class="cat-title" href="semua-produk.html?filter=merchandise">Merchandise</a>
             <ul class="cat-links">
               <li><a href="#">Keychain</a></li>
               <li><a href="#">Mug</a></li>
@@ -229,7 +229,7 @@
           </div>
           <div class="cat-col">
             <div class="cat-thumb"></div>
-            <h4 class="cat-title">Signage &amp; display</h4>
+            <a class="cat-title" href="semua-produk.html?filter=signage">Signage &amp; display</a>
             <ul class="cat-links">
               <li><a href="#">Banner</a></li>
               <li><a href="#">Standing Banner</a></li>
@@ -239,7 +239,7 @@
           </div>
           <div class="cat-col">
             <div class="cat-thumb"></div>
-            <h4 class="cat-title">Office</h4>
+            <a class="cat-title" href="semua-produk.html?filter=office">Office</a>
             <ul class="cat-links">
               <li><a href="#">Buku Nota Surat Jalan</a></li>
               <li><a href="#">Kop Surat</a></li>
@@ -281,51 +281,51 @@
         Kategori Produk
       </div>
       <ul class="cat-side-list">
-        <li><a href="semua-produk.html" class="active">
+        <li><a href="semua-produk.html" class="active" data-filter="all">
           <span class="cat-ico cat-ico-svg"><img src="images/semua-produk-icon.png" alt=""></span>
           Semua Produk
         </a></li>
-        <li><a href="#">
+        <li><a href="#" data-filter="voucher">
           <img class="cat-ico" src="images/category-icons/voucher.png" alt="">
           Voucher &amp; Ticket
         </a></li>
-        <li><a href="#">
+        <li><a href="#" data-filter="brochures">
           <img class="cat-ico" src="images/category-icons/brochure.png" alt="">
           Brochures
         </a></li>
-        <li><a href="#">
+        <li><a href="#" data-filter="stickers">
           <img class="cat-ico" src="images/category-icons/stickers.png" alt="">
           Sticker Label
         </a></li>
-        <li><a href="#">
+        <li><a href="#" data-filter="packaging">
           <img class="cat-ico" src="images/category-icons/packaging.png" alt="">
           Packaging
         </a></li>
-        <li><a href="#">
+        <li><a href="#" data-filter="booklet">
           <span class="cat-ico cat-ico-svg"><img src="images/booklet-icon.png" alt=""></span>
           Booklet
         </a></li>
-        <li><a href="#">
+        <li><a href="#" data-filter="calendars">
           <span class="cat-ico cat-ico-svg"><img src="images/calendar-icon.png" alt=""></span>
           Calendars
         </a></li>
-        <li><a href="#">
+        <li><a href="#" data-filter="cards">
           <span class="cat-ico cat-ico-svg"><img src="images/card-icon.png" alt=""></span>
           Cards
         </a></li>
-        <li><a href="#">
+        <li><a href="#" data-filter="apparel">
           <span class="cat-ico cat-ico-svg"><img src="images/apparel-icon.png" alt=""></span>
           Apparel
         </a></li>
-        <li><a href="#">
+        <li><a href="#" data-filter="merchandise">
           <img class="cat-ico" src="images/category-icons/merchandise.png" alt="">
           Merchandise
         </a></li>
-        <li><a href="#">
+        <li><a href="#" data-filter="signage">
           <img class="cat-ico" src="images/category-icons/signage-banner.png" alt="">
           Signage &amp; display
         </a></li>
-        <li><a href="#">
+        <li><a href="#" data-filter="office">
           <img class="cat-ico" src="images/category-icons/office-print.png" alt="">
           Office
         </a></li>
@@ -335,7 +335,15 @@
     <!-- Product grid -->
     <div class="produk-grid-wrap">
       <div class="produk-grid" id="produkGrid">
-        <a class="prod-card" href="produk-voucher-buku.html">
+        <a class="prod-card" href="produk-voucher.html" data-category="voucher">
+          <div class="prod-thumb"><img src="images/produk-voucher-standar-thumbnail.png" alt="Voucher"></div>
+          <div class="prod-body">
+            <h3 class="prod-name">Voucher</h3>
+            <div class="prod-rating"><span class="stars">★★★★★</span> <span class="count">(5)</span></div>
+            <div class="prod-price">Rp -</div>
+          </div>
+        </a>
+        <a class="prod-card" href="produk-voucher-buku.html" data-category="voucher">
           <div class="prod-thumb"><img src="images/produk-voucher-buku-thumbnail.png" alt="Voucher Buku"></div>
           <div class="prod-body">
             <h3 class="prod-name">Voucher Buku</h3>
@@ -343,7 +351,7 @@
             <div class="prod-price">Rp -</div>
           </div>
         </a>
-        <a class="prod-card" href="produk-packaging-box.html">
+        <a class="prod-card" href="produk-packaging-box.html" data-category="packaging">
           <div class="prod-thumb"><img src="images/produk-box-thumbnail.png" alt="Packaging Box"></div>
           <div class="prod-body">
             <h3 class="prod-name">Packaging Box</h3>
@@ -351,7 +359,7 @@
             <div class="prod-price">Rp -</div>
           </div>
         </a>
-        <a class="prod-card" href="produk-brosur-dl.html">
+        <a class="prod-card" href="produk-brosur-dl.html" data-category="brochures">
           <div class="prod-thumb"><img src="images/produk-brosurdl-thumbnail.png" alt="Brosur DL"></div>
           <div class="prod-body">
             <h3 class="prod-name">Brosur DL</h3>
@@ -359,7 +367,7 @@
             <div class="prod-price">Rp -</div>
           </div>
         </a>
-        <a class="prod-card" href="produk-trifold.html">
+        <a class="prod-card" href="produk-trifold.html" data-category="brochures">
           <div class="prod-thumb"><img src="images/produk-trifold-thumbnail.png" alt="Trifold Brochure"></div>
           <div class="prod-body">
             <h3 class="prod-name">Trifold Brochure</h3>
@@ -367,7 +375,7 @@
             <div class="prod-price">Rp -</div>
           </div>
         </a>
-        <a class="prod-card" href="produk-loyalty-card.html">
+        <a class="prod-card" href="produk-loyalty-card.html" data-category="cards">
           <div class="prod-thumb"><img src="images/produk-LoyaltyCard-thumbnail.png" alt="Loyalty Card"></div>
           <div class="prod-body">
             <h3 class="prod-name">Loyalty Card</h3>
