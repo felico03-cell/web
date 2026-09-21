@@ -772,6 +772,12 @@ footer{background:#fff;padding-top:44px;}
 
 .carousel .prod-card{scroll-snap-align:start;flex:0 0 47%;}
 
+/* Semua Produk: mobile category carousel (hidden on desktop/tablet) */
+.produk-cat-carousel{display:none;}
+.produk-cat-carousel .cat-tile{flex:0 0 84px;scroll-snap-align:start;}
+.produk-cat-carousel .cat-tile.active{border-color:var(--orange);background:var(--field-bg);}
+.produk-cat-carousel .cat-tile.active span:last-child{font-weight:800;}
+
 .busi-card{background:var(--field-bg);border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:14px;}
 .busi-banner{width:100%;height:auto;border-radius:14px;display:block;}
 
@@ -820,6 +826,14 @@ footer{background:#fff;padding-top:44px;}
   .ship-pay.align-right{align-items:flex-start;}
   .produk-grid{grid-template-columns:repeat(2,1fr);gap:14px;}
   .produk-head-row{flex-direction:column;align-items:flex-start;}
+  .produk-sidebar{display:none;}
+  .produk-section{padding-top:16px;}
+  .produk-cat-carousel{
+    display:flex;position:relative;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch;
+    padding:2px 2px 8px;margin-bottom:14px;
+  }
+  .produk-cat-carousel::-webkit-scrollbar{display:none;}
 
   .order-checklist{grid-template-columns:1fr;}
   .order-step{grid-template-columns:46px 1fr;gap:12px;}

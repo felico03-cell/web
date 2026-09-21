@@ -123,9 +123,16 @@ if (produkGridEl) {
   }
   produkGridEl.insertAdjacentHTML('beforeend', html);
 
-  const catSideLinks = document.querySelectorAll('.cat-side-list a[data-filter]');
+  const catSideLinks = document.querySelectorAll('.cat-side-list a[data-filter], .produk-cat-carousel a[data-filter]');
   const applyProdukFilter = (filter) => {
-    catSideLinks.forEach((l) => l.classList.toggle('active', l.dataset.filter === filter));
+    catSideLinks.forEach((l) => {
+      const isActive = l.dataset.filter === filter;
+      l.classList.toggle('active', isActive);
+      if (isActive && l.classList.contains('cat-tile')) {
+        const track = l.parentElement;
+        track.scrollTo({ left: l.offsetLeft - (track.clientWidth - l.offsetWidth) / 2, behavior: 'smooth' });
+      }
+    });
     produkGridEl.querySelectorAll('.prod-card').forEach((card) => {
       const match = filter === 'all' || card.dataset.category === filter;
       card.hidden = !match;
