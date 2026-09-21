@@ -174,6 +174,34 @@ if (mobileMenuEl && mobileMenuToggleBtn) {
   });
 }
 
+// ===== Jam Operasional popup =====
+const jamModalEl = document.getElementById('jamModal');
+const jamModalBackdropEl = document.getElementById('jamModalBackdrop');
+const jamModalCloseBtn = document.getElementById('jamModalClose');
+const jamTriggerEls = document.querySelectorAll('.jam-trigger');
+
+if (jamModalEl && jamModalBackdropEl && jamTriggerEls.length) {
+  const openJamModal = () => {
+    jamModalEl.classList.add('open');
+    jamModalBackdropEl.classList.add('open');
+  };
+  const closeJamModal = () => {
+    jamModalEl.classList.remove('open');
+    jamModalBackdropEl.classList.remove('open');
+  };
+  jamTriggerEls.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      openJamModal();
+    });
+  });
+  jamModalCloseBtn?.addEventListener('click', closeJamModal);
+  jamModalBackdropEl.addEventListener('click', closeJamModal);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeJamModal();
+  });
+}
+
 // ===== Karir popup =====
 const karirModalEl = document.getElementById('karirModal');
 const karirModalBackdropEl = document.getElementById('karirModalBackdrop');
