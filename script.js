@@ -1,21 +1,29 @@
-// Product carousel cards use the ready-made Calendar A6 product shot
-// (logo + photo + label already composed in the image itself).
-function buildCarousel(id, count, imgSrc, name) {
+// Homepage product carousels show the same product cards as Semua Produk,
+// using the lightweight "-web" thumbnails.
+const carouselProducts = [
+  { name: 'Voucher', href: 'produk-voucher.html', img: 'images/produk-voucher-standar-thumbnail-web.png' },
+  { name: 'Packaging Box', href: 'produk-packaging-box.html', img: 'images/produk-box-thumbnail-web.png' },
+  { name: 'Trifold Brochure', href: 'produk-trifold.html', img: 'images/produk-trifold-thumbnail-web.png' },
+  { name: 'Booklet', href: 'produk-booklet.html', img: 'images/produk-CompanyProfile-thumbnail-web.png' },
+];
+
+function buildCarousel(id) {
   const el = document.getElementById(id);
   if (!el) return;
-  let html = "";
-  for (let i = 0; i < count; i++) {
-    html += `
-      <div class="card">
-        <img src="${imgSrc}" alt="${name}" loading="lazy">
+  el.innerHTML = carouselProducts.map((p) => `
+    <a class="prod-card" href="${p.href}">
+      <div class="prod-thumb"><img src="${p.img}" alt="${p.name}" loading="lazy"></div>
+      <div class="prod-body">
+        <h3 class="prod-name">${p.name}</h3>
+        <div class="prod-rating"><span class="stars">★★★★★</span> <span class="count">(5)</span></div>
+        <div class="prod-price">Rp -</div>
       </div>
-    `;
-  }
-  el.innerHTML = html;
+    </a>
+  `).join('');
 }
 
-buildCarousel('produk', 6, 'images/calendar-a6.png', 'Calendar A6');
-buildCarousel('stickers', 6, 'images/calendar-a6.png', 'Calendar A6');
+buildCarousel('produk');
+buildCarousel('stickers');
 
 function scrollCarousel(id, dir) {
   const el = document.getElementById(id);
