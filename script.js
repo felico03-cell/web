@@ -107,32 +107,25 @@ document.querySelectorAll('.variant-btns').forEach((group) => {
   });
 });
 
-// ===== Semua Produk grid (placeholder cards) =====
+// ===== Semua Produk grid (category + search filtering) =====
 const produkGridEl = document.getElementById('produkGrid');
 if (produkGridEl) {
-  const tmpIcon = `
-    <svg viewBox="0 0 100 120" fill="none" stroke="#1b2d69" stroke-width="4">
-      <path d="M15 8h50l20 20v84a4 4 0 0 1-4 4H15a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4z" stroke-linejoin="round"/>
-      <path d="M65 8v20h20" stroke-linejoin="round"/>
-      <text x="50" y="80" font-family="Poppins, sans-serif" font-size="22" font-weight="800" text-anchor="middle" fill="#1b2d69" stroke="none">TMP</text>
-    </svg>`;
-  let html = '';
-  for (let i = 0; i < 11; i++) {
-    html += `
-      <div class="prod-card">
-        <div class="prod-thumb prod-thumb-placeholder">${tmpIcon}</div>
-        <div class="prod-body">
-          <h3 class="prod-name">Produk</h3>
-          <div class="prod-rating"><span class="stars">★★★★★</span> <span class="count">(5)</span></div>
-          <div class="prod-price">Rp -</div>
-        </div>
-      </div>
-    `;
-  }
-  produkGridEl.insertAdjacentHTML('beforeend', html);
-
   const catSideLinks = document.querySelectorAll('.cat-side-list a[data-filter], .produk-cat-carousel a[data-filter]');
+  let produkFilter = 'all';
+  let produkSearch = '';
+
+  const refreshProdukGrid = () => {
+    const q = produkSearch.trim().toLowerCase();
+    produkGridEl.querySelectorAll('.prod-card').forEach((card) => {
+      const matchesCategory = produkFilter === 'all' || card.dataset.category === produkFilter;
+      const name = card.querySelector('.prod-name')?.textContent.toLowerCase() || '';
+      const matchesSearch = !q || name.includes(q);
+      card.hidden = !(matchesCategory && matchesSearch);
+    });
+  };
+
   const applyProdukFilter = (filter) => {
+    produkFilter = filter;
     catSideLinks.forEach((l) => {
       const isActive = l.dataset.filter === filter;
       l.classList.toggle('active', isActive);
@@ -141,10 +134,7 @@ if (produkGridEl) {
         track.scrollTo({ left: l.offsetLeft - (track.clientWidth - l.offsetWidth) / 2, behavior: 'smooth' });
       }
     });
-    produkGridEl.querySelectorAll('.prod-card').forEach((card) => {
-      const match = filter === 'all' || card.dataset.category === filter;
-      card.hidden = !match;
-    });
+    refreshProdukGrid();
   };
   catSideLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
@@ -153,8 +143,117 @@ if (produkGridEl) {
     });
   });
 
-  const urlFilter = new URLSearchParams(location.search).get('filter');
-  if (urlFilter) applyProdukFilter(urlFilter);
+  const urlParams = new URLSearchParams(location.search);
+  produkSearch = urlParams.get('search') || '';
+  const urlFilter = urlParams.get('filter');
+  if (urlFilter) {
+    applyProdukFilter(urlFilter);
+  } else {
+    refreshProdukGrid();
+  }
+}
+
+// ===== Header search (desktop + mobile) =====
+const searchProducts = [
+  { name: 'Voucher', href: 'produk-voucher.html', category: 'voucher', img: 'images/produk-voucher-standar-thumbnail.png', keywords: ['kupon'] },
+  { name: 'Voucher Buku', href: 'produk-voucher-buku.html', category: 'voucher', img: 'images/produk-voucher-buku-thumbnail.png', keywords: ['kupon', 'buku'] },
+  { name: 'Packaging Box', href: 'produk-packaging-box.html', category: 'packaging', img: 'images/produk-box-thumbnail.png', keywords: ['kotak', 'dus', 'box'] },
+  { name: 'Brosur DL', href: 'produk-brosur-dl.html', category: 'brochures', img: 'images/produk-brosurdl-thumbnail.png', keywords: ['brochure', 'flyer'] },
+  { name: 'Trifold Brochure', href: 'produk-trifold.html', category: 'brochures', img: 'images/produk-trifold-thumbnail.png', keywords: ['brosur'] },
+  { name: 'Loyalty Card', href: 'produk-loyalty-card.html', category: 'cards', img: 'images/produk-LoyaltyCard-thumbnail.png', keywords: ['kartu', 'member'] },
+  { name: 'Booklet', href: 'produk-booklet.html', category: 'booklet', img: 'images/produk-CompanyProfile-thumbnail.png', keywords: ['company profile', 'buku'] },
+  { name: 'Kalender Perusahaan', href: 'produk-kalender.html', category: 'calendars', img: 'images/produk-calendar-thumbnail.png', keywords: ['kalender', 'calendar', 'corporate calendar'] },
+];
+
+function matchSearchProducts(term) {
+  const q = term.trim().toLowerCase();
+  if (!q) return [];
+  return searchProducts.filter((p) => {
+    const haystack = [p.name, p.category, ...(p.keywords || [])].join(' ').toLowerCase();
+    return haystack.includes(q);
+  }).slice(0, 6);
+}
+
+document.querySelectorAll('form.search-bar').forEach((form) => {
+  const input = form.querySelector('input[type="text"]');
+  if (!input) return;
+
+  const dropdown = document.createElement('div');
+  dropdown.className = 'search-suggest';
+  form.appendChild(dropdown);
+
+  let activeIndex = -1;
+
+  const goToResults = () => {
+    const q = input.value.trim();
+    if (!q) return;
+    const items = matchSearchProducts(q);
+    window.location.href = items.length === 1
+      ? items[0].href
+      : `semua-produk.html?search=${encodeURIComponent(q)}`;
+  };
+
+  const renderSuggestions = (items) => {
+    activeIndex = -1;
+    if (!items.length) {
+      dropdown.classList.remove('open');
+      dropdown.innerHTML = '';
+      return;
+    }
+    dropdown.innerHTML = items.map((p) => `
+      <a class="search-suggest-item" href="${p.href}">
+        <img src="${p.img}" alt="">
+        <span>${p.name}</span>
+      </a>
+    `).join('');
+    dropdown.classList.add('open');
+  };
+
+  input.addEventListener('input', () => {
+    renderSuggestions(matchSearchProducts(input.value));
+  });
+
+  input.addEventListener('focus', () => {
+    if (input.value.trim()) renderSuggestions(matchSearchProducts(input.value));
+  });
+
+  input.addEventListener('keydown', (e) => {
+    const items = dropdown.querySelectorAll('.search-suggest-item');
+    if (e.key === 'ArrowDown' && items.length) {
+      e.preventDefault();
+      activeIndex = (activeIndex + 1) % items.length;
+      items.forEach((it, i) => it.classList.toggle('active', i === activeIndex));
+    } else if (e.key === 'ArrowUp' && items.length) {
+      e.preventDefault();
+      activeIndex = (activeIndex - 1 + items.length) % items.length;
+      items.forEach((it, i) => it.classList.toggle('active', i === activeIndex));
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (activeIndex >= 0 && items[activeIndex]) {
+        window.location.href = items[activeIndex].getAttribute('href');
+      } else {
+        goToResults();
+      }
+    } else if (e.key === 'Escape') {
+      dropdown.classList.remove('open');
+    }
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    goToResults();
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!form.contains(e.target)) dropdown.classList.remove('open');
+  });
+});
+
+const searchQueryFromUrl = new URLSearchParams(location.search).get('search');
+if (searchQueryFromUrl) {
+  document.querySelectorAll('form.search-bar input[type="text"]').forEach((el) => {
+    el.value = searchQueryFromUrl;
+  });
 }
 
 // ===== Mobile off-canvas menu =====
