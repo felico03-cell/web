@@ -159,6 +159,7 @@ const searchProducts = [
   { name: 'Voucher HVS / Tiket', href: 'produk-voucher-hvs-tiket.html', category: 'voucher', img: 'images/produk-voucher-tiket-thumbnail.png', keywords: ['tiket', 'karcis', 'hvs', 'ticket'] },
   { name: 'Voucher Buku', href: 'produk-voucher-buku.html', category: 'voucher', img: 'images/produk-voucher-buku-thumbnail.png', keywords: ['kupon', 'buku'] },
   { name: 'Packaging Box', href: 'produk-packaging-box.html', category: 'packaging', img: 'images/produk-box-thumbnail.png', keywords: ['kotak', 'dus', 'box'] },
+  { name: 'Flyer', href: 'produk-flyer.html', category: 'brochures', img: 'images/produk-Flyer-thumbnail.png', keywords: ['a6', 'a5', 'a4', 'a3', 'brosur'] },
   { name: 'Brosur DL', href: 'produk-brosur-dl.html', category: 'brochures', img: 'images/produk-brosurdl-thumbnail.png', keywords: ['brochure', 'flyer'] },
   { name: 'Trifold Brochure', href: 'produk-trifold.html', category: 'brochures', img: 'images/produk-trifold-thumbnail.png', keywords: ['brosur'] },
   { name: 'Loyalty Card', href: 'produk-loyalty-card.html', category: 'cards', img: 'images/produk-LoyaltyCard-thumbnail.png', keywords: ['kartu', 'member'] },

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flyer — Calsprint</title>
+<link rel="icon" type="image/png" href="images/logo-calsprint-notext.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== Mobile header (shown on small screens only) ===== -->
+<header class="mobile-topbar">
+  <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileMenu">
+    <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+  </button>
+  <a href="index.html" class="brand">
+    <img class="brand-logo" src="images/logo-calsprint.png" alt="Calsprint">
+  </a>
+  <div class="mobile-topbar-actions">
+    <a class="mobile-hubungi" href="hubungi-kami.html">Hubungi Kami</a>
+    <a class="mobile-ic wa" href="https://wa.me/6287840233772" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+      <svg viewBox="0 0 24 24"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.34A10 10 0 1 0 12 2zm0 18.2a8.16 8.16 0 0 1-4.16-1.14l-.3-.18-3.02.8.81-2.94-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.13c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3-.02-.46-.02s-.42.06-.64.3c-.22.24-.85.83-.85 2.02 0 1.19.87 2.34 1 2.5.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/></svg>
+    </a>
+  </div>
+</header>
+
+<div class="mobile-search-wrap">
+  <form class="pill-field search-bar mobile-search-bar" role="search">
+    <input type="text" placeholder="Mau Cetak Apa?">
+    <button type="submit" aria-label="Cari">
+      <img class="search-icon" src="images/search-icon.png" alt="">
+    </button>
+  </form>
+</div>
+
+<!-- ===== Mobile off-canvas menu ===== -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-backdrop" id="mobileMenuBackdrop" aria-label="Tutup menu"></button>
+  <div class="mobile-menu-panel">
+    <div class="mobile-menu-head">
+      <a href="index.html" class="brand">
+        <img class="brand-logo" src="images/logo-calsprint.png" alt="Calsprint">
+      </a>
+      <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Tutup menu">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-nav">
+      <a href="index.html">Beranda</a>
+      <a href="semua-produk.html" class="active">Semua Produk</a>
+      <a href="tentang-kami.html">Tentang Kami</a>
+      <a href="index.html#promo">Promo</a>
+      <a href="portofolio.html">Portofolio</a>
+    </nav>
+    <div class="mobile-menu-cats">
+      <h5>Kategori Produk</h5>
+      <ul>
+        <li><a href="semua-produk.html">Voucher &amp; Ticket</a></li>
+        <li><a href="semua-produk.html">Brochures</a></li>
+        <li><a href="semua-produk.html">Sticker Label</a></li>
+        <li><a href="semua-produk.html">Packaging</a></li>
+        <li><a href="semua-produk.html">Booklet</a></li>
+        <li><a href="semua-produk.html">Calendars</a></li>
+        <li><a href="semua-produk.html">Cards</a></li>
+        <li><a href="semua-produk.html">Apparel</a></li>
+        <li><a href="semua-produk.html">Merchandise</a></li>
+        <li><a href="semua-produk.html">Signage &amp; display</a></li>
+        <li><a href="semua-produk.html">Office</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu-foot">
+      <a class="btn-whatsapp" href="https://wa.me/6287840233772" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.34A10 10 0 1 0 12 2zm0 18.2a8.16 8.16 0 0 1-4.16-1.14l-.3-.18-3.02.8.81-2.94-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.13c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3-.02-.46-.02s-.42.06-.64.3c-.22.24-.85.83-.85 2.02 0 1.19.87 2.34 1 2.5.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/></svg>
+        <span>Chat us on WhatsApp</span>
+      </a>
+      <div class="mobile-menu-social">
+        <a href="https://www.instagram.com/cals.print/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@cals.print" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 2h-3.2v13.4a3 3 0 1 1-2.1-2.86v-3.3a6.2 6.2 0 1 0 5.3 6.16V8.9a7.6 7.6 0 0 0 4.6 1.56V7.3a4.4 4.4 0 0 1-4.6-4.1V2z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Top utility bar ===== -->
+<div class="topbar desktop-only-section">
+  <div class="container">
+    <div class="follow">
+      <span>Ikuti Kami di:</span>
+      <a class="ic-outline" href="https://www.instagram.com/cals.print/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>
+      </a>
+      <a class="ic-outline" href="https://www.tiktok.com/@cals.print" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 2h-3.2v13.4a3 3 0 1 1-2.1-2.86v-3.3a6.2 6.2 0 1 0 5.3 6.16V8.9a7.6 7.6 0 0 0 4.6 1.56V7.3a4.4 4.4 0 0 1-4.6-4.1V2z"/></svg>
+      </a>
+    </div>
+    <div class="links">
+      <a href="cara-order.html">Cara Order</a>
+      <span class="sep">|</span>
+      <a href="#" class="karir-trigger">Karir</a>
+      <span class="sep">|</span>
+      <a href="faq.html">FAQ</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Header ===== -->
+<header class="site-header desktop-only-section">
+  <div class="container header-row">
+    <a href="index.html" class="brand">
+      <img class="brand-logo" src="images/logo-calsprint.png" alt="Calsprint">
+    </a>
+
+    <button class="pill-field location-pill">
+      <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+      Tangerang
+    </button>
+
+    <form class="pill-field search-bar" role="search">
+      <input type="text" placeholder="Mau Cetak Apa?">
+      <button type="submit" aria-label="Cari">
+        <img class="search-icon" src="images/search-icon.png" alt="">
+      </button>
+    </form>
+
+    <div class="header-actions">
+      <a class="btn-whatsapp-img" href="https://wa.me/6287840233772" target="_blank" rel="noopener">
+        <img src="images/whatsapp-long-button.svg" alt="Chat us on WhatsApp">
+      </a>
+      <a class="btn-hubungi-img" href="hubungi-kami.html">
+        <img src="images/hubungi-kami-button.svg" alt="Hubungi Kami">
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Category nav ===== -->
+<nav class="catnav desktop-only-section">
+  <div class="container">
+    <div class="category-wrap">
+      <button class="pick" id="categoryToggle" aria-expanded="false" aria-controls="categoryDropdown">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+        Pilih Kategori
+      </button>
+
+      <div class="category-dropdown" id="categoryDropdown">
+        <div class="cat-grid">
+          <div class="cat-col">
+            <div class="cat-thumb"><img src="images/produk-voucher-dropdown.jpg" alt="Voucher &amp; Ticket"></div>
+            <a class="cat-title" href="semua-produk.html?filter=voucher">Voucher &amp; Ticket</a>
+            <ul class="cat-links">
+              <li><a href="produk-voucher.html">Vouchers</a></li>
+              <li><a href="produk-voucher-hvs-tiket.html">Tickets</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"><img src="images/produk-brosur-dropdown.png" alt="Brochures"></div>
+            <a class="cat-title" href="semua-produk.html?filter=brochures">Brochures</a>
+            <ul class="cat-links">
+              <li><a href="produk-flyer.html">Flyers</a></li>
+              <li><a href="#">Leaflets</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"><img src="images/produk-sticker-dropdown.png" alt="Sticker Label"></div>
+            <a class="cat-title" href="semua-produk.html?filter=stickers">Sticker Label</a>
+            <ul class="cat-links">
+              <li><a href="#">Sticker Die Cut</a></li>
+              <li><a href="#">Sticker A3+</a></li>
+              <li><a href="#">Custom Request</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"><img src="images/produk-packaging-dropdown.png" alt="Packaging"></div>
+            <a class="cat-title" href="semua-produk.html?filter=packaging">Packaging</a>
+            <ul class="cat-links">
+              <li><a href="#">Hang Tag</a></li>
+              <li><a href="#">Food Box</a></li>
+              <li><a href="#">Custom Packaging</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"><img src="images/produk-CompanyProfile-dropdown.png" alt="Booklet"></div>
+            <a class="cat-title" href="semua-produk.html?filter=booklet">Booklet</a>
+            <ul class="cat-links">
+              <li><a href="produk-booklet.html">Booklet</a></li>
+              <li><a href="#">Spiral Book</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"><img src="images/produk-calendar-dropdown.png" alt="Calendars"></div>
+            <a class="cat-title" href="semua-produk.html?filter=calendars">Calendars</a>
+            <ul class="cat-links">
+              <li><a href="#">Standard Calendar</a></li>
+              <li><a href="produk-kalender.html">Corporate Calendar</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"><img src="images/produk-cards-dropdown.png" alt="Cards"></div>
+            <a class="cat-title" href="semua-produk.html?filter=cards">Cards</a>
+            <ul class="cat-links">
+              <li><a href="#">Greeting Card</a></li>
+              <li><a href="produk-loyalty-card.html">Loyalty Card</a></li>
+              <li><a href="#">Business Card</a></li>
+              <li><a href="#">Payment Card</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"><img src="images/produk-Apparel-dropdown.png" alt="Apparel"></div>
+            <a class="cat-title" href="semua-produk.html?filter=apparel">Apparel</a>
+            <ul class="cat-links">
+              <li><a href="#">T-Shirt</a></li>
+              <li><a href="produk-totebag.html">Totebag Custom</a></li>
+              <li><a href="#">Baseball Cap</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"><img src="images/produk-Merchandise-thumbnail.png" alt="Merchandise"></div>
+            <a class="cat-title" href="semua-produk.html?filter=merchandise">Merchandise</a>
+            <ul class="cat-links">
+              <li><a href="produk-gantungan-kunci.html">Gantungan Kunci Custom</a></li>
+              <li><a href="#">Mug</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"></div>
+            <a class="cat-title" href="semua-produk.html?filter=signage">Signage &amp; display</a>
+            <ul class="cat-links">
+              <li><a href="#">Banner</a></li>
+              <li><a href="#">Standing Banner</a></li>
+              <li><a href="#">Posters</a></li>
+              <li><a href="#">Standing Improraboard</a></li>
+            </ul>
+          </div>
+          <div class="cat-col">
+            <div class="cat-thumb"></div>
+            <a class="cat-title" href="semua-produk.html?filter=office">Office</a>
+            <ul class="cat-links">
+              <li><a href="#">Buku Nota Surat Jalan</a></li>
+              <li><a href="#">Kop Surat</a></li>
+              <li><a href="#">Amplop</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="index.html">Beranda</a>
+    <a href="semua-produk.html" class="active">Semua Produk</a>
+    <a href="tentang-kami.html">Tentang Kami</a>
+    <a href="index.html#promo">Promo</a>
+    <a href="portofolio.html">Portofolio</a>
+  </div>
+</nav>
+
+<!-- ===== Product hero / breadcrumb ===== -->
+<div class="product-hero">
+  <div class="container produk-head-row">
+    <h1>Flyer</h1>
+    <div class="breadcrumb">
+      <svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3l9-8z"/></svg>
+      <a href="index.html">Beranda</a>
+      <svg class="chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <a href="semua-produk.html">Semua Produk</a>
+      <svg class="chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Detail</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Product detail ===== -->
+<section class="product-detail">
+  <div class="container product-detail-grid">
+
+    <!-- Gallery -->
+    <div class="product-gallery">
+      <img id="galleryImg" src="images/produkpage-Flyer-1.png" alt="Flyer" data-gallery="images/produkpage-Flyer-1.png,images/produkpage-Flyer-2.png,images/produkpage-Flyer-3.png">
+      <button class="gallery-hit prev" aria-label="Foto sebelumnya">
+        <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="gallery-hit next" aria-label="Foto berikutnya">
+        <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <!-- Info -->
+    <div class="product-info">
+      <h1>Flyer</h1>
+      <div class="prod-rating"><span class="stars">★★★★★</span> <span class="count">(5)</span></div>
+
+      <div class="variant-row">
+        <span class="lbl">Ukuran:</span>
+        <div class="variant-btns">
+          <button type="button" class="variant-btn active" data-image="images/produkpage-Flyer-1.png">A6</button>
+          <button type="button" class="variant-btn" data-image="images/produkpage-Flyer-2.png">A5</button>
+          <button type="button" class="variant-btn" data-image="images/produkpage-Flyer-3.png">A4</button>
+          <button type="button" class="variant-btn" data-image="images/produkpage-Flyer-1.png">A3</button>
+        </div>
+      </div>
+
+      <div class="share-row">
+        <span class="lbl">Bagikan:</span>
+        <div class="share-btns">
+          <a class="share-btn" href="#" aria-label="Salin tautan">
+            <img src="images/icon-link-color.png" alt="">
+          </a>
+          <a class="share-btn" href="#" aria-label="Bagikan ke Instagram">
+            <img src="images/instagram-icon-color.png" alt="">
+          </a>
+          <a class="share-btn" href="https://wa.me/6287840233772" target="_blank" rel="noopener" aria-label="Bagikan ke WhatsApp">
+            <img src="images/whatsapp-icon-color.png" alt="">
+          </a>
+          <a class="share-btn" href="#" aria-label="Bagikan ke TikTok">
+            <img src="images/tiktok-icon-color.png" alt="">
+          </a>
+        </div>
+      </div>
+
+      <div class="spec-head">
+        <img src="images/info-icon-primary-color.png" alt="">
+        <span>Spesifikasi Produk</span>
+      </div>
+      <ul class="spec-list">
+        <li>Tersedia dalam berbagai ukuran: A6, A5, A4, dan A3.</li>
+        <li>Cetak full color satu atau dua sisi dengan hasil tajam dan jelas.</li>
+        <li>Pilihan bahan art paper atau HVS sesuai kebutuhan promosi Anda.</li>
+        <li>Cocok untuk promosi event, brosur produk, hingga materi pemasaran usaha.</li>
+      </ul>
+
+      <div class="color-notice">
+        <img class="ic" src="images/info-icon-secondary-color.png" alt="">
+        <div>
+          <h4>Catatan Penting Mengenai Warna</h4>
+          <p>Warna pada hasil cetak dapat sedikit berbeda dengan tampilan di layar. Hal ini wajar karena layar menggunakan sistem warna RGB (Red, Green, Blue) berbasis cahaya, sedangkan proses pencetakan menggunakan tinta dengan sistem CMYK (Cyan, Magenta, Yellow, Black).</p>
+          <p>Tim kami akan selalu berupaya memastikan hasil cetak tetap optimal dan memenuhi standar kualitas terbaik.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer id="tentang">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h5>Kategori Produk</h5>
+      <ul>
+        <li><a href="#">Voucher</a></li>
+        <li><a href="#">Packaging</a></li>
+        <li><a href="#">Stickers</a></li>
+        <li><a href="#">Brochure</a></li>
+        <li><a href="#">Office Print</a></li>
+        <li><a href="#">Merchandise</a></li>
+        <li><a href="#">Signgage &amp; Banner</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Layanan Pelanggan</h5>
+      <ul>
+        <li><a href="cara-order.html">Cara Order</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="hubungi-kami.html">Hubungi Kami</a></li>
+        <li><a href="#" class="jam-trigger">Jam Operasional</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Tentang Kami</h5>
+      <ul>
+        <li><a href="tentang-kami.html">Profil Perusahaan</a></li>
+        <li><a href="#" class="karir-trigger">Karir</a></li>
+      </ul>
+    </div>
+    <div class="footer-about">
+      <a href="index.html" class="brand">
+        <img class="brand-logo" src="images/logo-calsprint.png" alt="Calsprint">
+      </a>
+      <p><b>Calsprint</b> hadir untuk membantu kebutuhan cetak Anda, dari kebutuhan sehari-hari hingga kebutuhan bisnis. Dengan produk dan layanan yang terus kami kembangkan, kami ingin menjadi bagian dari perjalanan bisnis Anda.</p>
+      <h6>Ikuti Kami</h6>
+      <div class="footer-social">
+        <a href="https://www.tiktok.com/@cals.print" target="_blank" rel="noopener" aria-label="TikTok">
+          <img src="images/tiktok-icon-orange.png" alt="">
+        </a>
+        <a href="https://www.instagram.com/cals.print/" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="images/instagram-icon-orange.png" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-strip">
+    <div class="container ship-pay-row">
+      <div class="ship-pay">
+        <span class="lbl">Jasa Pengiriman</span>
+        <div class="logos">
+          <img class="badge-img" src="images/jne.png" alt="JNE">
+          <img class="badge-img" src="images/lion-parcel.png" alt="Lion Parcel">
+          <img class="badge-img" src="images/gosend.png" alt="GoSend">
+          <img class="badge-img" src="images/grabexpress.png" alt="GrabExpress">
+          <img class="badge-img" src="images/lalamove.png" alt="Lalamove">
+        </div>
+      </div>
+      <div class="ship-pay align-right">
+        <span class="lbl">Metode Pembayaran</span>
+        <div class="logos">
+          <img class="badge-img" src="images/bca.png" alt="BCA">
+          <img class="badge-img" src="images/qris.png" alt="QRIS">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">Copyright © CV Lokal Jaya Cemerlang. All rights reserved.</div>
+</footer>
+
+<!-- ===== Karir popup ===== -->
+<div class="karir-modal-backdrop" id="karirModalBackdrop"></div>
+<div class="karir-modal" id="karirModal" role="dialog" aria-modal="true" aria-labelledby="karirModalTitle">
+  <button class="karir-modal-close" id="karirModalClose" aria-label="Tutup">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <h3 class="karir-modal-title" id="karirModalTitle">Bergabung Bersama CALSPRINT</h3>
+  <div class="karir-modal-body">
+    <p>Temukan kesempatan untuk berkembang dan menjadi bagian dari perjalanan CALSPRINT.</p>
+    <div class="karir-modal-subtitle">Posisi yang Tersedia</div>
+    <p>Saat ini belum ada lowongan pekerjaan yang tersedia.</p>
+    <p>Tertarik menjadi bagian dari CALSPRINT? Kirimkan CV dan informasi diri Anda melalui email kami untuk dipertimbangkan sesuai dengan kebutuhan perusahaan.</p>
+    <a class="karir-modal-btn" href="mailto:calsprint2203@gmail.com?subject=Lamaran%20Pekerjaan&body=Berikut%20informasi%20diri%20saya%20...">Kirim CV</a>
+  </div>
+</div>
+
+<!-- ===== Jam Operasional popup ===== -->
+<div class="karir-modal-backdrop" id="jamModalBackdrop"></div>
+<div class="karir-modal" id="jamModal" role="dialog" aria-modal="true" aria-labelledby="jamModalTitle">
+  <button class="karir-modal-close" id="jamModalClose" aria-label="Tutup">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <h3 class="karir-modal-title" id="jamModalTitle">Jam Operasional:</h3>
+  <ul class="jam-list">
+    <li><span>Senin:</span><span>08.00–17.00</span></li>
+    <li><span>Selasa:</span><span>08.00–17.00</span></li>
+    <li><span>Rabu:</span><span>08.00–17.00</span></li>
+    <li><span>Kamis:</span><span>08.00–17.00</span></li>
+    <li><span>Jumat:</span><span>08.00–17.00</span></li>
+    <li><span>Sabtu:</span><span>08.00–16.00</span></li>
+    <li><span>Minggu &amp; Hari Libur Nasional:</span><span>Tutup</span></li>
+  </ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
