@@ -163,6 +163,8 @@ const searchProducts = [
   { name: 'Loyalty Card', href: 'produk-loyalty-card.html', category: 'cards', img: 'images/produk-LoyaltyCard-thumbnail.png', keywords: ['kartu', 'member'] },
   { name: 'Booklet', href: 'produk-booklet.html', category: 'booklet', img: 'images/produk-CompanyProfile-thumbnail.png', keywords: ['company profile', 'buku'] },
   { name: 'Kalender Perusahaan', href: 'produk-kalender.html', category: 'calendars', img: 'images/produk-calendar-thumbnail.png', keywords: ['kalender', 'calendar', 'corporate calendar'] },
+  { name: 'Totebag Custom', href: 'produk-totebag.html', category: 'apparel', img: 'images/produk-ToteBag-thumbnail.png', keywords: ['tote bag', 'tas', 'totebag'] },
+  { name: 'Gantungan Kunci Custom', href: 'produk-gantungan-kunci.html', category: 'merchandise', img: 'images/produk-GantunganKunci-thumbnail.png', keywords: ['keychain', 'gantungan kunci', 'kunci'] },
 ];
 
 function matchSearchProducts(term) {

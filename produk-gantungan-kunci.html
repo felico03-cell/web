@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calsprint</title>
+<title>Gantungan Kunci Custom — Calsprint</title>
 <link rel="icon" type="image/png" href="images/logo-calsprint-notext.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -49,10 +49,10 @@
       </button>
     </div>
     <nav class="mobile-menu-nav">
-      <a href="index.html" class="active">Beranda</a>
-      <a href="semua-produk.html">Semua Produk</a>
+      <a href="index.html">Beranda</a>
+      <a href="semua-produk.html" class="active">Semua Produk</a>
       <a href="tentang-kami.html">Tentang Kami</a>
-      <a href="#promo">Promo</a>
+      <a href="index.html#promo">Promo</a>
       <a href="portofolio.html">Portofolio</a>
     </nav>
     <div class="mobile-menu-cats">
@@ -113,7 +113,7 @@
 <!-- ===== Header ===== -->
 <header class="site-header desktop-only-section">
   <div class="container header-row">
-    <a href="#" class="brand">
+    <a href="index.html" class="brand">
       <img class="brand-logo" src="images/logo-calsprint.png" alt="Calsprint">
     </a>
 
@@ -250,266 +250,88 @@
         </div>
       </div>
     </div>
-    <a href="index.html" class="active">Beranda</a>
-    <a href="semua-produk.html">Semua Produk</a>
+    <a href="index.html">Beranda</a>
+    <a href="semua-produk.html" class="active">Semua Produk</a>
     <a href="tentang-kami.html">Tentang Kami</a>
-    <a href="#promo">Promo</a>
+    <a href="index.html#promo">Promo</a>
     <a href="portofolio.html">Portofolio</a>
   </div>
 </nav>
 
-<!-- ===== Hero ===== -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-card">
-      <div class="hero-slider" id="heroSlider">
-        <div class="hero-track" id="heroTrack">
-          <div class="hero-slide">
-            <img class="hero-img" src="images/hero-banner.png" alt="Cetak Spanduk Banner — mulai dari Rp 20.000 per meter. Flexi, Albatroz. X Banner, Roll Up Banner, Aneka Spanduk.">
-            <a class="hero-wa-overlay" href="https://wa.me/6287840233772" target="_blank" rel="noopener" aria-label="Chat WhatsApp Order 0878 4023 3772"></a>
-          </div>
-          <div class="hero-slide">
-            <img class="hero-img" src="images/hero-banner-2.png" alt="Cetak Voucher Jilid — Numerator + Perforasi, tanpa ribet!">
-          </div>
-          <div class="hero-slide">
-            <img class="hero-img" src="images/hero-banner-3.png" alt="Banner promo ketiga — placeholder, ganti dengan banner Anda">
-          </div>
-        </div>
-      </div>
+<!-- ===== Product hero / breadcrumb ===== -->
+<div class="product-hero">
+  <div class="container produk-head-row">
+    <h1>Gantungan Kunci Custom</h1>
+    <div class="breadcrumb">
+      <svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3l9-8z"/></svg>
+      <a href="index.html">Beranda</a>
+      <svg class="chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <a href="semua-produk.html">Semua Produk</a>
+      <svg class="chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Detail</span>
+    </div>
+  </div>
+</div>
 
-      <button class="hero-arrow prev" onclick="heroPrev()" aria-label="Banner sebelumnya">
+<!-- ===== Product detail ===== -->
+<section class="product-detail">
+  <div class="container product-detail-grid">
+
+    <!-- Gallery -->
+    <div class="product-gallery">
+      <img id="galleryImg" src="images/produkpage-GantunganKunci-1.png" alt="Gantungan Kunci Custom" data-gallery="images/produkpage-GantunganKunci-1.png">
+      <button class="gallery-hit prev" aria-label="Foto sebelumnya">
         <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <button class="hero-arrow next" onclick="heroNext()" aria-label="Banner berikutnya">
+      <button class="gallery-hit next" aria-label="Foto berikutnya">
         <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
     </div>
 
-    <div class="hero-dots" id="heroDots"></div>
-  </div>
-</section>
+    <!-- Info -->
+    <div class="product-info">
+      <h1>Gantungan Kunci Custom</h1>
+      <div class="prod-rating"><span class="stars">★★★★★</span> <span class="count">(5)</span></div>
 
-<!-- ===== Mobile: Kategori Produk ===== -->
-<section class="section mobile-cats">
-  <div class="container">
-    <div class="section-head">
-      <h2>Kategori Produk</h2>
-      <span class="dots"></span>
-    </div>
-    <div class="cat-tile-grid">
-      <a class="cat-tile" href="semua-produk.html">
-        <span class="cat-tile-ico"><img src="images/category-icons/voucher.png" alt=""></span>
-        <span>Voucher &amp; Ticket</span>
-      </a>
-      <a class="cat-tile" href="semua-produk.html">
-        <span class="cat-tile-ico"><img src="images/category-icons/brochure.png" alt=""></span>
-        <span>Brochures</span>
-      </a>
-      <a class="cat-tile" href="semua-produk.html">
-        <span class="cat-tile-ico"><img src="images/calendar-icon.png" alt=""></span>
-        <span>Calendars</span>
-      </a>
-      <a class="cat-tile" href="semua-produk.html">
-        <span class="cat-tile-ico"><img src="images/category-icons/stickers.png" alt=""></span>
-        <span>Sticker Label</span>
-      </a>
-      <a class="cat-tile" href="semua-produk.html">
-        <span class="cat-tile-ico"><img src="images/category-icons/packaging.png" alt=""></span>
-        <span>Packaging</span>
-      </a>
-      <a class="cat-tile" href="semua-produk.html">
-        <span class="cat-tile-ico"><img src="images/booklet-icon.png" alt=""></span>
-        <span>Booklet</span>
-      </a>
-      <a class="cat-tile" href="semua-produk.html">
-        <span class="cat-tile-ico"><img src="images/card-icon.png" alt=""></span>
-        <span>Cards</span>
-      </a>
-      <a class="cat-tile" href="semua-produk.html">
-        <span class="cat-tile-ico"><img src="images/apparel-icon.png" alt=""></span>
-        <span>Apparel</span>
-      </a>
-      <a class="cat-tile" href="semua-produk.html">
-        <span class="cat-tile-ico"><img src="images/category-icons/merchandise.png" alt=""></span>
-        <span>Merchandise</span>
-      </a>
-      <a class="cat-tile" href="semua-produk.html">
-        <span class="cat-tile-ico"><img src="images/category-icons/office-print.png" alt=""></span>
-        <span>Office</span>
-      </a>
-      <a class="cat-tile" href="semua-produk.html">
-        <span class="cat-tile-ico"><img src="images/category-icons/signage-banner.png" alt=""></span>
-        <span>Signage &amp; display</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Mobile: Produk Promo ===== -->
-<section class="section mobile-promo">
-  <div class="container">
-    <div class="section-head">
-      <h2>Produk Promo</h2>
-      <span class="dots"></span>
-      <a class="see-all orange-link" href="semua-produk.html">Lihat semua
-        <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </div>
-    <div class="carousel-wrap">
-      <button class="scroll-btn prev" onclick="scrollCarousel('mobilePromo',-1)" aria-label="Sebelumnya">
-        <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="carousel promo-carousel" id="mobilePromo">
-        <a class="prod-card" href="semua-produk.html">
-          <div class="prod-thumb"><img src="images/produk-voucher-buku-thumbnail-web.png" alt="Voucher Buku" loading="lazy"></div>
-          <div class="prod-body">
-            <h3 class="prod-name">Voucher Buku</h3>
-            <div class="prod-rating"><span class="stars">★★★★★</span> <span class="count">(5)</span></div>
-            <div class="prod-price">Rp -</div>
-          </div>
-        </a>
-        <a class="prod-card" href="semua-produk.html">
-          <div class="prod-thumb"><img src="images/produk-calendar-thumbnail-web.png" alt="Calendar" loading="lazy"></div>
-          <div class="prod-body">
-            <h3 class="prod-name">Calendar</h3>
-            <div class="prod-rating"><span class="stars">★★★★★</span> <span class="count">(5)</span></div>
-            <div class="prod-price">Rp -</div>
-          </div>
-        </a>
+      <div class="share-row">
+        <span class="lbl">Bagikan:</span>
+        <div class="share-btns">
+          <a class="share-btn" href="#" aria-label="Salin tautan">
+            <img src="images/icon-link-color.png" alt="">
+          </a>
+          <a class="share-btn" href="#" aria-label="Bagikan ke Instagram">
+            <img src="images/instagram-icon-color.png" alt="">
+          </a>
+          <a class="share-btn" href="https://wa.me/6287840233772" target="_blank" rel="noopener" aria-label="Bagikan ke WhatsApp">
+            <img src="images/whatsapp-icon-color.png" alt="">
+          </a>
+          <a class="share-btn" href="#" aria-label="Bagikan ke TikTok">
+            <img src="images/tiktok-icon-color.png" alt="">
+          </a>
+        </div>
       </div>
-      <button class="scroll-btn next" onclick="scrollCarousel('mobilePromo',1)" aria-label="Berikutnya">
-        <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-    </div>
-  </div>
-</section>
 
-<!-- ===== Mobile: Penunjang Bisnis Anda ===== -->
-<section class="section mobile-busi">
-  <div class="container">
-    <div class="section-head">
-      <h2>Penunjang Bisnis Anda</h2>
-      <span class="dots"></span>
-      <a class="see-all orange-link" href="semua-produk.html">Lihat semua
-        <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </div>
-    <div class="busi-card">
-      <img class="busi-banner" src="images/wide-packaging-mobile.jpg" alt="Packaging">
-      <img class="busi-banner" src="images/wide-voucher-hand-mobile.jpg" alt="Voucher &amp; Ticket">
-      <img class="busi-banner" src="images/wide-calendar-orange-mobile.jpg" alt="Calendar">
-      <img class="busi-banner" src="images/wide-sticker-yellow-mobile.jpg" alt="Stickers">
-    </div>
-  </div>
-</section>
+      <div class="spec-head">
+        <img src="images/info-icon-primary-color.png" alt="">
+        <span>Spesifikasi Produk</span>
+      </div>
+      <ul class="spec-list">
+        <li>Bahan akrilik bening, tahan gores dan tahan lama.</li>
+        <li>Cetak logo/desain custom full color pada permukaan akrilik.</li>
+        <li>Dilengkapi ring dan rantai gantungan kunci.</li>
+        <li>Cocok untuk merchandise event, seminar, hingga souvenir brand.</li>
+      </ul>
 
-<!-- ===== Produk Pilihan ===== -->
-<section class="section on-navy desktop-only-section">
-  <div class="container">
-    <div class="section-head">
-      <h2>Produk Pilihan</h2>
-      <span class="dots"></span>
-      <a class="see-all" href="#">Lihat Semua
-        <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </div>
-    <div class="carousel-wrap">
-      <button class="scroll-btn prev" onclick="scrollCarousel('produk',-1)" aria-label="Sebelumnya">
-        <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="carousel" id="produk"></div>
-      <button class="scroll-btn next" onclick="scrollCarousel('produk',1)" aria-label="Berikutnya">
-        <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Stickers ===== -->
-<section class="section on-navy no-top desktop-only-section">
-  <div class="container">
-    <div class="section-head">
-      <h2>Stickers</h2>
-      <span class="dots"></span>
-      <a class="see-all" href="#">Lihat Semua
-        <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </div>
-    <div class="carousel-wrap">
-      <button class="scroll-btn prev" onclick="scrollCarousel('stickers',-1)" aria-label="Sebelumnya">
-        <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="carousel" id="stickers"></div>
-      <button class="scroll-btn next" onclick="scrollCarousel('stickers',1)" aria-label="Berikutnya">
-        <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Kategori CTA ===== -->
-<section class="section desktop-only-section">
-  <div class="container">
-    <div class="cat-cta-grid">
-      <a href="semua-produk.html" class="cat-cta-card navy">
-        <object class="cat-cta-img" type="image/svg+xml" data="images/digital-print-main-page.svg" aria-label="Digital Print"></object>
-        <span class="cat-cta-btn">Lihat Produk
-          <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
-      </a>
-      <a href="semua-produk.html" class="cat-cta-card orange">
-        <object class="cat-cta-img" type="image/svg+xml" data="images/offset-print-main-page.svg" aria-label="Offset Print"></object>
-        <span class="cat-cta-btn">Lihat Produk
-          <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
-      </a>
-      <a href="semua-produk.html" class="cat-cta-card grey">
-        <object class="cat-cta-img" type="image/svg+xml" data="images/merchandise-main-page.svg" aria-label="Merchandise"></object>
-        <span class="cat-cta-btn">Lihat Produk
-          <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
-      </a>
-      <a href="semua-produk.html" class="cat-cta-card yellow">
-        <object class="cat-cta-img" type="image/svg+xml" data="images/template-desain-main-page.svg" aria-label="Template Desain"></object>
-        <span class="cat-cta-btn">Lihat Produk
-          <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Feature strip ===== -->
-<section class="feature-strip">
-  <div class="container feature-grid">
-    <div class="feature-card">
-      <span class="ic"><img src="images/icon-proses-cepat-orange.svg" alt=""></span>
-      <div>
-        <h4>Proses Cepat</h4>
-        <p>Proses produksi cepat kejar deadline.</p>
+      <div class="color-notice">
+        <img class="ic" src="images/info-icon-secondary-color.png" alt="">
+        <div>
+          <h4>Catatan Penting Mengenai Warna</h4>
+          <p>Warna pada hasil cetak dapat sedikit berbeda dengan tampilan di layar. Hal ini wajar karena layar menggunakan sistem warna RGB (Red, Green, Blue) berbasis cahaya, sedangkan proses pencetakan menggunakan tinta dengan sistem CMYK (Cyan, Magenta, Yellow, Black).</p>
+          <p>Tim kami akan selalu berupaya memastikan hasil cetak tetap optimal dan memenuhi standar kualitas terbaik.</p>
+        </div>
       </div>
     </div>
-    <div class="feature-card">
-      <span class="ic"><img src="images/icon-harga-fleksibel-orange.svg" alt=""></span>
-      <div>
-        <h4>Harga Fleksibel</h4>
-        <p>Bisa nego dan menyesuaikan budget.</p>
-      </div>
-    </div>
-    <div class="feature-card">
-      <span class="ic"><img src="images/icon-kirim-orange.svg" alt=""></span>
-      <div>
-        <h4>Kirim ke Mana Saja</h4>
-        <p>Melayani berbagai pilihan ekspedisi.</p>
-      </div>
-    </div>
-    <div class="feature-card">
-      <span class="ic"><img src="images/icon-support-b2b-orange.svg" alt=""></span>
-      <div>
-        <h4>Support B2B &amp; UMKM</h4>
-        <p>Harga khusus untuk pesanan banyak.</p>
-      </div>
-    </div>
+
   </div>
 </section>
 
@@ -545,7 +367,7 @@
       </ul>
     </div>
     <div class="footer-about">
-      <a href="#" class="brand">
+      <a href="index.html" class="brand">
         <img class="brand-logo" src="images/logo-calsprint.png" alt="Calsprint">
       </a>
       <p><b>Calsprint</b> hadir untuk membantu kebutuhan cetak Anda, dari kebutuhan sehari-hari hingga kebutuhan bisnis. Dengan produk dan layanan yang terus kami kembangkan, kami ingin menjadi bagian dari perjalanan bisnis Anda.</p>
