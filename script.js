@@ -229,6 +229,11 @@ const searchProducts = [
   { name: 'Gantungan Kunci Custom', href: 'produk-gantungan-kunci.html', category: 'merchandise', img: 'images/produk-GantunganKunci-thumbnail.png', keywords: ['keychain', 'gantungan kunci', 'kunci'] },
   { name: 'Standing Impraboard', href: 'produk-standing-impraboard.html', category: 'signage', img: 'images/produk-StandingImpraboard-thumbnail.png', keywords: ['impraboard', 'standing', 'display', 'tripod', 'signage'] },
   { name: 'Buku Nota', href: 'produk-buku-nota.html', category: 'office', img: 'images/produk-BukuNota-thumbnail.png', keywords: ['nota', 'surat jalan', 'ncr', 'kwitansi', 'faktur'] },
+  { name: 'Hang Tag', href: 'produk-hang-tag.html', category: 'packaging', img: 'images/produk-HangTag-thumbnail.png', keywords: ['label', 'tag', 'label harga', 'tali'] },
+  { name: 'Kartu Nama', href: 'produk-kartu-nama.html', category: 'cards', img: 'images/produk-KartuNama-thumbnail.png', keywords: ['business card', 'kartu', 'name card'] },
+  { name: 'Thank You Card', href: 'produk-thank-you-card.html', category: 'cards', img: 'images/produk-ThankYouCard-thumbnail.png', keywords: ['kartu ucapan', 'greeting card', 'terima kasih', 'kartu'] },
+  { name: 'Sticker Chromo', href: 'produk-sticker-chromo.html', category: 'stickers', img: 'images/produk-StickerChromo-thumbnail.png', keywords: ['stiker', 'label', 'chromo', 'a3+'] },
+  { name: 'Sticker Vinyl', href: 'produk-sticker-vinyl.html', category: 'stickers', img: 'images/produk-StickerVinylA3-thumbnail.png', keywords: ['stiker', 'label', 'vinyl', 'tahan air', 'a3'] },
 ];
 
 function matchSearchProducts(term) {
