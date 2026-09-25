@@ -111,21 +111,81 @@ document.querySelectorAll('.variant-btns').forEach((group) => {
 const produkGridEl = document.getElementById('produkGrid');
 if (produkGridEl) {
   const catSideLinks = document.querySelectorAll('.cat-side-list a[data-filter], .produk-cat-carousel a[data-filter]');
+  const paginationEl = document.getElementById('pagination');
+  const PRODUK_ROWS_PER_PAGE = 3;
   let produkFilter = 'all';
   let produkSearch = '';
+  let produkPage = 1;
+
+  // Page size follows the grid's current column count (4 / 3 / 2 by breakpoint)
+  const produkPageSize = () => {
+    const cols = getComputedStyle(produkGridEl).gridTemplateColumns.split(' ').filter(Boolean).length || 1;
+    return cols * PRODUK_ROWS_PER_PAGE;
+  };
+
+  // Page list with ellipses, e.g. 1 … 4 5 6 … 10
+  const produkPageItems = (total, current) => {
+    if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
+    const pages = [1];
+    const start = Math.max(2, current - 1);
+    const end = Math.min(total - 1, current + 1);
+    if (start > 2) pages.push('…');
+    for (let i = start; i <= end; i++) pages.push(i);
+    if (end < total - 1) pages.push('…');
+    pages.push(total);
+    return pages;
+  };
+
+  const arrowSvg = (d) => `<svg viewBox="0 0 24 24"><path d="${d}" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+  const renderProdukPagination = (totalPages) => {
+    if (!paginationEl) return;
+    paginationEl.hidden = totalPages <= 1;
+    if (totalPages <= 1) { paginationEl.innerHTML = ''; return; }
+    const nums = produkPageItems(totalPages, produkPage).map((p) => (p === '…'
+      ? '<span class="page-dots">...</span>'
+      : `<button class="page-num${p === produkPage ? ' active' : ''}" data-page="${p}"${p === produkPage ? ' aria-current="page"' : ''}>${p}</button>`)).join('');
+    paginationEl.innerHTML =
+      `<button class="page-arrow" data-page="${produkPage - 1}" aria-label="Halaman sebelumnya"${produkPage === 1 ? ' disabled' : ''}>${arrowSvg('M15 6l-6 6 6 6')}</button>` +
+      nums +
+      `<button class="page-arrow" data-page="${produkPage + 1}" aria-label="Halaman berikutnya"${produkPage === totalPages ? ' disabled' : ''}>${arrowSvg('M9 6l6 6-6 6')}</button>`;
+  };
 
   const refreshProdukGrid = () => {
     const q = produkSearch.trim().toLowerCase();
+    const matching = [];
     produkGridEl.querySelectorAll('.prod-card').forEach((card) => {
       const matchesCategory = produkFilter === 'all' || card.dataset.category === produkFilter;
       const name = card.querySelector('.prod-name')?.textContent.toLowerCase() || '';
       const matchesSearch = !q || name.includes(q);
-      card.hidden = !(matchesCategory && matchesSearch);
+      card.hidden = true;
+      if (matchesCategory && matchesSearch) matching.push(card);
     });
+    const pageSize = produkPageSize();
+    const totalPages = Math.max(1, Math.ceil(matching.length / pageSize));
+    produkPage = Math.min(Math.max(1, produkPage), totalPages);
+    matching.slice((produkPage - 1) * pageSize, produkPage * pageSize).forEach((card) => { card.hidden = false; });
+    renderProdukPagination(totalPages);
   };
+
+  paginationEl?.addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-page]');
+    if (!btn || btn.disabled) return;
+    produkPage = Number(btn.dataset.page);
+    refreshProdukGrid();
+    produkGridEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  // Re-paginate when the column count changes across breakpoints
+  let produkPageSizeLast = produkPageSize();
+  window.addEventListener('resize', () => {
+    const size = produkPageSize();
+    if (size !== produkPageSizeLast) { produkPageSizeLast = size; refreshProdukGrid(); }
+  });
 
   const applyProdukFilter = (filter) => {
     produkFilter = filter;
+    produkPage = 1;
     catSideLinks.forEach((l) => {
       const isActive = l.dataset.filter === filter;
       l.classList.toggle('active', isActive);
@@ -167,6 +227,8 @@ const searchProducts = [
   { name: 'Kalender Perusahaan', href: 'produk-kalender.html', category: 'calendars', img: 'images/produk-calendar-thumbnail.png', keywords: ['kalender', 'calendar', 'corporate calendar'] },
   { name: 'Totebag Custom', href: 'produk-totebag.html', category: 'apparel', img: 'images/produk-ToteBag-thumbnail.png', keywords: ['tote bag', 'tas', 'totebag'] },
   { name: 'Gantungan Kunci Custom', href: 'produk-gantungan-kunci.html', category: 'merchandise', img: 'images/produk-GantunganKunci-thumbnail.png', keywords: ['keychain', 'gantungan kunci', 'kunci'] },
+  { name: 'Standing Impraboard', href: 'produk-standing-impraboard.html', category: 'signage', img: 'images/produk-StandingImpraboard-thumbnail.png', keywords: ['impraboard', 'standing', 'display', 'tripod', 'signage'] },
+  { name: 'Buku Nota', href: 'produk-buku-nota.html', category: 'office', img: 'images/produk-BukuNota-thumbnail.png', keywords: ['nota', 'surat jalan', 'ncr', 'kwitansi', 'faktur'] },
 ];
 
 function matchSearchProducts(term) {
