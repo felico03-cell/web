@@ -33,6 +33,7 @@ function buildCarousel(id, products) {
 
 buildCarousel('produk', newProducts);
 buildCarousel('stickers', bestSellerProducts);
+buildCarousel('mobilePromo', bestSellerProducts);
 
 function scrollCarousel(id, dir) {
   const el = document.getElementById(id);
