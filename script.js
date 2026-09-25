@@ -1,16 +1,25 @@
 // Homepage product carousels show the same product cards as Semua Produk,
 // using the lightweight "-web" thumbnails.
-const carouselProducts = [
-  { name: 'Voucher', href: 'produk-voucher.html', img: 'images/produk-voucher-standar-thumbnail-web.png' },
-  { name: 'Packaging Box', href: 'produk-packaging-box.html', img: 'images/produk-box-thumbnail-web.png' },
-  { name: 'Trifold Brochure', href: 'produk-trifold.html', img: 'images/produk-trifold-thumbnail-web.png' },
-  { name: 'Booklet', href: 'produk-booklet.html', img: 'images/produk-CompanyProfile-thumbnail-web.png' },
+const newProducts = [
+  { name: 'Standing Impraboard', href: 'produk-standing-impraboard.html', img: 'images/produk-StandingImpraboard-thumbnail-web.png' },
+  { name: 'Gantungan Kunci Custom', href: 'produk-gantungan-kunci.html', img: 'images/produk-GantunganKunci-thumbnail-web.png' },
+  { name: 'Totebag Custom', href: 'produk-totebag.html', img: 'images/produk-ToteBag-thumbnail-web.png' },
+  { name: 'Kalender Perusahaan', href: 'produk-kalender.html', img: 'images/produk-calendar-thumbnail-web.png' },
 ];
 
-function buildCarousel(id) {
+const bestSellerProducts = [
+  { name: 'Voucher', href: 'produk-voucher.html', img: 'images/produk-voucher-standar-thumbnail-web.png' },
+  { name: 'Sticker Chromo', href: 'produk-sticker-chromo.html', img: 'images/produk-StickerChromo-thumbnail-web.png' },
+  { name: 'Sticker Vinyl', href: 'produk-sticker-vinyl.html', img: 'images/produk-StickerVinylA3-thumbnail-web.png' },
+  { name: 'Thank You Card', href: 'produk-thank-you-card.html', img: 'images/produk-ThankYouCard-thumbnail-web.png' },
+  { name: 'Loyalty Card', href: 'produk-loyalty-card.html', img: 'images/produk-LoyaltyCard-thumbnail-web.png' },
+  { name: 'Trifold Brochure', href: 'produk-trifold.html', img: 'images/produk-trifold-thumbnail-web.png' },
+];
+
+function buildCarousel(id, products) {
   const el = document.getElementById(id);
   if (!el) return;
-  el.innerHTML = carouselProducts.map((p) => `
+  el.innerHTML = products.map((p) => `
     <a class="prod-card" href="${p.href}">
       <div class="prod-thumb"><img src="${p.img}" alt="${p.name}" loading="lazy"></div>
       <div class="prod-body">
@@ -22,8 +31,8 @@ function buildCarousel(id) {
   `).join('');
 }
 
-buildCarousel('produk');
-buildCarousel('stickers');
+buildCarousel('produk', newProducts);
+buildCarousel('stickers', bestSellerProducts);
 
 function scrollCarousel(id, dir) {
   const el = document.getElementById(id);
