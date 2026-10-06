@@ -599,7 +599,7 @@ footer{background:#fff;padding-top:44px;}
 
 /* ===== Semua Produk: layout ===== */
 .produk-section{padding:26px 0 60px;}
-.produk-layout{display:grid;grid-template-columns:260px 1fr;gap:24px;align-items:start;}
+.produk-layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:24px;align-items:start;}
 
 /* Sidebar */
 .produk-sidebar{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;}
@@ -625,7 +625,7 @@ footer{background:#fff;padding-top:44px;}
 .cat-ico-svg img{width:26px;height:26px;object-fit:contain;}
 
 /* Product grid */
-.produk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.produk-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;}
 .prod-card{
   display:block;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;
   box-shadow:0 4px 14px rgba(27,45,105,.06);
@@ -845,9 +845,9 @@ footer{background:#fff;padding-top:44px;}
   .kontak-card{padding:28px;}
   .alamat-grid{grid-template-columns:1fr;}
   .why-grid{grid-template-columns:repeat(2,1fr);}
-  .produk-layout{grid-template-columns:1fr;}
+  .produk-layout{grid-template-columns:minmax(0,1fr);}
   .produk-sidebar{order:2;}
-  .produk-grid{grid-template-columns:repeat(3,1fr);}
+  .produk-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
   .product-detail-grid{grid-template-columns:1fr;}
   .galeri-grid{grid-template-columns:repeat(2,1fr);}
   .galeri-item.wide{grid-column:span 2;}
@@ -872,7 +872,10 @@ footer{background:#fff;padding-top:44px;}
   .carousel .card{flex-basis:150px;}
   .footer-col{flex-basis:100%;}
   .ship-pay.align-right{align-items:flex-start;}
-  .produk-grid{grid-template-columns:repeat(2,1fr);gap:14px;}
+  .produk-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+  .pagination{gap:5px;}
+  .page-num{min-width:30px;height:30px;font-size:12.5px;}
+  .page-arrow{width:32px;height:32px;}
   .produk-head-row{flex-direction:column;align-items:flex-start;}
   .produk-sidebar{display:none;}
   .produk-section{padding-top:16px;}
