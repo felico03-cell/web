@@ -127,6 +127,16 @@ if (galleryImgEl) {
   }
 }
 
+// ===== Product detail "Chat Kami di WhatsApp" link (product name + chosen variant) =====
+const waChatBtn = document.querySelector('.wa-chat-btn');
+const updateWaChatLink = () => {
+  if (!waChatBtn) return;
+  const variant = document.querySelector('.variant-btn.active')?.textContent.trim();
+  const label = variant ? `${waChatBtn.dataset.product} - ${variant}` : waChatBtn.dataset.product;
+  waChatBtn.href = 'https://wa.me/6287840233772?text=' +
+    encodeURIComponent(`Halo saya dapat info barang ${label} dari website CalsPrint, boleh tanya tentang produknya?`);
+};
+
 // ===== Product detail variant picker =====
 document.querySelectorAll('.variant-btns').forEach((group) => {
   group.addEventListener('click', (e) => {
@@ -135,6 +145,7 @@ document.querySelectorAll('.variant-btns').forEach((group) => {
     group.querySelectorAll('.variant-btn').forEach((b) => b.classList.remove('active'));
     btn.classList.add('active');
     if (btn.dataset.image) showGallerySlideBySrc?.(btn.dataset.image);
+    updateWaChatLink();
   });
 });
 
