@@ -4,7 +4,7 @@ const newProducts = [
   { name: 'Standing Impraboard', href: 'produk-standing-impraboard.html', img: 'images/produk-StandingImpraboard-thumbnail-web.png' },
   { name: 'Gantungan Kunci Custom', href: 'produk-gantungan-kunci.html', img: 'images/produk-GantunganKunci-thumbnail-web.png' },
   { name: 'Totebag Custom', href: 'produk-totebag.html', img: 'images/produk-ToteBag-thumbnail-web.png' },
-  { name: 'Kalender Perusahaan', href: 'produk-kalender.html', img: 'images/produk-calendar-thumbnail-web.png' },
+  { name: 'Kalender Meja', href: 'produk-kalender.html', img: 'images/produk-calendar-thumbnail-web.png' },
 ];
 
 const bestSellerProducts = [
@@ -13,7 +13,7 @@ const bestSellerProducts = [
   { name: 'Sticker Vinyl', href: 'produk-sticker-vinyl.html', img: 'images/produk-StickerVinylA3-thumbnail-web.png' },
   { name: 'Thank You Card', href: 'produk-thank-you-card.html', img: 'images/produk-ThankYouCard-thumbnail-web.png' },
   { name: 'Loyalty Card', href: 'produk-loyalty-card.html', img: 'images/produk-LoyaltyCard-thumbnail-web.png' },
-  { name: 'Trifold Brochure', href: 'produk-trifold.html', img: 'images/produk-trifold-thumbnail-web.png' },
+  { name: 'Brosur Trifold', href: 'produk-trifold.html', img: 'images/produk-trifold-thumbnail-web.png' },
 ];
 
 function buildCarousel(id, products) {
@@ -91,11 +91,32 @@ const galleryImgEl = document.getElementById('galleryImg');
 let showGallerySlideBySrc = null;
 if (galleryImgEl) {
   const gallerySlides = (galleryImgEl.dataset.gallery || '').split(',').map(s => s.trim()).filter(Boolean);
+  const galleryEl = galleryImgEl.closest('.product-gallery');
+  // A single photo has nothing to page through, so drop the arrows
+  if (gallerySlides.length <= 1) {
+    galleryEl?.querySelectorAll('.gallery-hit').forEach((b) => b.remove());
+  }
   if (gallerySlides.length) {
     let gallerySlideIndex = 0;
+    const galleryDots = [];
+    if (gallerySlides.length > 1 && galleryEl) {
+      const dotsWrap = document.createElement('div');
+      dotsWrap.className = 'gallery-dots';
+      gallerySlides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Foto ${i + 1}`);
+        dot.addEventListener('click', () => showGallerySlide(i));
+        dotsWrap.appendChild(dot);
+        galleryDots.push(dot);
+      });
+      galleryEl.appendChild(dotsWrap);
+    }
     const showGallerySlide = (i) => {
       gallerySlideIndex = (i + gallerySlides.length) % gallerySlides.length;
       galleryImgEl.src = gallerySlides[gallerySlideIndex];
+      galleryDots.forEach((d, j) => d.classList.toggle('active', j === gallerySlideIndex));
     };
     document.querySelector('.gallery-hit.prev')?.addEventListener('click', () => showGallerySlide(gallerySlideIndex - 1));
     document.querySelector('.gallery-hit.next')?.addEventListener('click', () => showGallerySlide(gallerySlideIndex + 1));
@@ -228,18 +249,20 @@ const searchProducts = [
   { name: 'Voucher', href: 'produk-voucher.html', category: 'voucher', img: 'images/produk-voucher-standar-thumbnail.png', keywords: ['kupon'] },
   { name: 'Voucher HVS / Tiket', href: 'produk-voucher-hvs-tiket.html', category: 'voucher', img: 'images/produk-voucher-tiket-thumbnail.png', keywords: ['tiket', 'karcis', 'hvs', 'ticket'] },
   { name: 'Voucher Buku', href: 'produk-voucher-buku.html', category: 'voucher', img: 'images/produk-voucher-buku-thumbnail.png', keywords: ['kupon', 'buku'] },
-  { name: 'Packaging Box', href: 'produk-packaging-box.html', category: 'packaging', img: 'images/produk-box-thumbnail.png', keywords: ['kotak', 'dus', 'box'] },
-  { name: 'Flyer', href: 'produk-flyer.html', category: 'brochures', img: 'images/produk-Flyer-thumbnail.png', keywords: ['a6', 'a5', 'a4', 'a3', 'brosur'] },
+  { name: 'Catering Box', href: 'produk-packaging-box.html', category: 'packaging', img: 'images/produk-box-thumbnail.png', keywords: ['kotak', 'dus', 'box'] },
+  { name: 'Brosur A5', href: 'produk-brosura5.html', category: 'brochures', img: 'images/produk-Flyer-thumbnail.png', keywords: ['a5', 'brosur', 'brochure', 'flyer'] },
   { name: 'Brosur DL', href: 'produk-brosur-dl.html', category: 'brochures', img: 'images/produk-brosurdl-thumbnail.png', keywords: ['brochure', 'flyer'] },
-  { name: 'Trifold Brochure', href: 'produk-trifold.html', category: 'brochures', img: 'images/produk-trifold-thumbnail.png', keywords: ['brosur'] },
+  { name: 'Brosur Trifold', href: 'produk-trifold.html', category: 'brochures', img: 'images/produk-trifold-thumbnail.png', keywords: ['brosur'] },
   { name: 'Loyalty Card', href: 'produk-loyalty-card.html', category: 'cards', img: 'images/produk-LoyaltyCard-thumbnail.png', keywords: ['kartu', 'member'] },
-  { name: 'Booklet', href: 'produk-booklet.html', category: 'booklet', img: 'images/produk-CompanyProfile-thumbnail.png', keywords: ['company profile', 'buku'] },
-  { name: 'Kalender Perusahaan', href: 'produk-kalender.html', category: 'calendars', img: 'images/produk-calendar-thumbnail.png', keywords: ['kalender', 'calendar', 'corporate calendar'] },
+  { name: 'Company Profile', href: 'produk-booklet-compro.html', category: 'booklet', img: 'images/produk-CompanyProfile-thumbnail.png', keywords: ['company profile', 'buku'] },
+  { name: 'Buku Spiral', href: 'produk-booklet-buku-spiral.html', category: 'booklet', img: 'images/produk-bukuSpiral-thumbnail.png', keywords: ['spiral', 'buku', 'booklet', 'jilid spiral'] },
+  { name: 'Kalender Meja', href: 'produk-kalender.html', category: 'calendars', img: 'images/produk-calendar-thumbnail.png', keywords: ['kalender', 'calendar', 'corporate calendar'] },
   { name: 'Totebag Custom', href: 'produk-totebag.html', category: 'apparel', img: 'images/produk-ToteBag-thumbnail.png', keywords: ['tote bag', 'tas', 'totebag'] },
   { name: 'Gantungan Kunci Custom', href: 'produk-gantungan-kunci.html', category: 'merchandise', img: 'images/produk-GantunganKunci-thumbnail.png', keywords: ['keychain', 'gantungan kunci', 'kunci'] },
   { name: 'Standing Impraboard', href: 'produk-standing-impraboard.html', category: 'signage', img: 'images/produk-StandingImpraboard-thumbnail.png', keywords: ['impraboard', 'standing', 'display', 'tripod', 'signage'] },
   { name: 'Buku Nota', href: 'produk-buku-nota.html', category: 'office', img: 'images/produk-BukuNota-thumbnail.png', keywords: ['nota', 'surat jalan', 'ncr', 'kwitansi', 'faktur'] },
   { name: 'Hang Tag', href: 'produk-hang-tag.html', category: 'packaging', img: 'images/produk-HangTag-thumbnail.png', keywords: ['label', 'tag', 'label harga', 'tali'] },
+  { name: 'Sleeve Packaging', href: 'produk-sleeve-packaging.html', category: 'packaging', img: 'images/produk-sleeve-thumbnail.png', keywords: ['sleeve', 'kemasan', 'packaging'] },
   { name: 'Kartu Nama', href: 'produk-kartu-nama.html', category: 'cards', img: 'images/produk-KartuNama-thumbnail.png', keywords: ['business card', 'kartu', 'name card'] },
   { name: 'Thank You Card', href: 'produk-thank-you-card.html', category: 'cards', img: 'images/produk-ThankYouCard-thumbnail.png', keywords: ['kartu ucapan', 'greeting card', 'terima kasih', 'kartu'] },
   { name: 'Sticker Chromo', href: 'produk-sticker-chromo.html', category: 'stickers', img: 'images/produk-StickerChromo-thumbnail.png', keywords: ['stiker', 'label', 'chromo', 'a3+'] },
