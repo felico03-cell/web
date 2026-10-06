@@ -362,7 +362,7 @@ footer{background:#fff;padding-top:44px;}
   padding:56px 0;text-align:center;color:#fff;
 }
 .about-hero.with-photo{
-  background:linear-gradient(rgba(15,26,64,.68),rgba(15,26,64,.58)), url('images/tentang-kami-picture.png') center/cover no-repeat;
+  background:linear-gradient(rgba(15,26,64,.68),rgba(15,26,64,.58)), url('images/opt/tentang-kami-picture.webp') center/cover no-repeat;
   padding:360px 0;
 }
 .about-hero-badge{
@@ -439,7 +439,7 @@ footer{background:#fff;padding-top:44px;}
 
 /* ===== Hubungi Kami: hero ===== */
 .hubungi-hero{
-  background:linear-gradient(90deg,rgba(15,26,64,.78) 0%,rgba(15,26,64,.5) 45%,rgba(15,26,64,.15) 100%), url('images/hubungi-kami-hero.png') center/cover no-repeat;
+  background:linear-gradient(90deg,rgba(15,26,64,.78) 0%,rgba(15,26,64,.5) 45%,rgba(15,26,64,.15) 100%), url('images/opt/hubungi-kami-hero.webp') center/cover no-repeat;
   padding:220px 0;color:#fff;
 }
 .hubungi-hero h1{font-size:38px;font-weight:800;margin-bottom:14px;text-shadow:0 2px 10px rgba(0,0,0,.35);}
@@ -883,7 +883,7 @@ footer{background:#fff;padding-top:44px;}
 
   .hubungi-hero{
     padding:64px 0 104px;
-    background:linear-gradient(180deg,rgba(15,26,64,.82) 0%,rgba(15,26,64,.6) 100%), url('images/hubungi-kami-hero.png') 62% center/cover no-repeat;
+    background:linear-gradient(180deg,rgba(15,26,64,.82) 0%,rgba(15,26,64,.6) 100%), url('images/opt/hubungi-kami-hero.webp') 62% center/cover no-repeat;
   }
   .hubungi-hero h1{font-size:28px;margin-bottom:10px;}
   .hubungi-hero p{font-size:14px;line-height:1.55;}

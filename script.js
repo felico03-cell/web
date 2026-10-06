@@ -1,19 +1,19 @@
 // Homepage product carousels show the same product cards as Semua Produk,
 // using the lightweight "-web" thumbnails.
 const newProducts = [
-  { name: 'Standing Impraboard', href: 'produk-standing-impraboard.html', img: 'images/produk-StandingImpraboard-thumbnail-web.png' },
-  { name: 'Gantungan Kunci Custom', href: 'produk-gantungan-kunci.html', img: 'images/produk-GantunganKunci-thumbnail-web.png' },
-  { name: 'Totebag Custom', href: 'produk-totebag.html', img: 'images/produk-ToteBag-thumbnail-web.png' },
-  { name: 'Kalender Meja', href: 'produk-kalender.html', img: 'images/produk-calendar-thumbnail-web.png' },
+  { name: 'Standing Impraboard', href: 'produk-standing-impraboard.html', img: 'images/opt/produk-StandingImpraboard-thumbnail-web.webp' },
+  { name: 'Gantungan Kunci Custom', href: 'produk-gantungan-kunci.html', img: 'images/opt/produk-GantunganKunci-thumbnail-web.webp' },
+  { name: 'Totebag Custom', href: 'produk-totebag.html', img: 'images/opt/produk-ToteBag-thumbnail-web.webp' },
+  { name: 'Kalender Meja', href: 'produk-kalender.html', img: 'images/opt/produk-calendar-thumbnail-web.webp' },
 ];
 
 const bestSellerProducts = [
-  { name: 'Voucher', href: 'produk-voucher.html', img: 'images/produk-voucher-standar-thumbnail-web.png' },
-  { name: 'Sticker Chromo', href: 'produk-sticker-chromo.html', img: 'images/produk-StickerChromo-thumbnail-web.png' },
-  { name: 'Sticker Vinyl', href: 'produk-sticker-vinyl.html', img: 'images/produk-StickerVinylA3-thumbnail-web.png' },
-  { name: 'Thank You Card', href: 'produk-thank-you-card.html', img: 'images/produk-ThankYouCard-thumbnail-web.png' },
-  { name: 'Loyalty Card', href: 'produk-loyalty-card.html', img: 'images/produk-LoyaltyCard-thumbnail-web.png' },
-  { name: 'Brosur Trifold', href: 'produk-trifold.html', img: 'images/produk-trifold-thumbnail-web.png' },
+  { name: 'Voucher', href: 'produk-voucher.html', img: 'images/opt/produk-voucher-standar-thumbnail-web.webp' },
+  { name: 'Sticker Chromo', href: 'produk-sticker-chromo.html', img: 'images/opt/produk-StickerChromo-thumbnail-web.webp' },
+  { name: 'Sticker Vinyl', href: 'produk-sticker-vinyl.html', img: 'images/opt/produk-StickerVinylA3-thumbnail-web.webp' },
+  { name: 'Thank You Card', href: 'produk-thank-you-card.html', img: 'images/opt/produk-ThankYouCard-thumbnail-web.webp' },
+  { name: 'Loyalty Card', href: 'produk-loyalty-card.html', img: 'images/opt/produk-LoyaltyCard-thumbnail-web.webp' },
+  { name: 'Brosur Trifold', href: 'produk-trifold.html', img: 'images/opt/produk-trifold-thumbnail-web.webp' },
 ];
 
 function buildCarousel(id, products) {
@@ -246,27 +246,27 @@ if (produkGridEl) {
 
 // ===== Header search (desktop + mobile) =====
 const searchProducts = [
-  { name: 'Voucher', href: 'produk-voucher.html', category: 'voucher', img: 'images/produk-voucher-standar-thumbnail.png', keywords: ['kupon'] },
-  { name: 'Voucher HVS / Tiket', href: 'produk-voucher-hvs-tiket.html', category: 'voucher', img: 'images/produk-voucher-tiket-thumbnail.png', keywords: ['tiket', 'karcis', 'hvs', 'ticket'] },
-  { name: 'Voucher Buku', href: 'produk-voucher-buku.html', category: 'voucher', img: 'images/produk-voucher-buku-thumbnail.png', keywords: ['kupon', 'buku'] },
-  { name: 'Catering Box', href: 'produk-packaging-box.html', category: 'packaging', img: 'images/produk-box-thumbnail.png', keywords: ['kotak', 'dus', 'box'] },
-  { name: 'Brosur A5', href: 'produk-brosura5.html', category: 'brochures', img: 'images/produk-Flyer-thumbnail.png', keywords: ['a5', 'brosur', 'brochure', 'flyer'] },
-  { name: 'Brosur DL', href: 'produk-brosur-dl.html', category: 'brochures', img: 'images/produk-brosurdl-thumbnail.png', keywords: ['brochure', 'flyer'] },
-  { name: 'Brosur Trifold', href: 'produk-trifold.html', category: 'brochures', img: 'images/produk-trifold-thumbnail.png', keywords: ['brosur'] },
-  { name: 'Loyalty Card', href: 'produk-loyalty-card.html', category: 'cards', img: 'images/produk-LoyaltyCard-thumbnail.png', keywords: ['kartu', 'member'] },
-  { name: 'Company Profile', href: 'produk-booklet-compro.html', category: 'booklet', img: 'images/produk-CompanyProfile-thumbnail.png', keywords: ['company profile', 'buku'] },
-  { name: 'Buku Spiral', href: 'produk-booklet-buku-spiral.html', category: 'booklet', img: 'images/produk-bukuSpiral-thumbnail.png', keywords: ['spiral', 'buku', 'booklet', 'jilid spiral'] },
-  { name: 'Kalender Meja', href: 'produk-kalender.html', category: 'calendars', img: 'images/produk-calendar-thumbnail.png', keywords: ['kalender', 'calendar', 'corporate calendar'] },
-  { name: 'Totebag Custom', href: 'produk-totebag.html', category: 'apparel', img: 'images/produk-ToteBag-thumbnail.png', keywords: ['tote bag', 'tas', 'totebag'] },
-  { name: 'Gantungan Kunci Custom', href: 'produk-gantungan-kunci.html', category: 'merchandise', img: 'images/produk-GantunganKunci-thumbnail.png', keywords: ['keychain', 'gantungan kunci', 'kunci'] },
-  { name: 'Standing Impraboard', href: 'produk-standing-impraboard.html', category: 'signage', img: 'images/produk-StandingImpraboard-thumbnail.png', keywords: ['impraboard', 'standing', 'display', 'tripod', 'signage'] },
-  { name: 'Buku Nota', href: 'produk-buku-nota.html', category: 'office', img: 'images/produk-BukuNota-thumbnail.png', keywords: ['nota', 'surat jalan', 'ncr', 'kwitansi', 'faktur'] },
-  { name: 'Hang Tag', href: 'produk-hang-tag.html', category: 'packaging', img: 'images/produk-HangTag-thumbnail.png', keywords: ['label', 'tag', 'label harga', 'tali'] },
-  { name: 'Sleeve Packaging', href: 'produk-sleeve-packaging.html', category: 'packaging', img: 'images/produk-sleeve-thumbnail.png', keywords: ['sleeve', 'kemasan', 'packaging'] },
-  { name: 'Kartu Nama', href: 'produk-kartu-nama.html', category: 'cards', img: 'images/produk-KartuNama-thumbnail.png', keywords: ['business card', 'kartu', 'name card'] },
-  { name: 'Thank You Card', href: 'produk-thank-you-card.html', category: 'cards', img: 'images/produk-ThankYouCard-thumbnail.png', keywords: ['kartu ucapan', 'greeting card', 'terima kasih', 'kartu'] },
-  { name: 'Sticker Chromo', href: 'produk-sticker-chromo.html', category: 'stickers', img: 'images/produk-StickerChromo-thumbnail.png', keywords: ['stiker', 'label', 'chromo', 'a3+'] },
-  { name: 'Sticker Vinyl', href: 'produk-sticker-vinyl.html', category: 'stickers', img: 'images/produk-StickerVinylA3-thumbnail.png', keywords: ['stiker', 'label', 'vinyl', 'tahan air', 'a3'] },
+  { name: 'Voucher', href: 'produk-voucher.html', category: 'voucher', img: 'images/opt/produk-voucher-standar-thumbnail.webp', keywords: ['kupon'] },
+  { name: 'Voucher HVS / Tiket', href: 'produk-voucher-hvs-tiket.html', category: 'voucher', img: 'images/opt/produk-voucher-tiket-thumbnail.webp', keywords: ['tiket', 'karcis', 'hvs', 'ticket'] },
+  { name: 'Voucher Buku', href: 'produk-voucher-buku.html', category: 'voucher', img: 'images/opt/produk-voucher-buku-thumbnail.webp', keywords: ['kupon', 'buku'] },
+  { name: 'Catering Box', href: 'produk-packaging-box.html', category: 'packaging', img: 'images/opt/produk-box-thumbnail.webp', keywords: ['kotak', 'dus', 'box'] },
+  { name: 'Brosur A5', href: 'produk-brosura5.html', category: 'brochures', img: 'images/opt/produk-Flyer-thumbnail.webp', keywords: ['a5', 'brosur', 'brochure', 'flyer'] },
+  { name: 'Brosur DL', href: 'produk-brosur-dl.html', category: 'brochures', img: 'images/opt/produk-brosurdl-thumbnail.webp', keywords: ['brochure', 'flyer'] },
+  { name: 'Brosur Trifold', href: 'produk-trifold.html', category: 'brochures', img: 'images/opt/produk-trifold-thumbnail.webp', keywords: ['brosur'] },
+  { name: 'Loyalty Card', href: 'produk-loyalty-card.html', category: 'cards', img: 'images/opt/produk-LoyaltyCard-thumbnail.webp', keywords: ['kartu', 'member'] },
+  { name: 'Company Profile', href: 'produk-booklet-compro.html', category: 'booklet', img: 'images/opt/produk-CompanyProfile-thumbnail.webp', keywords: ['company profile', 'buku'] },
+  { name: 'Buku Spiral', href: 'produk-booklet-buku-spiral.html', category: 'booklet', img: 'images/opt/produk-bukuSpiral-thumbnail.webp', keywords: ['spiral', 'buku', 'booklet', 'jilid spiral'] },
+  { name: 'Kalender Meja', href: 'produk-kalender.html', category: 'calendars', img: 'images/opt/produk-calendar-thumbnail.webp', keywords: ['kalender', 'calendar', 'corporate calendar'] },
+  { name: 'Totebag Custom', href: 'produk-totebag.html', category: 'apparel', img: 'images/opt/produk-ToteBag-thumbnail.webp', keywords: ['tote bag', 'tas', 'totebag'] },
+  { name: 'Gantungan Kunci Custom', href: 'produk-gantungan-kunci.html', category: 'merchandise', img: 'images/opt/produk-GantunganKunci-thumbnail.webp', keywords: ['keychain', 'gantungan kunci', 'kunci'] },
+  { name: 'Standing Impraboard', href: 'produk-standing-impraboard.html', category: 'signage', img: 'images/opt/produk-StandingImpraboard-thumbnail.webp', keywords: ['impraboard', 'standing', 'display', 'tripod', 'signage'] },
+  { name: 'Buku Nota', href: 'produk-buku-nota.html', category: 'office', img: 'images/opt/produk-BukuNota-thumbnail.webp', keywords: ['nota', 'surat jalan', 'ncr', 'kwitansi', 'faktur'] },
+  { name: 'Hang Tag', href: 'produk-hang-tag.html', category: 'packaging', img: 'images/opt/produk-HangTag-thumbnail.webp', keywords: ['label', 'tag', 'label harga', 'tali'] },
+  { name: 'Sleeve Packaging', href: 'produk-sleeve-packaging.html', category: 'packaging', img: 'images/opt/produk-sleeve-thumbnail.webp', keywords: ['sleeve', 'kemasan', 'packaging'] },
+  { name: 'Kartu Nama', href: 'produk-kartu-nama.html', category: 'cards', img: 'images/opt/produk-KartuNama-thumbnail.webp', keywords: ['business card', 'kartu', 'name card'] },
+  { name: 'Thank You Card', href: 'produk-thank-you-card.html', category: 'cards', img: 'images/opt/produk-ThankYouCard-thumbnail.webp', keywords: ['kartu ucapan', 'greeting card', 'terima kasih', 'kartu'] },
+  { name: 'Sticker Chromo', href: 'produk-sticker-chromo.html', category: 'stickers', img: 'images/opt/produk-StickerChromo-thumbnail.webp', keywords: ['stiker', 'label', 'chromo', 'a3+'] },
+  { name: 'Sticker Vinyl', href: 'produk-sticker-vinyl.html', category: 'stickers', img: 'images/opt/produk-StickerVinylA3-thumbnail.webp', keywords: ['stiker', 'label', 'vinyl', 'tahan air', 'a3'] },
 ];
 
 function matchSearchProducts(term) {
