@@ -258,7 +258,7 @@ if (produkGridEl) {
 // ===== Header search (desktop + mobile) =====
 const searchProducts = [
   { name: 'Voucher', href: 'produk-voucher.html', category: 'voucher', img: 'images/opt/produk-voucher-standar-thumbnail.webp', keywords: ['kupon'] },
-  { name: 'Voucher HVS / Tiket', href: 'produk-voucher-hvs-tiket.html', category: 'voucher', img: 'images/opt/produk-voucher-tiket-thumbnail.webp', keywords: ['tiket', 'karcis', 'hvs', 'ticket'] },
+  { name: 'Voucher Tiket', href: 'produk-voucher-hvs-tiket.html', category: 'voucher', img: 'images/opt/produk-voucher-tiket-thumbnail.webp', keywords: ['tiket', 'karcis', 'hvs', 'ticket'] },
   { name: 'Voucher Buku', href: 'produk-voucher-buku.html', category: 'voucher', img: 'images/opt/produk-voucher-buku-thumbnail.webp', keywords: ['kupon', 'buku'] },
   { name: 'Catering Box', href: 'produk-packaging-box.html', category: 'packaging', img: 'images/opt/produk-box-thumbnail.webp', keywords: ['kotak', 'dus', 'box'] },
   { name: 'Brosur A5', href: 'produk-brosura5.html', category: 'brochures', img: 'images/opt/produk-Flyer-thumbnail.webp', keywords: ['a5', 'brosur', 'brochure', 'flyer'] },
