@@ -1,19 +1,19 @@
 // Homepage product carousels show the same product cards as Semua Produk,
 // using the lightweight "-web" thumbnails.
 const newProducts = [
-  { name: 'Standing Impraboard', href: 'produk-standing-impraboard.html', img: 'images/opt/produk-StandingImpraboard-thumbnail-web.webp' },
-  { name: 'Gantungan Kunci Custom', href: 'produk-gantungan-kunci.html', img: 'images/opt/produk-GantunganKunci-thumbnail-web.webp' },
-  { name: 'Totebag Custom', href: 'produk-totebag.html', img: 'images/opt/produk-ToteBag-thumbnail-web.webp' },
-  { name: 'Kalender Meja', href: 'produk-kalender.html', img: 'images/opt/produk-calendar-thumbnail-web.webp' },
+  { name: 'Standing Impraboard', href: 'produk-standing-impraboard.html', img: 'images/opt/produk-StandingImpraboard-thumbnail-web.webp', price: 'Rp 180.000' },
+  { name: 'Gantungan Kunci Custom', href: 'produk-gantungan-kunci.html', img: 'images/opt/produk-GantunganKunci-thumbnail-web.webp', price: 'Rp 5.000' },
+  { name: 'Totebag Custom', href: 'produk-totebag.html', img: 'images/opt/produk-ToteBag-thumbnail-web.webp', price: 'Rp 10.000' },
+  { name: 'Kalender Meja', href: 'produk-kalender.html', img: 'images/opt/produk-calendar-thumbnail-web.webp', price: 'Rp 33.500' },
 ];
 
 const bestSellerProducts = [
-  { name: 'Voucher', href: 'produk-voucher.html', img: 'images/opt/produk-voucher-standar-thumbnail-web.webp' },
-  { name: 'Sticker Chromo', href: 'produk-sticker-chromo.html', img: 'images/opt/produk-StickerChromo-thumbnail-web.webp' },
-  { name: 'Sticker Vinyl', href: 'produk-sticker-vinyl.html', img: 'images/opt/produk-StickerVinylA3-thumbnail-web.webp' },
-  { name: 'Thank You Card', href: 'produk-thank-you-card.html', img: 'images/opt/produk-ThankYouCard-thumbnail-web.webp' },
-  { name: 'Loyalty Card', href: 'produk-loyalty-card.html', img: 'images/opt/produk-LoyaltyCard-thumbnail-web.webp' },
-  { name: 'Brosur Trifold', href: 'produk-trifold.html', img: 'images/opt/produk-trifold-thumbnail-web.webp' },
+  { name: 'Voucher', href: 'produk-voucher.html', img: 'images/opt/produk-voucher-standar-thumbnail-web.webp', price: 'Rp 250' },
+  { name: 'Sticker Chromo', href: 'produk-sticker-chromo.html', img: 'images/opt/produk-StickerChromo-thumbnail-web.webp', price: 'Rp 5.500' },
+  { name: 'Sticker Vinyl', href: 'produk-sticker-vinyl.html', img: 'images/opt/produk-StickerVinylA3-thumbnail-web.webp', price: 'Rp 9.000' },
+  { name: 'Thank You Card', href: 'produk-thank-you-card.html', img: 'images/opt/produk-ThankYouCard-thumbnail-web.webp', price: 'Rp 565' },
+  { name: 'Loyalty Card', href: 'produk-loyalty-card.html', img: 'images/opt/produk-LoyaltyCard-thumbnail-web.webp', price: 'Rp 320' },
+  { name: 'Brosur Trifold', href: 'produk-trifold.html', img: 'images/opt/produk-trifold-thumbnail-web.webp', price: 'Rp 2.645' },
 ];
 
 function buildCarousel(id, products) {
@@ -25,7 +25,8 @@ function buildCarousel(id, products) {
       <div class="prod-body">
         <h3 class="prod-name">${p.name}</h3>
         <div class="prod-rating"><span class="stars">★★★★★</span> <span class="count">(5)</span></div>
-        <div class="prod-price">Rp -</div>
+        <div class="prod-from">Mulai Dari</div>
+        <div class="prod-price">${p.price || 'Rp -'}</div>
       </div>
     </a>
   `).join('');
@@ -270,7 +271,7 @@ const searchProducts = [
   { name: 'Kalender Meja', href: 'produk-kalender.html', category: 'calendars', img: 'images/opt/produk-calendar-thumbnail.webp', keywords: ['kalender', 'calendar', 'corporate calendar'] },
   { name: 'Totebag Custom', href: 'produk-totebag.html', category: 'apparel', img: 'images/opt/produk-ToteBag-thumbnail.webp', keywords: ['tote bag', 'tas', 'totebag'] },
   { name: 'Gantungan Kunci Custom', href: 'produk-gantungan-kunci.html', category: 'merchandise', img: 'images/opt/produk-GantunganKunci-thumbnail.webp', keywords: ['keychain', 'gantungan kunci', 'kunci'] },
-  { name: 'Standing Impraboard', href: 'produk-standing-impraboard.html', category: 'signage', img: 'images/opt/produk-StandingImpraboard-thumbnail.webp', keywords: ['impraboard', 'standing', 'display', 'tripod', 'signage'] },
+  { name: 'Standing Impraboard', href: 'produk-standing-impraboard.html', category: 'signage', img: 'images/opt/produk-StandingImpraboard-thumbnail.webp', price: 'Rp 180.000', keywords: ['impraboard', 'standing', 'display', 'tripod', 'signage'] },
   { name: 'Buku Nota', href: 'produk-buku-nota.html', category: 'office', img: 'images/opt/produk-BukuNota-thumbnail.webp', keywords: ['nota', 'surat jalan', 'ncr', 'kwitansi', 'faktur'] },
   { name: 'Hang Tag', href: 'produk-hang-tag.html', category: 'packaging', img: 'images/opt/produk-HangTag-thumbnail.webp', keywords: ['label', 'tag', 'label harga', 'tali'] },
   { name: 'Sleeve Packaging', href: 'produk-sleeve-packaging.html', category: 'packaging', img: 'images/opt/produk-sleeve-thumbnail.webp', keywords: ['sleeve', 'kemasan', 'packaging'] },
