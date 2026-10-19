@@ -207,6 +207,7 @@ header.site-header{padding:18px 0;background:#fff;}
   flex:0 0 100%;
   line-height:0;
 }
+.hero-link{display:block;}
 .hero-img{
   width:100%;height:auto;display:block;
 }
