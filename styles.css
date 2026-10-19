@@ -780,7 +780,7 @@ footer{background:#fff;padding-top:44px;}
 }
 .mobile-hubungi:hover{background:var(--orange-2);}
 
-.mobile-search-wrap{padding:0 20px 14px;background:#fff;}
+.mobile-search-wrap{padding:14px 20px;background:#fff;}
 .mobile-search-bar{width:100%;border:1px solid var(--line);}
 
 .mobile-menu{display:none;position:fixed;inset:0;z-index:100;}
@@ -935,5 +935,5 @@ footer{background:#fff;padding-top:44px;}
   .mobile-topbar-actions{gap:6px;}
   .mobile-hubungi{padding:0 10px;font-size:11px;}
   .mobile-ic{width:32px;height:32px;}
-  .mobile-search-wrap{padding:0 14px 14px;}
+  .mobile-search-wrap{padding:14px;}
 }
