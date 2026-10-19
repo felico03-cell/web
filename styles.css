@@ -919,6 +919,10 @@ footer{background:#fff;padding-top:44px;}
   .alamat-map{background:#fff;}
   .map-btn{align-self:center;margin:14px 0;}
 
+  .hero{background:none;padding:0;}
+  .hero .container{padding:0;max-width:none;}
+  .hero-card,.hero-slider{border-radius:0;box-shadow:none;}
+
   .desktop-only-section{display:none;}
   .mobile-topbar{display:flex;}
   .mobile-search-wrap{display:block;}
