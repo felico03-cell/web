@@ -373,10 +373,36 @@
   <h3 class="karir-modal-title" id="karirModalTitle">Bergabung Bersama CALSPRINT</h3>
   <div class="karir-modal-body">
     <p>Temukan kesempatan untuk berkembang dan menjadi bagian dari perjalanan CALSPRINT.</p>
-    <div class="karir-modal-subtitle">Posisi yang Tersedia</div>
-    <p>Saat ini belum ada lowongan pekerjaan yang tersedia.</p>
-    <p>Tertarik menjadi bagian dari CALSPRINT? Kirimkan CV dan informasi diri Anda melalui email kami untuk dipertimbangkan sesuai dengan kebutuhan perusahaan.</p>
-    <a class="karir-modal-btn" href="mailto:calsprint2203@gmail.com?subject=Lamaran%20Pekerjaan&body=Berikut%20informasi%20diri%20saya%20...">Kirim CV</a>
+    <p>Kirimkan CV dan informasi diri Anda.</p>
+    <form id="karirForm" class="karir-form">
+      <input type="hidden" name="access_key" value="bf5496ca-64f1-4351-93b9-7b734a3ca2fc">
+      <input type="hidden" name="subject" value="Lamaran Pekerjaan - Website CALSPRINT">
+      <input type="checkbox" name="botcheck" class="kontak-botcheck" tabindex="-1" autocomplete="off">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="karirNama">Nama</label>
+          <input type="text" id="karirNama" name="name" placeholder="Masukkan nama Anda" required>
+        </div>
+        <div class="form-group">
+          <label for="karirEmail">Email</label>
+          <input type="email" id="karirEmail" name="email" placeholder="Masukkan alamat email Anda" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <span class="form-label">CV</span>
+        <div class="file-field">
+          <label for="karirCv" class="file-btn">Pilih File</label>
+          <span class="file-name" id="karirCvName">Belum ada file dipilih</span>
+          <input type="file" id="karirCv" class="file-input" name="attachment" accept=".pdf,.doc,.docx" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="karirPesan">Pesan</label>
+        <textarea id="karirPesan" name="pesan" rows="4" placeholder="Ceritakan sedikit tentang diri Anda."></textarea>
+      </div>
+      <button type="submit" class="kontak-submit">Kirim CV</button>
+      <p class="kontak-status" id="karirStatus" hidden></p>
+    </form>
   </div>
 </div>
 

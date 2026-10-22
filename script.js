@@ -479,44 +479,69 @@ if (categoryToggleBtn && categoryDropdownEl) {
   });
 }
 
-// ===== Hubungi Kami: Dapatkan Penawaran form (Web3Forms) =====
-const kontakFormEl = document.getElementById('kontakForm');
-const kontakStatusEl = document.getElementById('kontakStatus');
-
-if (kontakFormEl && kontakStatusEl) {
-  kontakFormEl.addEventListener('submit', function (e) {
+// ===== Web3Forms submission (Hubungi Kami + Karir popup) =====
+function bindWeb3Form(formEl, statusEl, successText) {
+  if (!formEl || !statusEl) return;
+  formEl.addEventListener('submit', function (e) {
     e.preventDefault();
-    const submitBtn = kontakFormEl.querySelector('.kontak-submit');
+    const submitBtn = formEl.querySelector('.kontak-submit');
     const originalBtnText = submitBtn.textContent;
     submitBtn.disabled = true;
     submitBtn.textContent = 'Mengirim...';
-    kontakStatusEl.hidden = true;
+    statusEl.hidden = true;
 
+    // FormData (multipart) so file attachments such as the CV are included
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify(Object.fromEntries(new FormData(kontakFormEl))),
+      headers: { Accept: 'application/json' },
+      body: new FormData(formEl),
     })
       .then(function (res) { return res.json(); })
       .then(function (data) {
-        kontakStatusEl.hidden = false;
+        statusEl.hidden = false;
         if (data.success) {
-          kontakStatusEl.textContent = 'Pesan Anda berhasil terkirim. Tim CALSPRINT akan segera menghubungi Anda.';
-          kontakStatusEl.className = 'kontak-status success';
-          kontakFormEl.reset();
+          statusEl.textContent = successText;
+          statusEl.className = 'kontak-status success';
+          formEl.reset();
         } else {
-          kontakStatusEl.textContent = 'Gagal mengirim pesan. Silakan coba lagi.';
-          kontakStatusEl.className = 'kontak-status error';
+          statusEl.textContent = 'Gagal mengirim pesan. Silakan coba lagi.';
+          statusEl.className = 'kontak-status error';
         }
       })
       .catch(function () {
-        kontakStatusEl.hidden = false;
-        kontakStatusEl.textContent = 'Gagal mengirim pesan. Periksa koneksi Anda dan coba lagi.';
-        kontakStatusEl.className = 'kontak-status error';
+        statusEl.hidden = false;
+        statusEl.textContent = 'Gagal mengirim pesan. Periksa koneksi Anda dan coba lagi.';
+        statusEl.className = 'kontak-status error';
       })
       .finally(function () {
         submitBtn.disabled = false;
         submitBtn.textContent = originalBtnText;
       });
   });
+}
+
+bindWeb3Form(
+  document.getElementById('kontakForm'),
+  document.getElementById('kontakStatus'),
+  'Pesan Anda berhasil terkirim. Tim CALSPRINT akan segera menghubungi Anda.'
+);
+bindWeb3Form(
+  document.getElementById('karirForm'),
+  document.getElementById('karirStatus'),
+  'CV Anda berhasil terkirim. Terima kasih atas minat Anda bergabung bersama CALSPRINT.'
+);
+
+// ===== Karir popup: show chosen CV file name =====
+const karirCvEl = document.getElementById('karirCv');
+const karirCvNameEl = document.getElementById('karirCvName');
+
+if (karirCvEl && karirCvNameEl) {
+  const emptyText = karirCvNameEl.textContent;
+  const updateCvName = () => {
+    const file = karirCvEl.files[0];
+    karirCvNameEl.textContent = file ? file.name : emptyText;
+    karirCvNameEl.parentElement.classList.toggle('has-file', !!file);
+  };
+  karirCvEl.addEventListener('change', updateCvName);
+  karirCvEl.form?.addEventListener('reset', () => setTimeout(updateCvName));
 }
