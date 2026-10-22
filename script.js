@@ -490,7 +490,7 @@ function bindWeb3Form(formEl, statusEl, successText) {
     submitBtn.textContent = 'Mengirim...';
     statusEl.hidden = true;
 
-    // FormData (multipart) so file attachments such as the CV are included
+    // FormData so every form field is sent as-is
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: { Accept: 'application/json' },
@@ -530,18 +530,3 @@ bindWeb3Form(
   document.getElementById('karirStatus'),
   'CV Anda berhasil terkirim. Terima kasih atas minat Anda bergabung bersama CALSPRINT.'
 );
-
-// ===== Karir popup: show chosen CV file name =====
-const karirCvEl = document.getElementById('karirCv');
-const karirCvNameEl = document.getElementById('karirCvName');
-
-if (karirCvEl && karirCvNameEl) {
-  const emptyText = karirCvNameEl.textContent;
-  const updateCvName = () => {
-    const file = karirCvEl.files[0];
-    karirCvNameEl.textContent = file ? file.name : emptyText;
-    karirCvNameEl.parentElement.classList.toggle('has-file', !!file);
-  };
-  karirCvEl.addEventListener('change', updateCvName);
-  karirCvEl.form?.addEventListener('reset', () => setTimeout(updateCvName));
-}
